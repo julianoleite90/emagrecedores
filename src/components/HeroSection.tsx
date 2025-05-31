@@ -20,7 +20,7 @@ const HeroSection = () => {
           {/* Conteúdo do lado esquerdo */}
           <div className="space-y-6">
             {/* Data de atualização */}
-            <div className="pt-4 md:pt-6">
+            <div className="pt-2 md:pt-6">
               <p className="text-gray-600 text-sm">
                 Data: {formatDate()}
               </p>
@@ -35,13 +35,13 @@ const HeroSection = () => {
             </div>
 
             {/* Subtítulo com destaque */}
-            <div className="text-lg text-gray-600 mb-2">
+            <div className="text-lg text-gray-600 mb-1">
               <span className="text-green-600 font-semibold">Análise especializada</span>{' '}
               dos produtos mais eficazes e seguros para perda de peso com aprovação da Anvisa.
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[350px] w-full px-4 mb-2">
+            <div className="block lg:hidden relative h-[700px] w-full mb-1">
               <Image
                 src="/novocomparativo.png"
                 alt="Remédios para emagrecer"
@@ -52,7 +52,7 @@ const HeroSection = () => {
             </div>
 
             {/* Primeiro parágrafo */}
-            <p className="text-gray-700 mb-8 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed">
               Você já tentou de tudo para emagrecer — <span className="text-slate-700 font-medium">dietas, exercícios, receitas milagrosas</span> — e sente que nada realmente funciona? Se sim, você não está sozinho. A luta contra a balança é uma realidade para <span className="text-slate-700 font-medium">milhões de brasileiros</span>, e a busca por soluções eficazes e seguras nunca esteve tão em alta.
             </p>
 

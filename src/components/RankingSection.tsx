@@ -114,7 +114,7 @@ const RankingSection = () => {
                 <p className="text-gray-900 mb-6">
                   O Definamax também oferece um teste de IMC (Índice de Massa Corporal) gratuito para você
                   entender melhor como está sua saúde corporal. Para realizar o seu teste, <UtmLink 
-                    href="https://definamaxoficial.com/analise"
+                    href="https://www.definamaxoficial.com/avaliacao"
                     className="text-green-600 hover:text-green-800 underline cursor-pointer"
                     eventId="imc-definamax"
                   >
@@ -131,7 +131,7 @@ const RankingSection = () => {
                     <span>→</span> Acessar Site Oficial
                   </UtmLink>
                   <UtmLink 
-                    href="https://mon.net.br/3i6gsj" 
+                    href="https://www.definamaxoficial.com/" 
                     className="w-full bg-orange-500 text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                     eventId="informacoes-definamax"
                   >
