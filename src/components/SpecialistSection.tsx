@@ -18,12 +18,11 @@ const SpecialistSection = () => {
           </div>
         </div>
         <div className="flex-1">
-          <p className="text-gray-700 text-base mb-4">
-            "Como especialista em saúde e bem-estar, analisei as opções mais modernas e eficazes,
-            levando em conta pesquisas recentes, recomendações médicas e relatos de pacientes. O
-            resultado? Um ranking atualizado com os 5 melhores remédios para emagrecer em 2025
-            — e uma fórmula de fibras que está revolucionando o tratamento da obesidade."
-          </p>
+          <div className="text-gray-700 space-y-4">
+            <p>
+              &ldquo;Como especialista em saúde e bem-estar, analisei as opções mais modernas e eficazes, levando em conta pesquisas recentes, recomendações médicas e relatos de pacientes. O resultado? Um ranking atualizado com os 5 melhores remédios para emagrecer em 2025.&rdquo;
+            </p>
+          </div>
           <div>
             <h3 className="text-green-600 font-bold text-lg">Dra. Ana Costa</h3>
             <p className="text-gray-600 text-sm">Especialista em Emagrecimento</p>

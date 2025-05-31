@@ -22,11 +22,11 @@ const ExpertSection = () => {
             {/* Conteúdo */}
             <div className="flex-1 text-center md:text-left">
               {/* Citação */}
-              <blockquote className="mb-4 md:mb-6">
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                  "Como especialista em saúde e bem-estar, analisei as opções mais modernas e eficazes, levando em conta pesquisas recentes, recomendações médicas e relatos de pacientes. O resultado? Um ranking atualizado com os 5 melhores remédios para emagrecer em 2025 — e uma fórmula de fibras que está revolucionando o tratamento da obesidade."
+              <div className="text-gray-700 space-y-4">
+                <p>
+                  &ldquo;Como especialista em nutrição e emagrecimento, analiso constantemente a eficácia e segurança dos suplementos disponíveis no mercado. Esta análise é baseada em evidências científicas e resultados reais de pacientes.&rdquo;
                 </p>
-              </blockquote>
+              </div>
 
               {/* Nome e Especialidade */}
               <div>

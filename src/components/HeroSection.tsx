@@ -12,14 +12,8 @@ const HeroSection = () => {
     }).replace(/^\w/, (c) => c.toUpperCase()); // Capitaliza a primeira letra
   };
 
-  const getCurrentMonth = () => {
-    const date = new Date();
-    return date.toLocaleDateString('pt-BR', { month: 'long' })
-      .replace(/^\w/, (c) => c.toUpperCase());
-  };
-
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-gray-100 pt-8 pb-16 md:py-16">
+    <section className="bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Conteúdo do lado esquerdo */}
