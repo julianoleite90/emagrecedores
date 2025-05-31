@@ -36,10 +36,8 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <div className="text-lg text-gray-600 mb-2">
-              <span className="text-green-600 font-semibold">Análise Especializada</span>{' '}
-              dos produtos mais eficazes e seguros para perda de peso.{' '}
-              <span className="text-green-600 font-semibold">melhores fórmulas</span>{' '}
-              disponíveis no Brasil.
+              <span className="text-green-600 font-semibold">Análise especializada</span>{' '}
+              dos produtos mais eficazes e seguros para perda de peso com aprovação da Anvisa.
             </div>
 
             {/* Imagem em mobile */}

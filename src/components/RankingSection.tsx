@@ -68,9 +68,7 @@ const RankingSection = () => {
                 </h5>
 
                 <p className="text-gray-700 mb-6">
-                  Em nossa análise de mais de 2.500 casos, o <strong>Definamax</strong> apresentou resultados surpreendentes:
-                  <strong>93% dos usuários relataram redução visível de medidas em apenas 30 dias</strong>, com perda média
-                  de 5-7kg e redução de até 8cm na cintura.
+                  Em nossa análise de mais de 2.500 casos, o Definamax apresentou resultados surpreendentes: 93% dos usuários relataram redução visível de medidas em apenas 30 dias, com perda média de 5-7kg e redução de até 8cm na cintura.
                 </p>
 
                 <div className="bg-green-50 p-4 sm:p-6 rounded-lg mb-6">
