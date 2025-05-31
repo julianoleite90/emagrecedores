@@ -29,15 +29,14 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div><span className="text-gray-900">Os 5 Melhores Remédios</span></div>
-                <div>Para <span className="text-gray-900 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Emagrecer</span></div>
+                <div className="text-gray-900">Descubra os 5 Melhores Remédios para <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Emagrecer</span></div>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Fórmulas que realmente funcionam</h2>
+              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Com resultados comprovados</h2>
             </div>
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-              Você está aqui porque pesquisou por um &apos;remédio para emagrecer&apos; e busca uma solução segura, rápida e, principalmente, saudável para alcançar seus objetivos? Perfeito! Você chegou ao <span className="text-green-600 font-medium">lugar certo</span>. Continue lendo esta análise completa e descubra.
+              Você pesquisou por um remédio para emagrecer porque busca uma solução segura, eficaz e que realmente funcione para alcançar seus objetivos? Então você está no <span className="font-medium">lugar certo</span>! Nesta análise, vamos revelar o <span className="text-slate-700 font-medium">ranking dos 5 melhores remédios</span> disponíveis no mercado, todos com <span className="text-slate-700 font-medium">resultados comprovados por estudos clínicos</span>.
             </p>
 
             {/* Imagem em mobile */}
@@ -53,23 +52,21 @@ const HeroSection = () => {
 
             {/* Primeiro parágrafo */}
             <p className="text-gray-700 leading-relaxed">
-              Se você já tentou de tudo — dietas restritivas, rotinas de exercícios exaustivas, ou até aquelas <span className="text-green-600 font-medium">&apos;receitas milagrosas&apos;</span> — e sente que nada realmente funciona, você não está sozinho. A luta contra a balança é uma realidade desafiadora para milhões de brasileiros, e a busca por soluções verdadeiramente eficazes e seguras nunca esteve tão em alta.
+              Sabemos que emagrecer pode ser um desafio. Se dietas restritivas, exercícios intensos ou "fórmulas milagrosas" não deram certo para você, não desista! A ciência evoluiu, e hoje existem medicamentos que ajudam milhões de brasileiros a perder peso de forma saudável e segura. Mas, com tantas opções, como escolher o melhor para o seu caso?
             </p>
 
             {/* Segundo parágrafo */}
             <p className="text-gray-700 mb-8 leading-relaxed">
-              Nos últimos anos, a ciência deu um salto gigantesco, trazendo ao mercado novos medicamentos que prometem <span className="text-green-600 font-medium">resultados reais, com comprovação em rigorosos estudos clínicos</span> e, o mais importante, com um perfil de segurança cada vez maior. Mas, com tantas opções e informações dispersas, como saber quais são os remédios para emagrecer que realmente fazem a diferença? E qual deles é o ideal para a <span className="text-green-600 font-medium">SUA jornada de perda de peso</span>? Nossa análise detalhada vai desvendar tudo isso para você.
+            Nossa equipe, liderada pela Dra. Ana Costa, especialista em emagrecimento, analisou centenas de estudos e depoimentos reais para trazer uma seleção confiável. Mais abaixo, você vai conhecer o ranking com os 5 melhores remédios para emagrecer de 2025 e entender qual deles é o mais indicado para a sua jornada.
             </p>
 
             {/* Botão CTA */}
             <ScrollLink 
               targetId="ranking"
-              className="inline-flex bg-[#00C853] hover:bg-[#00B848] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base whitespace-nowrap"
+              className="inline-flex bg-[#00A040] hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base whitespace-nowrap"
             >
-              <span className="flex-1 text-center">Confira a análise remédios para emagrecer</span>
-              <svg className="w-5 h-5 ml-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+              <span className="flex-1 text-center">Clique e confira o ranking agora!</span>
+              <span>↓</span>
             </ScrollLink>
           </div>
 

@@ -20,7 +20,7 @@ const SpecialistSection = () => {
         <div className="flex-1">
           <div className="text-gray-700 space-y-4">
             <p className="text-sm md:text-base">
-              &ldquo;Como especialista em nutrição e emagrecimento, analiso constantemente a eficácia e segurança dos suplementos disponíveis no mercado. Esta análise é baseada em evidências científicas e resultados reais de pacientes.&rdquo;
+              &ldquo;Analisamos rigorosamente a eficácia, segurança e depoimentos reais para trazer uma seleção que realmente funciona.&rdquo;
             </p>
           </div>
           <div className="mt-2">
