@@ -3,7 +3,7 @@ const WhyConsiderSection = () => {
     <section className="py-12 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center md:text-left">
-          Por que considerar <span className="text-slate-700 underline">remédios para emagrecer</span>?
+          Por que remédios naturais para emagrecer é a <span className="text-slate-700">melhor opção</span>?
         </h2>
 
         <div className="space-y-6">

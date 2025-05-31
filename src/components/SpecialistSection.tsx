@@ -3,9 +3,9 @@ import Image from 'next/image';
 const SpecialistSection = () => {
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 max-w-4xl mx-auto mb-8">
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="relative flex-shrink-0 w-full md:w-auto flex justify-center">
-          <div className="w-44 h-44 md:w-72 md:h-72 rounded-full border-4 border-green-500 overflow-hidden">
+      <div className="flex flex-row items-start gap-4">
+        <div className="relative flex-shrink-0">
+          <div className="w-32 h-32 md:w-72 md:h-72 rounded-full border-4 border-green-500 overflow-hidden">
             <Image
               src="/medica-150.webp"
               alt="Dra. Ana Costa - Especialista em Emagrecimento"
@@ -13,19 +13,19 @@ const SpecialistSection = () => {
               height={288}
               priority
               quality={100}
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
             />
           </div>
         </div>
         <div className="flex-1">
           <div className="text-gray-700 space-y-4">
-            <p>
-              &ldquo;Como especialista em saúde e bem-estar, analisei as opções mais modernas e eficazes, levando em conta pesquisas recentes, recomendações médicas e relatos de pacientes. O resultado? Um ranking atualizado com os 5 melhores remédios para emagrecer em 2025.&rdquo;
+            <p className="text-sm md:text-base">
+              &ldquo;Como especialista em nutrição e emagrecimento, analiso constantemente a eficácia e segurança dos suplementos disponíveis no mercado. Esta análise é baseada em evidências científicas e resultados reais de pacientes.&rdquo;
             </p>
           </div>
-          <div>
-            <h3 className="text-green-600 font-bold text-lg">Dra. Ana Costa</h3>
-            <p className="text-gray-600 text-sm">Especialista em Emagrecimento</p>
+          <div className="mt-2">
+            <h3 className="text-green-600 font-bold text-base md:text-lg">Dra. Ana Costa</h3>
+            <p className="text-gray-600 text-xs md:text-sm">Especialista em Emagrecimento</p>
           </div>
         </div>
       </div>

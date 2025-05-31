@@ -22,7 +22,7 @@ const HeroSection = () => {
             {/* Data de atualização */}
             <div className="pt-2 md:pt-6">
               <p className="text-gray-600 text-sm">
-                Data: {formatDate()}
+                {formatDate()}
               </p>
             </div>
 
@@ -36,12 +36,12 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <div className="text-lg text-gray-600">
-              <span className="text-green-600 font-semibold">Análise detalhada</span>{' '}
-              dos produtos mais eficazes e seguros para perda de peso em 2025 - todos produtos com aprovação da anvisa.
+              <span className="text-green-600 font-semibold">Buscando</span>{' '}
+              por um remédio seguro para emagrecer de forma rápida e saudável? Então leia nossa análise.
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[450px] w-full -mt-2 mb-2">
+            <div className="block lg:hidden relative h-[450px] w-full my-[2px]">
               <Image
                 src="/onovocomparativo.png"
                 alt="Remédios para emagrecer"
