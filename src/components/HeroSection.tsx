@@ -13,15 +13,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white">
+    <section className="bg-gradient-to-b from-gray-50 to-gray-100 pt-8 pb-16 md:py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Conteúdo do lado esquerdo */}
           <div className="space-y-6">
             {/* Data de atualização */}
-            <p className="text-gray-600 text-sm">
-              Data: {formatDate()}
-            </p>
+            <div className="pt-4 md:pt-6">
+              <p className="text-gray-600 text-sm">
+                Data: {formatDate()}
+              </p>
+            </div>
 
             {/* Título principal */}
             <div className="text-center lg:text-left">
