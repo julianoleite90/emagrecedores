@@ -52,7 +52,7 @@ const HeroSection = () => {
 
             {/* Primeiro parágrafo */}
             <p className="text-gray-700 leading-relaxed">
-              Sabemos que emagrecer pode ser um desafio. Se dietas restritivas, exercícios intensos ou "fórmulas milagrosas" não deram certo para você, não desista! A ciência evoluiu, e hoje existem medicamentos que ajudam milhões de brasileiros a perder peso de forma saudável e segura. Mas, com tantas opções, como escolher o melhor para o seu caso?
+              Agora é o momento de transformar sua jornada! Emagrecer envolve diversos fatores, e muitas vezes dieta e exercícios sozinhos não são suficientes para superar as barreiras do corpo. Felizmente, a ciência e a natureza trazem aliados poderosos: <span className="text-slate-700 font-medium">remédios que realmente fazem a diferença</span>.
             </p>
 
             {/* Segundo parágrafo */}
