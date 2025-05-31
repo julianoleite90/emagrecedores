@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Conteúdo do lado esquerdo */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             {/* Data de atualização */}
             <div className="pt-2 md:pt-6">
               <p className="text-gray-600 text-sm">
@@ -35,18 +35,18 @@ const HeroSection = () => {
             </div>
 
             {/* Subtítulo com destaque */}
-            <div className="text-lg text-gray-600 mb-1">
+            <div className="text-lg text-gray-600">
               <span className="text-green-600 font-semibold">Análise especializada</span>{' '}
               dos produtos mais eficazes e seguros para perda de peso com aprovação da Anvisa.
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[700px] w-full mb-1">
+            <div className="block lg:hidden relative h-[500px] w-full">
               <Image
                 src="/novocomparativo.png"
                 alt="Remédios para emagrecer"
                 fill
-                className="object-contain"
+                className="object-cover object-top"
                 priority
               />
             </div>
