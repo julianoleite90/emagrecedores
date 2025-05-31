@@ -8,13 +8,13 @@ const Header = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <Image
-              src="/logo.webp"
+              src="/2logo.png"
               alt="Logo"
               width={280}
               height={100}
               priority
               quality={100}
-              className="w-72 md:w-72"
+              className="w-84 md:w-84"
             />
           </div>
           
