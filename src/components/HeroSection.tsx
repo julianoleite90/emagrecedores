@@ -4,7 +4,8 @@ import ScrollLink from './ScrollLink';
 const HeroSection = () => {
   const formatDate = () => {
     const date = new Date();
-    return date.toLocaleDateString('pt-BR', {
+    const spDate = new Date(date.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+    return spDate.toLocaleDateString('pt-BR', {
       weekday: 'long',
       day: 'numeric',
       month: 'long',
