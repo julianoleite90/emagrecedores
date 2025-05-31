@@ -37,7 +37,7 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-              Você está aqui porque pesquisou por um 'remédio para emagrecer' e busca uma solução segura, rápida e, principalmente, saudável para alcançar seus objetivos? Perfeito! Você chegou ao <span className="text-green-600 font-medium">lugar certo</span>. Continue lendo esta análise completa e descubra.
+              Você está aqui porque pesquisou por um &apos;remédio para emagrecer&apos; e busca uma solução segura, rápida e, principalmente, saudável para alcançar seus objetivos? Perfeito! Você chegou ao <span className="text-green-600 font-medium">lugar certo</span>. Continue lendo esta análise completa e descubra.
             </p>
 
             {/* Imagem em mobile */}
@@ -53,7 +53,7 @@ const HeroSection = () => {
 
             {/* Primeiro parágrafo */}
             <p className="text-gray-700 leading-relaxed">
-              Se você já tentou de tudo — dietas restritivas, rotinas de exercícios exaustivas, ou até aquelas <span className="text-green-600 font-medium">'receitas milagrosas'</span> — e sente que nada realmente funciona, você não está sozinho. A luta contra a balança é uma realidade desafiadora para milhões de brasileiros, e a busca por soluções verdadeiramente eficazes e seguras nunca esteve tão em alta.
+              Se você já tentou de tudo — dietas restritivas, rotinas de exercícios exaustivas, ou até aquelas <span className="text-green-600 font-medium">&apos;receitas milagrosas&apos;</span> — e sente que nada realmente funciona, você não está sozinho. A luta contra a balança é uma realidade desafiadora para milhões de brasileiros, e a busca por soluções verdadeiramente eficazes e seguras nunca esteve tão em alta.
             </p>
 
             {/* Segundo parágrafo */}
