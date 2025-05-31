@@ -41,12 +41,12 @@ const HeroSection = () => {
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[600px] w-full">
+            <div className="block lg:hidden relative h-[450px] w-full -mt-2 mb-2">
               <Image
-                src="/novocomparativo.png"
+                src="/onovocomparativo.png"
                 alt="Remédios para emagrecer"
                 fill
-                className="object-contain object-center"
+                className="object-cover object-top"
                 priority
               />
             </div>
@@ -76,7 +76,7 @@ const HeroSection = () => {
           {/* Imagem do lado direito (apenas desktop) */}
           <div className="hidden lg:block relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/novocomparativo.png"
+              src="/onovocomparativo.png"
               alt="Remédios para emagrecer"
               fill
               className="object-cover"
