@@ -7,7 +7,7 @@ const HeroCTA = () => {
     <div className="flex justify-center py-8">
       <ScrollLink
         targetId="ranking"
-        className="bg-green-600 hover:bg-green-700 text-white text-xl font-medium px-8 py-4 rounded-full shadow-lg flex items-center gap-2 transition-all transform hover:scale-105"
+        className="bg-[#00C853] hover:bg-[#00B848] text-white text-xl font-medium px-8 py-4 rounded-full shadow-lg flex items-center gap-2 transition-all transform hover:scale-105"
       >
         Confira a análise remédios para emagrecer
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

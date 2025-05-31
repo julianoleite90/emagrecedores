@@ -28,20 +28,20 @@ const HeroSection = () => {
 
             {/* Título principal */}
             <div className="text-left">
-              <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-4">
-                <div><span className="text-slate-700">5 Melhores Remédios</span></div>
-                <div>Para <span className="text-slate-700 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Emagrecer</span></div>
+              <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
+                <div><span className="text-gray-900">Os 5 Melhores Remédios</span></div>
+                <div>Para <span className="text-gray-900 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Emagrecer</span></div>
               </h1>
+              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Fórmulas que realmente funcionam</h2>
             </div>
 
             {/* Subtítulo com destaque */}
-            <div className="text-lg text-gray-600">
-              <span className="text-green-600 font-semibold">Buscando</span>{' '}
-              por um remédio seguro para emagrecer de forma rápida e saudável? Então leia nossa análise.
-            </div>
+            <p className="text-gray-700 leading-relaxed">
+              Você está aqui porque pesquisou por um 'remédio para emagrecer' e busca uma solução segura, rápida e, principalmente, saudável para alcançar seus objetivos? Perfeito! Você chegou ao <span className="text-green-600 font-medium">lugar certo</span>. Continue lendo esta análise completa e descubra.
+            </p>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[450px] w-full my-[2px]">
+            <div className="block lg:hidden relative h-[450px] w-full mt-[2px] mb-6">
               <Image
                 src="/onovocomparativo.png"
                 alt="Remédios para emagrecer"
@@ -53,18 +53,18 @@ const HeroSection = () => {
 
             {/* Primeiro parágrafo */}
             <p className="text-gray-700 leading-relaxed">
-              Você já tentou de tudo para emagrecer — <span className="text-slate-700 font-medium">dietas, exercícios, receitas milagrosas</span> — e sente que nada realmente funciona? Se sim, você não está sozinho. A luta contra a balança é uma realidade para <span className="text-slate-700 font-medium">milhões de brasileiros</span>, e a busca por soluções eficazes e seguras nunca esteve tão em alta.
+              Se você já tentou de tudo — dietas restritivas, rotinas de exercícios exaustivas, ou até aquelas <span className="text-green-600 font-medium">'receitas milagrosas'</span> — e sente que nada realmente funciona, você não está sozinho. A luta contra a balança é uma realidade desafiadora para milhões de brasileiros, e a busca por soluções verdadeiramente eficazes e seguras nunca esteve tão em alta.
             </p>
 
             {/* Segundo parágrafo */}
             <p className="text-gray-700 mb-8 leading-relaxed">
-              Nos últimos anos, a <span className="text-slate-700 font-medium">ciência avançou muito</span> e trouxe ao mercado novos medicamentos que prometem <span className="text-slate-700 font-medium">resultados reais, comprovados em estudos clínicos</span>, e com cada vez mais segurança. Mas, afinal, <span className="text-slate-700 font-medium">quais são os melhores remédios para emagrecer disponíveis atualmente?</span> E qual deles realmente faz a diferença?
+              Nos últimos anos, a ciência deu um salto gigantesco, trazendo ao mercado novos medicamentos que prometem <span className="text-green-600 font-medium">resultados reais, com comprovação em rigorosos estudos clínicos</span> e, o mais importante, com um perfil de segurança cada vez maior. Mas, com tantas opções e informações dispersas, como saber quais são os remédios para emagrecer que realmente fazem a diferença? E qual deles é o ideal para a <span className="text-green-600 font-medium">SUA jornada de perda de peso</span>? Nossa análise detalhada vai desvendar tudo isso para você.
             </p>
 
             {/* Botão CTA */}
             <ScrollLink 
               targetId="ranking"
-              className="inline-flex bg-[#4CAF50] hover:bg-[#45a049] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base whitespace-nowrap"
+              className="inline-flex bg-[#00C853] hover:bg-[#00B848] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base whitespace-nowrap"
             >
               <span className="flex-1 text-center">Confira a análise remédios para emagrecer</span>
               <svg className="w-5 h-5 ml-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
