@@ -35,7 +35,7 @@ const HeroSection = () => {
             </div>
 
             {/* Subtítulo com destaque */}
-            <div className="text-lg text-gray-600 mb-4">
+            <div className="text-lg text-gray-600 mb-2">
               <span className="text-green-600 font-semibold">Análise Especializada</span>{' '}
               dos produtos mais eficazes e seguros para perda de peso.{' '}
               <span className="text-green-600 font-semibold">melhores fórmulas</span>{' '}
@@ -43,7 +43,7 @@ const HeroSection = () => {
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[400px] w-[90%] mx-auto mb-4">
+            <div className="block lg:hidden relative h-[350px] w-full px-4 mb-2">
               <Image
                 src="/novocomparativo.png"
                 alt="Remédios para emagrecer"
