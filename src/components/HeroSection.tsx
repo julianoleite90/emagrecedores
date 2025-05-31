@@ -29,34 +29,34 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-4">
-                <div>Os <span className="text-slate-700">5 Melhores Remédios</span></div>
-                <div>Para <span className="text-slate-700">Emagrecer</span> em Maio</div>
+                <div><span className="text-slate-700">5 Melhores Remédios</span></div>
+                <div>Para <span className="text-slate-700 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Emagrecer</span></div>
               </h1>
             </div>
 
             {/* Subtítulo com destaque */}
-            <div className="text-lg text-gray-600 mb-8">
+            <div className="text-lg text-gray-600 mb-4">
               <span className="text-green-600 font-semibold">Análise Especializada</span>{' '}
               dos produtos mais eficazes e seguros para perda de peso.{' '}
               <span className="text-green-600 font-semibold">melhores fórmulas</span>{' '}
               disponíveis no Brasil.
             </div>
 
-            {/* Primeiro parágrafo */}
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              Você já tentou de tudo para emagrecer — <span className="text-slate-700 font-medium">dietas, exercícios, receitas milagrosas</span> — e sente que nada realmente funciona? Se sim, você não está sozinho. A luta contra a balança é uma realidade para <span className="text-slate-700 font-medium">milhões de brasileiros</span>, e a busca por soluções eficazes e seguras nunca esteve tão em alta.
-            </p>
-
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[300px] w-full mb-6">
+            <div className="block lg:hidden relative h-[400px] w-[90%] mx-auto mb-4">
               <Image
                 src="/novocomparativo.png"
                 alt="Remédios para emagrecer"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
+
+            {/* Primeiro parágrafo */}
+            <p className="text-gray-700 mb-8 leading-relaxed">
+              Você já tentou de tudo para emagrecer — <span className="text-slate-700 font-medium">dietas, exercícios, receitas milagrosas</span> — e sente que nada realmente funciona? Se sim, você não está sozinho. A luta contra a balança é uma realidade para <span className="text-slate-700 font-medium">milhões de brasileiros</span>, e a busca por soluções eficazes e seguras nunca esteve tão em alta.
+            </p>
 
             {/* Segundo parágrafo */}
             <p className="text-gray-700 mb-8 leading-relaxed">
