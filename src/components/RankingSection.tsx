@@ -21,7 +21,7 @@ const RankingSection = () => {
           </div>
 
           {/* Primeiro Produto */}
-          <div className="mt-8 bg-white rounded-2xl shadow-xl p-8 mb-8 relative">
+          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               1° Lugar
             </div>
@@ -153,7 +153,7 @@ const RankingSection = () => {
           </div>
 
           {/* Segundo Produto */}
-          <div className="mt-8 bg-white rounded-2xl shadow-xl p-8 mb-8 relative">
+          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               2° Lugar
             </div>
@@ -275,7 +275,7 @@ const RankingSection = () => {
           </div>
 
           {/* Terceiro Produto */}
-          <div className="mt-8 bg-white rounded-2xl shadow-xl p-8 mb-8 relative">
+          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               3° Lugar
             </div>
@@ -394,7 +394,7 @@ const RankingSection = () => {
           </div>
 
           {/* Quarto Produto */}
-          <div className="mt-8 bg-white rounded-2xl shadow-xl p-8 mb-8 relative">
+          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               4° Lugar
             </div>
@@ -513,7 +513,7 @@ const RankingSection = () => {
           </div>
 
           {/* Quinto Produto */}
-          <div className="mt-8 bg-white rounded-2xl shadow-xl p-8 mb-8 relative">
+          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               5° Lugar
             </div>

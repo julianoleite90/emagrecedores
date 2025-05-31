@@ -41,12 +41,12 @@ const HeroSection = () => {
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[500px] w-full">
+            <div className="block lg:hidden relative h-[600px] w-full">
               <Image
                 src="/novocomparativo.png"
                 alt="Remédios para emagrecer"
                 fill
-                className="object-cover object-top"
+                className="object-contain object-center"
                 priority
               />
             </div>
