@@ -116,7 +116,7 @@ const RankingSection = () => {
                 <p className="text-gray-900 mb-6">
                   O Definamax também oferece um teste de IMC (Índice de Massa Corporal) gratuito para você
                   entender melhor como está sua saúde corporal. Para realizar o seu teste, <UtmLink 
-                    href="https://www.definamaxoficial.com/imc"
+                    href="https://definamaxoficial.com/analise"
                     className="text-green-600 hover:text-green-800 underline cursor-pointer"
                     eventId="imc-definamax"
                   >
@@ -133,11 +133,11 @@ const RankingSection = () => {
                     <span>→</span> Acessar Site Oficial
                   </UtmLink>
                   <UtmLink 
-                    href="https://www.definamaxoficial.com/" 
+                    href="https://mon.net.br/3i6gsj" 
                     className="w-full bg-orange-500 text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                     eventId="informacoes-definamax"
                   >
-                    <span>ℹ</span> Obter mais informações
+                    <span>→</span> Obter mais informações
                   </UtmLink>
                 </div>
 
@@ -259,7 +259,7 @@ const RankingSection = () => {
                     className="w-full bg-orange-500 text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                     eventId="informacoes-ozenvitta"
                   >
-                    <span>ℹ</span> Obter mais informações
+                    <span>→</span> Obter mais informações
                   </UtmLink>
                 </div>
 
@@ -378,7 +378,7 @@ const RankingSection = () => {
                     className="w-full bg-orange-500 text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                     eventId="informacoes-sb2"
                   >
-                    <span>ℹ</span> Obter mais informações
+                    <span>→</span> Obter mais informações
                   </UtmLink>
                 </div>
 
@@ -497,7 +497,7 @@ const RankingSection = () => {
                     className="w-full bg-orange-500 text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                     eventId="informacoes-newdetox"
                   >
-                    <span>ℹ</span> Obter mais informações
+                    <span>→</span> Obter mais informações
                   </UtmLink>
                 </div>
 
@@ -616,7 +616,7 @@ const RankingSection = () => {
                     className="w-full bg-orange-500 text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                     eventId="informacoes-mounja"
                   >
-                    <span>ℹ</span> Obter mais informações
+                    <span>→</span> Obter mais informações
                   </UtmLink>
                 </div>
 

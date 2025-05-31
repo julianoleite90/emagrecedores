@@ -27,7 +27,7 @@ const HeroSection = () => {
             </div>
 
             {/* Título principal */}
-            <div className="text-center lg:text-left">
+            <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-4">
                 <div>Os <span className="text-slate-700">5 Melhores Remédios</span></div>
                 <div>Para <span className="text-slate-700">Emagrecer</span> em Maio</div>
