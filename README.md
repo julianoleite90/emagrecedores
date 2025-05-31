@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page - Análise de Emagrecedores 2025
 
-## Getting Started
+Uma landing page moderna e otimizada para apresentar análises detalhadas dos melhores suplementos para emagrecimento em 2025.
 
-First, run the development server:
+## 🚀 Tecnologias
+
+- [Next.js 14](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## ✨ Funcionalidades
+
+- Design responsivo e otimizado para mobile
+- Análise detalhada de 5 produtos principais
+- Sistema de ranking com avaliações
+- Integração com Google Analytics
+- Otimização SEO
+- Suporte a PWA
+
+## 📦 Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/julianoleite90/novo-analise.git
+
+# Entre no diretório
+cd novo-analise
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Configuração
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O projeto utiliza as seguintes variáveis de ambiente:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `NEXT_PUBLIC_GA_ID`: ID do Google Analytics
 
-## Learn More
+## 📱 PWA
 
-To learn more about Next.js, take a look at the following resources:
+O projeto está configurado como PWA (Progressive Web App), oferecendo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Instalação na tela inicial
+- Funcionamento offline
+- Carregamento rápido
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Layout
 
-## Deploy on Vercel
+O layout foi desenvolvido com foco em:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- UX/UI moderno e intuitivo
+- Alta taxa de conversão
+- Carregamento otimizado
+- Experiência mobile-first
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📈 Performance
+
+O projeto foi otimizado para obter as melhores métricas no PageSpeed:
+
+- Imagens otimizadas
+- Lazy loading
+- CSS/JS minificados
+- Caching eficiente
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
