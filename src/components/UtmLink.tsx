@@ -12,7 +12,7 @@ interface UtmLinkProps {
 
 declare global {
   interface Window {
-    trackCTAClick: (productId: string, ctaType: string) => void;
+    trackCTAClick?: (productId: string, ctaType: string) => void;
   }
 }
 
@@ -25,7 +25,10 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
 
   const handleClick = () => {
     const [productId, ctaType] = eventId.split('-');
-    window.trackCTAClick(productId, ctaType);
+    if (window.trackCTAClick) {
+      console.log('CTA clicked, tracking:', { productId, ctaType });
+      window.trackCTAClick(productId, ctaType);
+    }
   };
 
   return (
@@ -35,6 +38,8 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
       target="_blank"
       rel="noopener noreferrer"
       onClick={handleClick}
+      data-product-id={eventId.split('-')[0]}
+      data-cta-type={eventId.split('-')[1]}
     >
       {children}
     </a>

@@ -46,20 +46,30 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-RTEPB48RDY');
 
-            // Função para rastrear visualização de seção
+            // Definindo funções de rastreamento globalmente
             window.trackSectionView = function(sectionId) {
+              console.log('Tracking section view:', sectionId);
               gtag('event', 'section_view', {
-                'section_id': sectionId
+                section_id: sectionId,
+                section_name: sectionId.replace(/-/g, ' ').toLowerCase()
               });
-            }
+            };
 
-            // Função para rastrear cliques em CTAs
             window.trackCTAClick = function(productId, ctaType) {
+              console.log('Tracking CTA click:', productId, ctaType);
               gtag('event', 'click_cta', {
-                'product_id': productId,
-                'cta_type': ctaType
+                product_id: productId,
+                cta_type: ctaType,
+                content_type: 'cta_button',
+                item_id: productId + '-' + ctaType
               });
-            }
+            };
+
+            // Verificar se as funções foram definidas corretamente
+            console.log('GA4 tracking functions initialized:', {
+              trackSectionView: typeof window.trackSectionView === 'function',
+              trackCTAClick: typeof window.trackCTAClick === 'function'
+            });
           `}
         </Script>
       </head>

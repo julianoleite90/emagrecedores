@@ -9,7 +9,7 @@ interface SectionTrackerProps {
 
 declare global {
   interface Window {
-    trackSectionView: (sectionId: string) => void;
+    trackSectionView?: (sectionId: string) => void;
   }
 }
 
@@ -23,7 +23,8 @@ const SectionTracker = ({ sectionId, children }: SectionTrackerProps) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasTracked.current) {
+          if (entry.isIntersecting && !hasTracked.current && window.trackSectionView) {
+            console.log('Section in view, tracking:', sectionId);
             window.trackSectionView(sectionId);
             hasTracked.current = true;
             observer.disconnect();
@@ -32,6 +33,7 @@ const SectionTracker = ({ sectionId, children }: SectionTrackerProps) => {
       },
       {
         threshold: 0.5, // Track when 50% of the section is visible
+        rootMargin: '0px' // Trigger when section enters viewport
       }
     );
 
@@ -43,7 +45,7 @@ const SectionTracker = ({ sectionId, children }: SectionTrackerProps) => {
   }, [sectionId]);
 
   return (
-    <div ref={sectionRef}>
+    <div ref={sectionRef} id={sectionId}>
       {children}
     </div>
   );
