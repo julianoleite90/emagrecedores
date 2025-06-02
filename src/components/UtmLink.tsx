@@ -1,7 +1,6 @@
 'use client';
 
 import { appendUtmToUrl } from '@/utils/utm';
-import { useAnalytics } from '@/hooks/useAnalytics';
 import { useEffect, useState } from 'react';
 
 interface UtmLinkProps {
@@ -11,9 +10,14 @@ interface UtmLinkProps {
   eventId: string;
 }
 
+declare global {
+  interface Window {
+    trackCTAClick: (productId: string, ctaType: string) => void;
+  }
+}
+
 const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
   const [utmHref, setUtmHref] = useState(href);
-  const { trackCTAClick } = useAnalytics();
 
   useEffect(() => {
     setUtmHref(appendUtmToUrl(href));
@@ -21,7 +25,7 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
 
   const handleClick = () => {
     const [productId, ctaType] = eventId.split('-');
-    trackCTAClick(productId, ctaType);
+    window.trackCTAClick(productId, ctaType);
   };
 
   return (

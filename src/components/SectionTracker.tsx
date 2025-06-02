@@ -1,15 +1,19 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { useAnalytics } from '@/hooks/useAnalytics';
 
 interface SectionTrackerProps {
   sectionId: string;
   children: React.ReactNode;
 }
 
+declare global {
+  interface Window {
+    trackSectionView: (sectionId: string) => void;
+  }
+}
+
 const SectionTracker = ({ sectionId, children }: SectionTrackerProps) => {
-  const { trackSectionView } = useAnalytics();
   const sectionRef = useRef<HTMLDivElement>(null);
   const hasTracked = useRef(false);
 
@@ -20,7 +24,7 @@ const SectionTracker = ({ sectionId, children }: SectionTrackerProps) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasTracked.current) {
-            trackSectionView(sectionId);
+            window.trackSectionView(sectionId);
             hasTracked.current = true;
             observer.disconnect();
           }
@@ -36,7 +40,7 @@ const SectionTracker = ({ sectionId, children }: SectionTrackerProps) => {
     return () => {
       observer.disconnect();
     };
-  }, [sectionId, trackSectionView]);
+  }, [sectionId]);
 
   return (
     <div ref={sectionRef}>

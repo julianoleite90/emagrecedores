@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Script from "next/script";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -34,6 +35,33 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-RTEPB48RDY`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RTEPB48RDY');
+
+            // Função para rastrear visualização de seção
+            window.trackSectionView = function(sectionId) {
+              gtag('event', 'section_view', {
+                'section_id': sectionId
+              });
+            }
+
+            // Função para rastrear cliques em CTAs
+            window.trackCTAClick = function(productId, ctaType) {
+              gtag('event', 'click_cta', {
+                'product_id': productId,
+                'cta_type': ctaType
+              });
+            }
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
         <Header />
