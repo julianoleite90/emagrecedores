@@ -38,54 +38,8 @@ export default function RootLayout({
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          src={`/analytics.js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-                transport_type: 'beacon',
-                debug_mode: true
-              });
-
-              // Handle client-side navigation
-              if (typeof window !== 'undefined') {
-                const handleRouteChange = (url) => {
-                  gtag('event', 'page_view', {
-                    page_path: url,
-                    page_title: document.title,
-                    page_location: window.location.href
-                  });
-                  console.log('Analytics: Page view sent for', url);
-                };
-
-                window.addEventListener('popstate', () => {
-                  handleRouteChange(window.location.pathname);
-                });
-
-                // Observe DOM changes for SPA navigation
-                const observer = new MutationObserver((mutations) => {
-                  mutations.forEach((mutation) => {
-                    if (mutation.type === 'childList' && mutation.target.nodeName === 'TITLE') {
-                      handleRouteChange(window.location.pathname);
-                    }
-                  });
-                });
-
-                observer.observe(document.querySelector('head'), {
-                  childList: true,
-                  subtree: true
-                });
-              }
-            `
-          }}
         />
       </head>
       <body className={inter.className}>

@@ -45,7 +45,13 @@ const RankingSection = () => {
 
             <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-4"></div>
             
-            <div className="flex flex-col sm:flex-row gap-6 mb-6" id="definamax">
+            <div 
+              className="flex flex-col sm:flex-row gap-6 mb-6" 
+              id="definamax"
+              data-ga-event="section_view"
+              data-ga-category="Produto"
+              data-ga-label="Definamax"
+            >
               <div className="w-full sm:w-64 shrink-0">
                 <Image
                   src="/definamax-400.webp"
@@ -177,7 +183,12 @@ const RankingSection = () => {
 
             <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-6"></div>
             
-            <div className="flex flex-col sm:flex-row gap-8 mb-8">
+            <div 
+              className="flex flex-col sm:flex-row gap-8 mb-8"
+              data-ga-event="section_view"
+              data-ga-category="Produto"
+              data-ga-label="Ozenvitta"
+            >
               <div className="w-full sm:w-64 shrink-0">
                 <Image
                   src="/ozenvitta-400.webp"
@@ -275,7 +286,12 @@ const RankingSection = () => {
           </div>
 
           {/* Terceiro Produto */}
-          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
+          <div 
+            className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative"
+            data-ga-event="section_view"
+            data-ga-category="Produto"
+            data-ga-label="SB2 Turbo"
+          >
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               3° Lugar
             </div>
@@ -394,7 +410,12 @@ const RankingSection = () => {
           </div>
 
           {/* Quarto Produto */}
-          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
+          <div 
+            className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative"
+            data-ga-event="section_view"
+            data-ga-category="Produto"
+            data-ga-label="New Detox"
+          >
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               4° Lugar
             </div>
@@ -513,7 +534,12 @@ const RankingSection = () => {
           </div>
 
           {/* Quinto Produto */}
-          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
+          <div 
+            className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative"
+            data-ga-event="section_view"
+            data-ga-category="Produto"
+            data-ga-label="Mounja Slim"
+          >
             <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
               5° Lugar
             </div>
