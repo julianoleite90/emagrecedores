@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Script from 'next/script'
+import AnalyticsScript from "@/components/AnalyticsScript";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -12,13 +12,18 @@ const inter = Inter({
 
 const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#ffffff"
+};
+
 export const metadata: Metadata = {
   title: "5 Melhores Remédios Para Emagrecer em 2025",
   description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
   keywords: "remédios para emagrecer, emagrecimento, perda de peso, suplementos emagrecedores",
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-  themeColor: "#ffffff",
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
@@ -39,18 +44,7 @@ export default function RootLayout({
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       </head>
       <body className={inter.className}>
-        {/* Custom Analytics */}
-        <Script
-          src={`/analytics.js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-          onLoad={() => {
-            console.log('Analytics script carregado');
-          }}
-          onError={(e) => {
-            console.error('Erro ao carregar analytics:', e);
-          }}
-        />
-        
+        <AnalyticsScript />
         <Header />
         <main>
           {children}
