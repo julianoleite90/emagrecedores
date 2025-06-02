@@ -21,19 +21,38 @@ interface TrackRequestBody {
 
 export async function POST(request: Request) {
     try {
+        console.log('API: Recebendo requisição de tracking');
+        
         const body = await request.json() as TrackRequestBody;
         const { client_id, events, measurement_id } = body;
         const api_secret = process.env.API_SECRET;
 
+        console.log('API: Dados recebidos:', {
+            client_id,
+            measurement_id,
+            events_count: events?.length,
+            has_api_secret: !!api_secret
+        });
+
         if (!client_id || !events || !measurement_id || !api_secret) {
+            console.error('API: Campos obrigatórios ausentes:', {
+                has_client_id: !!client_id,
+                has_events: !!events,
+                has_measurement_id: !!measurement_id,
+                has_api_secret: !!api_secret
+            });
+            
             return NextResponse.json(
                 { error: 'Campos obrigatórios ausentes' },
                 { status: 400 }
             );
         }
 
+        const gaEndpoint = `https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`;
+        console.log('API: Enviando para GA:', gaEndpoint);
+
         const response = await fetch(
-            `https://www.google-analytics.com/mp/collect?measurement_id=${measurement_id}&api_secret=${api_secret}`,
+            gaEndpoint,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -43,16 +62,22 @@ export async function POST(request: Request) {
 
         if (!response.ok) {
             const errorText = await response.text();
-            console.error('Erro ao enviar para GA:', errorText);
+            console.error('API: Erro ao enviar para GA:', {
+                status: response.status,
+                statusText: response.statusText,
+                error: errorText
+            });
+            
             return NextResponse.json(
                 { error: 'Erro ao enviar para GA', details: errorText },
                 { status: 500 }
             );
         }
 
+        console.log('API: Eventos enviados com sucesso');
         return new NextResponse(null, { status: 204 });
     } catch (error) {
-        console.error('Erro no servidor:', error);
+        console.error('API: Erro no servidor:', error);
         const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
         return NextResponse.json(
             { error: 'Erro no servidor', details: errorMessage },

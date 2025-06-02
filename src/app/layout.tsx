@@ -37,12 +37,20 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      </head>
+      <body className={inter.className}>
+        {/* Custom Analytics */}
         <Script
           src={`/analytics.js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
+          onLoad={() => {
+            console.log('Analytics script carregado');
+          }}
+          onError={(e) => {
+            console.error('Erro ao carregar analytics:', e);
+          }}
         />
-      </head>
-      <body className={inter.className}>
+        
         <Header />
         <main>
           {children}
