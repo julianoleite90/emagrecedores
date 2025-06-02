@@ -1,8 +1,8 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 
 interface TrackEventProps {
   name: string;
-  params?: Record<string, any>;
+  params?: Record<string, string | number | boolean>;
 }
 
 const getClientId = () => {

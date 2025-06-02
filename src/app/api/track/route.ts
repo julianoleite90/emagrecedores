@@ -4,7 +4,20 @@ const API_SECRET = 'AIzaSyBTvIjsJNvQotJyY4l5oKyq6ja3XIg6Mp4';
 const GA_ENDPOINT = 'https://www.google-analytics.com/mp/collect';
 const MEASUREMENT_ID = 'G-RTEPB48RDY';
 
-async function sendToGA4(data: any) {
+interface GA4Event {
+  name: string;
+  params: Record<string, string | number | boolean>;
+}
+
+interface GA4Payload {
+  client_id: string;
+  events: GA4Event[];
+  user_properties: Record<string, unknown>;
+  timestamp_micros: number;
+  non_personalized_ads: boolean;
+}
+
+async function sendToGA4(data: GA4Payload): Promise<boolean> {
   try {
     const response = await fetch(`${GA_ENDPOINT}?measurement_id=${MEASUREMENT_ID}&api_secret=${API_SECRET}`, {
       method: 'POST',
@@ -28,9 +41,9 @@ async function sendToGA4(data: any) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { client_id, events, page_location, page_title } = body;
+    const { client_id, events } = body;
 
-    const data = {
+    const data: GA4Payload = {
       client_id: client_id || `${Math.random().toString(36).substring(2)}.${Date.now()}`,
       events,
       user_properties: {},
