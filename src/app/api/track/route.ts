@@ -1,7 +1,20 @@
 import { NextResponse } from 'next/server';
 
+interface TrackEvent {
+    name: string;
+    params: {
+        [key: string]: string;
+    };
+}
+
+interface TrackRequestBody {
+    client_id: string;
+    measurement_id: string;
+    events: TrackEvent[];
+}
+
 export async function POST(request: Request) {
-    const body = await request.json();
+    const body = await request.json() as TrackRequestBody;
     const { client_id, events, measurement_id } = body;
     const api_secret = process.env.API_SECRET;
 
@@ -31,9 +44,10 @@ export async function POST(request: Request) {
         }
 
         return new NextResponse(null, { status: 204 });
-    } catch (err: any) {
+    } catch (error: unknown) {
+        const errorMessage = error instanceof Error ? error.message : 'Erro desconhecido';
         return NextResponse.json(
-            { error: 'Erro no servidor', details: err.message },
+            { error: 'Erro no servidor', details: errorMessage },
             { status: 500 }
         );
     }
