@@ -3,16 +3,16 @@ const WhyConsiderSection = () => {
     <section className="py-12 bg-white">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center md:text-left">
-          Qual <span className="text-slate-700">remédio para emagrecer</span> é o mais eficaz?
+        Qual é o <span className="text-slate-700"> Melhor Remédio para Emagrecer em 2025 </span> para Você?
         </h2>
 
         <div className="space-y-6">
           <p className="text-gray-700 leading-relaxed">
-            Emagrecer pode ser um grande desafio. Se dietas restritivas, treinos intensos ou &quot;soluções milagrosas&quot; não funcionaram para você, saiba que não está sozinho! A boa notícia é que a ciência avançou, oferecendo medicamentos que ajudam milhões de brasileiros a perder peso de forma segura e eficaz. Mas, com tantas opções, como identificar o ideal para o seu caso?
+          Emagrecer pode ser um desafio frustrante. Se dietas restritivas, treinos exaustivos ou promessas milagrosas falharam com você, saiba que você não está sozinho nessa jornada. A boa notícia? A ciência evoluiu, trazendo opções que já ajudaram milhões de brasileiros a perder peso com segurança e eficácia.
           </p>
           
           <p className="text-gray-700 leading-relaxed">
-            Com a liderança da Dra. Ana Costa, nossa equipe analisou centenas de estudos e depoimentos reais, criando uma seleção confiável. Logo abaixo, você confere o ranking dos 5 melhores remédios para emagrecer em 2025 e descobre qual deles se adapta melhor à sua meta!
+          Mas, diante de tantas escolhas, como encontrar a certa para o seu caso? Liderada pela Dra. Ana Costa, nossa equipe mergulhou em centenas de estudos e depoimentos reais, elaborando uma seleção confiável. Abaixo, confira o ranking dos 5 melhores remédios de 2025 e veja qual deles se encaixa perfeitamente em seus objetivos para emagrecer.
           </p>
         </div>
       </div>

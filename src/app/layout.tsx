@@ -2,15 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Script from 'next/script'
 
 const inter = Inter({ 
   subsets: ["latin"],
   display: 'swap',
   preload: true,
 });
-
-const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
 
 export const metadata: Metadata = {
   title: "5 Melhores Remédios Para Emagrecer em 2025",
@@ -37,69 +34,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_MEASUREMENT_ID}', {
-                page_path: window.location.pathname,
-                transport_type: 'beacon',
-                debug_mode: true
-              });
-
-              // Handle client-side navigation
-              if (typeof window !== 'undefined') {
-                const getUtmParams = () => {
-                  const urlParams = new URLSearchParams(window.location.search);
-                  return {
-                    utm_source: urlParams.get('utm_source') || '(direct)',
-                    utm_medium: urlParams.get('utm_medium') || '(none)',
-                    utm_campaign: urlParams.get('utm_campaign') || '(not set)',
-                    utm_term: urlParams.get('utm_term') || '(not set)',
-                    utm_content: urlParams.get('utm_content') || '(not set)'
-                  };
-                };
-
-                const handleRouteChange = (url) => {
-                  const utmParams = getUtmParams();
-                  gtag('event', 'page_view', {
-                    page_path: url,
-                    page_title: document.title,
-                    page_location: window.location.href,
-                    ...utmParams
-                  });
-                  console.log('Analytics: Page view sent for', url, 'with UTMs:', utmParams);
-                };
-
-                window.addEventListener('popstate', () => {
-                  handleRouteChange(window.location.pathname);
-                });
-
-                // Observe DOM changes for SPA navigation
-                const observer = new MutationObserver((mutations) => {
-                  mutations.forEach((mutation) => {
-                    if (mutation.type === 'childList' && mutation.target.nodeName === 'TITLE') {
-                      handleRouteChange(window.location.pathname);
-                    }
-                  });
-                });
-
-                observer.observe(document.querySelector('head'), {
-                  childList: true,
-                  subtree: true
-                });
-              }
-            `
-          }}
-        />
       </head>
       <body className={inter.className}>
         <Header />

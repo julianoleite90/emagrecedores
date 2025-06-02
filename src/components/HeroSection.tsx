@@ -29,14 +29,14 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Descubra os 5 Melhores Remédios para <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Emagrecer</span></div>
+                <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer em 2025 <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Revelados!</span></div>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Com resultados comprovados</h2>
+              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Descubra quais opções científicas estão ajudando milhares a alcançar seus objetivos de forma segura – veja nossa análise completa.</h2>
             </div>
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-              Você pesquisou por um remédio para emagrecer porque busca uma solução segura, eficaz e que realmente funcione para alcançar seus objetivos? Então você está no <span className="font-medium">lugar certo</span>! Nesta análise, vamos revelar o <span className="text-slate-700 font-medium">ranking dos 5 melhores remédios</span> disponíveis no mercado, todos com <span className="text-slate-700 font-medium">resultados comprovados por estudos clínicos</span>.
+            Já tentou emagrecer sem sucesso? Muitas pessoas enfrentam essa dificuldade, mas a ciência avançou. Nesta análise, nossa equipe revela o ranking dos 5 melhores remédios de 2025, validados por estudos clínicos e experiência especializada.
             </p>
 
             {/* Imagem em mobile */}
@@ -52,13 +52,9 @@ const HeroSection = () => {
 
             {/* Primeiro parágrafo */}
             <p className="text-gray-700 leading-relaxed">
-              Agora é o momento de transformar sua jornada! Emagrecer envolve diversos fatores, e muitas vezes dieta e exercícios sozinhos não são suficientes para superar as barreiras do corpo. Felizmente, a ciência e a natureza trazem aliados poderosos: <span className="text-slate-700 font-medium">remédios que realmente fazem a diferença</span>.
+            Com a liderança da Dra. Ana Costa, especialista renomada em emagrecimento, analisamos centenas de estudos e depoimentos reais. Abaixo, explore nosso ranking com os 5 melhores remédios de 2025 e descubra qual se adapta melhor aos seus objetivos de emagrecimento.
             </p>
 
-            {/* Segundo parágrafo */}
-            <p className="text-gray-700 mb-8 leading-relaxed">
-            Nossa equipe, liderada pela Dra. Ana Costa, especialista em emagrecimento, analisou centenas de estudos e depoimentos reais para trazer uma seleção confiável. Mais abaixo, você vai conhecer o ranking com os 5 melhores remédios para emagrecer de 2025 e entender qual deles é o mais indicado para a sua jornada.
-            </p>
 
             {/* Botão CTA */}
             <ScrollLink 
