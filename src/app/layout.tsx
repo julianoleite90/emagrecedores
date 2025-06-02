@@ -10,6 +10,8 @@ const inter = Inter({
   preload: true,
 });
 
+const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
+
 export const metadata: Metadata = {
   title: "TESTANDO: Os 5 Melhores Remédios Para Emagrecer em 2025",
   description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
@@ -35,6 +37,56 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}', {
+                page_path: window.location.pathname,
+                transport_type: 'beacon',
+                debug_mode: true
+              });
+
+              // Handle client-side navigation
+              if (typeof window !== 'undefined') {
+                const handleRouteChange = (url) => {
+                  gtag('event', 'page_view', {
+                    page_path: url,
+                    page_title: document.title,
+                    page_location: window.location.href
+                  });
+                  console.log('Analytics: Page view sent for', url);
+                };
+
+                window.addEventListener('popstate', () => {
+                  handleRouteChange(window.location.pathname);
+                });
+
+                // Observe DOM changes for SPA navigation
+                const observer = new MutationObserver((mutations) => {
+                  mutations.forEach((mutation) => {
+                    if (mutation.type === 'childList' && mutation.target.nodeName === 'TITLE') {
+                      handleRouteChange(window.location.pathname);
+                    }
+                  });
+                });
+
+                observer.observe(document.querySelector('head'), {
+                  childList: true,
+                  subtree: true
+                });
+              }
+            `
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Header />
@@ -68,34 +120,6 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <Script
-          id="analytics"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function trackPageView() {
-                const measurementId = 'G-RTEPB48RDY';
-                const clientId = \`\${Math.floor(Math.random() * 1e10)}.\${Date.now()}\`;
-                const payload = {
-                  client_id: clientId,
-                  measurement_id: measurementId,
-                  events: [{
-                    name: 'page_view',
-                    params: {
-                      page_title: document.title,
-                      page_path: window.location.pathname,
-                      page_location: window.location.href
-                    }
-                  }]
-                };
-                fetch('/api/track', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(payload)
-                }).catch(console.error);
-              })();
-            `
-          }}
-        />
       </body>
     </html>
   );
