@@ -10,8 +10,6 @@ const inter = Inter({
   preload: true,
 });
 
-const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
-
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
