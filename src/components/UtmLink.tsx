@@ -10,6 +10,12 @@ interface UtmLinkProps {
   eventId: string;
 }
 
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params: any) => void;
+  }
+}
+
 const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
   const [utmHref, setUtmHref] = useState(href);
 
@@ -17,30 +23,30 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
     setUtmHref(appendUtmToUrl(href));
   }, [href]);
 
-  const trackClick = async () => {
-    const clientId = `${Math.floor(Math.random() * 1e10)}.${Date.now()}`;
-    
-    try {
-      await fetch('/api/track', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          client_id: clientId,
-          measurement_id: 'G-RTEPB48RDY',
-          events: [{
-            name: 'click_cta',
-            params: {
-              event_category: 'CTA',
-              event_label: eventId,
-              event_value: href
-            }
-          }]
-        })
+  const trackClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmParams = {
+        utm_source: urlParams.get('utm_source') || '(direct)',
+        utm_medium: urlParams.get('utm_medium') || '(none)',
+        utm_campaign: urlParams.get('utm_campaign') || '(not set)',
+        utm_term: urlParams.get('utm_term') || '(not set)',
+        utm_content: urlParams.get('utm_content') || '(not set)'
+      };
+
+      window.gtag('event', 'click_cta', {
+        event_category: 'CTA',
+        event_label: eventId,
+        event_value: href,
+        ...utmParams,
+        outbound_link: href
       });
-    } catch (error) {
-      console.error('Error tracking click:', error);
+
+      console.log('Analytics: CTA click tracked', {
+        eventId,
+        href,
+        utmParams
+      });
     }
   };
 

@@ -57,13 +57,26 @@ export default function RootLayout({
 
               // Handle client-side navigation
               if (typeof window !== 'undefined') {
+                const getUtmParams = () => {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  return {
+                    utm_source: urlParams.get('utm_source') || '(direct)',
+                    utm_medium: urlParams.get('utm_medium') || '(none)',
+                    utm_campaign: urlParams.get('utm_campaign') || '(not set)',
+                    utm_term: urlParams.get('utm_term') || '(not set)',
+                    utm_content: urlParams.get('utm_content') || '(not set)'
+                  };
+                };
+
                 const handleRouteChange = (url) => {
+                  const utmParams = getUtmParams();
                   gtag('event', 'page_view', {
                     page_path: url,
                     page_title: document.title,
-                    page_location: window.location.href
+                    page_location: window.location.href,
+                    ...utmParams
                   });
-                  console.log('Analytics: Page view sent for', url);
+                  console.log('Analytics: Page view sent for', url, 'with UTMs:', utmParams);
                 };
 
                 window.addEventListener('popstate', () => {
