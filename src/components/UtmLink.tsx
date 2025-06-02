@@ -17,15 +17,40 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
     setUtmHref(appendUtmToUrl(href));
   }, [href]);
 
+  const trackClick = async () => {
+    const clientId = `${Math.floor(Math.random() * 1e10)}.${Date.now()}`;
+    
+    try {
+      await fetch('/api/track', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          client_id: clientId,
+          measurement_id: 'G-RTEPB48RDY',
+          events: [{
+            name: 'click_cta',
+            params: {
+              event_category: 'CTA',
+              event_label: eventId,
+              event_value: href
+            }
+          }]
+        })
+      });
+    } catch (error) {
+      console.error('Error tracking click:', error);
+    }
+  };
+
   return (
     <a 
       href={utmHref}
       className={className}
       target="_blank"
       rel="noopener noreferrer"
-      data-ga-event={eventId}
-      data-ga-category="CTA"
-      data-ga-label={eventId}
+      onClick={trackClick}
     >
       {children}
     </a>
