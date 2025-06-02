@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Script from 'next/script';
 import UtmLink from './UtmLink';
 
+const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
+
 const RankingSection = () => {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white" id="ranking">
@@ -831,19 +833,27 @@ const RankingSection = () => {
             const observer = new IntersectionObserver((entries) => {
               entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                  fetch('/api/track', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
+                  const clientId = localStorage.getItem('ga_client_id');
+                  if (!clientId) return;
+
+                  const payload = {
+                    client_id: clientId,
+                    measurement_id: '${GA_MEASUREMENT_ID}',
+                    events: [{
                       name: 'scroll_to_footer',
                       params: {
                         event_category: 'Engagement',
-                        event_label: 'User reached footer'
+                        event_label: 'User reached footer',
+                        page_location: window.location.href,
+                        page_path: window.location.pathname,
+                        page_title: document.title
                       }
-                    })
-                  }).catch(console.error);
+                    }]
+                  };
+
+                  const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+                  navigator.sendBeacon('/api/track', blob);
+                  
                   observer.disconnect(); // Only track once
                 }
               });
