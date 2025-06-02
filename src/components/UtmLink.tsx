@@ -10,15 +10,6 @@ interface UtmLinkProps {
   eventId: string;
 }
 
-interface WindowWithGtag extends Window {
-  gtag?: (command: string, action: string, params: {
-    event_category: string;
-    event_label: string;
-    event_value: string;
-    transport_type: string;
-  }) => void;
-}
-
 const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
   const [utmHref, setUtmHref] = useState(href);
 
@@ -26,26 +17,40 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
     setUtmHref(appendUtmToUrl(href));
   }, [href]);
 
+  const trackClick = async () => {
+    const clientId = `${Math.floor(Math.random() * 1e10)}.${Date.now()}`;
+    
+    try {
+      await fetch('/api/track', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          client_id: clientId,
+          measurement_id: 'G-RTEPB48RDY',
+          events: [{
+            name: 'click_cta',
+            params: {
+              event_category: 'CTA',
+              event_label: eventId,
+              event_value: href
+            }
+          }]
+        })
+      });
+    } catch (error) {
+      console.error('Error tracking click:', error);
+    }
+  };
+
   return (
     <a 
       href={utmHref}
       className={className}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => {
-        // Track click event in Google Analytics with specific event ID
-        if (typeof window !== 'undefined') {
-          const windowWithGtag = window as WindowWithGtag;
-          if (windowWithGtag.gtag) {
-            windowWithGtag.gtag('event', 'click_cta', {
-              event_category: 'CTA',
-              event_label: eventId,
-              event_value: href,
-              transport_type: 'beacon'
-            });
-          }
-        }
-      }}
+      onClick={trackClick}
     >
       {children}
     </a>
