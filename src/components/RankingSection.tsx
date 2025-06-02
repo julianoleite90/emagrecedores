@@ -1,9 +1,6 @@
 import Image from 'next/image';
-import Script from 'next/script';
 import UtmLink from './UtmLink';
 import FooterTracking from './FooterTracking';
-
-const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
 
 const RankingSection = () => {
   return (
