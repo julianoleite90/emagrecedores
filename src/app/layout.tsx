@@ -13,7 +13,7 @@ const inter = Inter({
 const GA_MEASUREMENT_ID = 'G-RTEPB48RDY';
 
 export const metadata: Metadata = {
-  title: "TESTANDO: Os 5 Melhores Remédios Para Emagrecer em 2025",
+  title: "5 Melhores Remédios Para Emagrecer em 2025",
   description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
   keywords: "remédios para emagrecer, emagrecimento, perda de peso, suplementos emagrecedores",
   robots: "index, follow",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
-    title: "TESTANDO: Os 5 Melhores Remédios Para Emagrecer em 2025",
+    title: "5 Melhores Remédios Para Emagrecer em 2025",
     description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
     siteName: "Análise de Emagrecedores",
   },
