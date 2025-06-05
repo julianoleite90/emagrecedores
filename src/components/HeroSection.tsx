@@ -4,13 +4,18 @@ import ScrollLink from './ScrollLink';
 const HeroSection = () => {
   const formatDate = () => {
     const date = new Date();
-    const spDate = new Date(date.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
-    return spDate.toLocaleDateString('pt-BR', {
+    // Usando Intl.DateTimeFormat para formatação mais confiável
+    const formatter = new Intl.DateTimeFormat('pt-BR', {
+      timeZone: 'America/Sao_Paulo',
       weekday: 'long',
-      day: 'numeric',
+      day: 'numeric', 
       month: 'long',
       year: 'numeric'
-    }).replace(/^\w/, (c) => c.toUpperCase()); // Capitaliza a primeira letra
+    });
+    
+    const formattedDate = formatter.format(date);
+    // Capitaliza a primeira letra
+    return formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
   };
 
   return (

@@ -128,14 +128,14 @@ const RankingSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
                       href="https://www.definamaxoficial.com/" 
-                      className="w-full bg-[#00C853] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-definamax"
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
                     <UtmLink 
                       href="https://www.definamaxoficial.com/" 
-                      className="w-full bg-[#FF6B00] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-definamax"
                     >
                       <span>→</span> Obter mais informações
@@ -252,14 +252,14 @@ const RankingSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
                       href="https://mon.net.br/3i6gsj" 
-                      className="w-full bg-[#00C853] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-ozenvitta"
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
                     <UtmLink 
                       href="https://mon.net.br/3i6gsj" 
-                      className="w-full bg-[#FF6B00] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-ozenvitta"
                     >
                       <span>→</span> Obter mais informações
@@ -373,14 +373,14 @@ const RankingSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
                       href="https://mon.net.br/3eefqg" 
-                      className="w-full bg-[#00C853] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-sb2"
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
                     <UtmLink 
                       href="https://mon.net.br/3eefqg" 
-                      className="w-full bg-[#FF6B00] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-sb2"
                     >
                       <span>→</span> Obter mais informações
@@ -494,14 +494,14 @@ const RankingSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
                       href="https://mon.net.br/3eefce" 
-                      className="w-full bg-[#00C853] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-newdetox"
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
                     <UtmLink 
                       href="https://mon.net.br/3eefce" 
-                      className="w-full bg-[#FF6B00] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-newdetox"
                     >
                       <span>→</span> Obter mais informações
@@ -615,14 +615,14 @@ const RankingSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
                       href="https://app.monetizze.com.br/r/BGZ1881505" 
-                      className="w-full bg-[#00C853] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-mounja"
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
                     <UtmLink 
                       href="https://app.monetizze.com.br/r/BGZ1881505" 
-                      className="w-full bg-[#FF6B00] text-white text-center py-3 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-mounja"
                     >
                       <span>→</span> Obter mais informações
