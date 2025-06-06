@@ -3,19 +3,22 @@ import ScrollLink from './ScrollLink';
 
 const HeroSection = () => {
   const formatDate = () => {
-    const date = new Date();
-    // Usando Intl.DateTimeFormat para formatação mais confiável
-    const formatter = new Intl.DateTimeFormat('pt-BR', {
+    // Obter data atual no timezone de Brasília de forma mais confiável
+    const now = new Date();
+    
+    // Converter para timezone de São Paulo usando toLocaleDateString diretamente
+    const options: Intl.DateTimeFormatOptions = {
       timeZone: 'America/Sao_Paulo',
       weekday: 'long',
-      day: 'numeric', 
-      month: 'long',
+      day: 'numeric',
+      month: 'long', 
       year: 'numeric'
-    });
+    };
     
-    const formattedDate = formatter.format(date);
+    const brasiliaDateString = now.toLocaleDateString('pt-BR', options);
+    
     // Capitaliza a primeira letra
-    return formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
+    return brasiliaDateString.charAt(0).toUpperCase() + brasiliaDateString.slice(1);
   };
 
   return (
