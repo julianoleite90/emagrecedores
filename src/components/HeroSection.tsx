@@ -38,7 +38,7 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer em 2025 <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Revelados!</span></div>
+                <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer em 2025 <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Analisados!</span></div>
               </h1>
               <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Descubra quais opções científicas estão ajudando milhares a alcançar seus objetivos de forma segura – veja nossa análise completa.</h2>
             </div>
