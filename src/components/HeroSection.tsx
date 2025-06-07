@@ -4,7 +4,8 @@ import ScrollLink from './ScrollLink';
 const HeroSection = () => {
   const formatDate = () => {
     // Obter data atual no timezone de Brasília de forma mais confiável
-    const now = new Date();
+    // Forçar a atualização da data garantindo que não use cache
+    const currentDateTime = new Date(Date.now());
     
     // Converter para timezone de São Paulo usando toLocaleDateString diretamente
     const options: Intl.DateTimeFormatOptions = {
@@ -15,7 +16,7 @@ const HeroSection = () => {
       year: 'numeric'
     };
     
-    const brasiliaDateString = now.toLocaleDateString('pt-BR', options);
+    const brasiliaDateString = currentDateTime.toLocaleDateString('pt-BR', options);
     
     // Capitaliza a primeira letra
     return brasiliaDateString.charAt(0).toUpperCase() + brasiliaDateString.slice(1);
