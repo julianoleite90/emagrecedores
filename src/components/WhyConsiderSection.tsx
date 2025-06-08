@@ -2,7 +2,11 @@
 import { useState, useRef } from 'react';
 import ScrollLink from './ScrollLink';
 
-const WhyConsiderSection = () => {
+interface WhyConsiderSectionProps {
+  onQuizComplete?: (completed: boolean) => void;
+}
+
+const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [answers, setAnswers] = useState({
     goal: '',
@@ -72,6 +76,14 @@ const WhyConsiderSection = () => {
         }, 100); // Small delay to ensure the element is rendered
       }, 300);
     } else {
+      // Quiz completed, notify parent component
+      const completed = newAnswers.goal && newAnswers.challenge && newAnswers.timeframe;
+      if (completed && onQuizComplete) {
+        setTimeout(() => {
+          onQuizComplete(true);
+        }, 600); // Small delay to show the result first
+      }
+      
       // Scroll to result after answering the last question
       setTimeout(() => {
         if (resultRef.current) {
