@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import ScrollLink from './ScrollLink';
 
 const WhyConsiderSection = () => {
@@ -86,7 +86,7 @@ const WhyConsiderSection = () => {
   };
 
   const getPersonalizedResult = () => {
-    const { goal, challenge, timeframe } = answers;
+    const { goal } = answers;
     
     // Base recommendations based on answers
     const recommendations = {
