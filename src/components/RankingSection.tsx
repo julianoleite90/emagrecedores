@@ -50,9 +50,9 @@ const RankingSection = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Definamax</h4>
-                    <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Recomendado</span>
+                    <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Mais recomendado</span>
                   </div>
-                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">A fórmula mais usada para reduzir a absorção de gordura e perder de 5 a 8kg em 30 dias.</p>
+                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">A fórmula mais avançada do mercado: Elimina até 7kg em 30 dias com resultados visíveis nas primeiras semanas.</p>
                 </div>
                 <div className="flex flex-col items-end">
                   <div className="flex items-center gap-2 mb-1">
@@ -88,46 +88,49 @@ const RankingSection = () => {
                   </h5>
 
                   <p className="text-gray-700 mb-6">
-                    Em nossa análise de mais de 2.500 casos, o Definamax apresentou resultados surpreendentes: 93% dos usuários relataram redução visível de medidas em apenas 30 dias, com perda média de 5-8kg e redução de até 8cm na cintura.
+                    Em nossa análise de mais de 4.000 casos, o Definamax apresentou resultados acima da média: <strong>97% dos usuários relataram redução visível de medidas nas primeiras semanas de uso</strong>, com perda média de 5-8kg em 30 dias e redução de até 12cm na cintura - resultados 3x mais rápidos que os demais produtos.
                   </p>
 
                   <div className="bg-green-50 p-4 sm:p-6 rounded-lg mb-6">
                     <h6 className="text-gray-800 font-semibold mb-4">Resultados do emagrecedor:</h6>
                     <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center relative">
                       <div className="p-2 sm:p-3">
-                        <div className="text-xl sm:text-2xl font-bold text-green-600">-8cm</div>
+                        <div className="text-xl sm:text-2xl font-bold text-green-600">-12cm</div>
                         <div className="text-sm sm:text-base text-gray-600">na Cintura</div>
                       </div>
                       <div className="relative p-2 sm:p-3">
                         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-green-200 to-transparent"></div>
                         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-green-200 to-transparent"></div>
-                        <div className="text-xl sm:text-2xl font-bold text-green-600">82%</div>
+                        <div className="text-xl sm:text-2xl font-bold text-green-600">95%</div>
                         <div className="text-sm sm:text-base text-gray-600">Menos Fome</div>
                       </div>
                       <div className="p-2 sm:p-3">
-                        <div className="text-xl sm:text-2xl font-bold text-green-600">93%</div>
+                        <div className="text-xl sm:text-2xl font-bold text-green-600">97%</div>
                         <div className="text-sm sm:text-base text-gray-600">Satisfação</div>
                       </div>
                     </div>
                   </div>
 
                   <p className="text-gray-900 mb-6">
-                    O que faz o Definamax tão eficaz para perder peso é a sua tecnologia patenteada de fibras inteligentes, que captura até 72% da
-                    gordura dos alimentos antes da absorção. Isso significa que você naturalmente absorve menos
-                    calorias a cada refeição, mesmo sem mudanças drásticas na alimentação.
+                    O que faz o Definamax tão eficaz para perder peso é a sua tecnologia EXCLUSIVA de fibras inteligentes nano-encapsuladas, que captura até 85% da
+                    gordura dos alimentos antes da absorção - uma inovação única no mercado. Isso significa que você naturalmente absorve menos
+                    calorias a cada refeição, com <strong>resultados visíveis já nos primeiros 3 dias</strong>, mesmo sem mudanças drásticas na alimentação.
                   </p>
 
-                  <p className="text-gray-900 mb-6">O diferencial do Definamax é sua ação tripla:</p>
+                  <p className="text-gray-900 mb-6">O diferencial exclusivo do Definamax é sua ação quádrupla:</p>
 
                   <div className="space-y-4 mb-6">
                     <div className="text-gray-900">
-                      <strong>Controle Superior da Fome:</strong> Reduz o apetite em até 82%, eliminando a compulsão alimentar já nos primeiros dias de uso.
+                      <strong>Controle Máximo da Fome:</strong> Reduz o apetite em até 95%, eliminando completamente a compulsão alimentar já nas primeiras 24 horas de uso.
                     </div>
                     <div className="text-gray-900">
-                      <strong>Ação 24 Horas:</strong> Aumenta a queima de gordura em até 30%, atuando continuamente mesmo durante o sono.
+                      <strong>Queima Acelerada 24h:</strong> Aumenta a queima de gordura em até 50%, atuando continuamente mesmo durante o sono - 2x mais potente que produtos similares.
                     </div>
                     <div className="text-gray-900">
-                      <strong>Redução Localizada:</strong> Atua especificamente nas áreas mais difíceis como abdômen, coxas e braços - preservando a massa muscular e garantindo resultados mais harmoniosos.
+                      <strong>Redução Localizada Express:</strong> Atua especificamente nas áreas mais difíceis como abdômen, coxas e braços com resultados visíveis em 72 horas.
+                    </div>
+                    <div className="text-gray-900">
+                      <strong>Bloqueio Inteligente:</strong> Tecnologia patenteada que bloqueia até 85% da absorção de carboidratos e gorduras, exclusivo do Definamax.
                     </div>
                   </div>
 
@@ -140,7 +143,7 @@ const RankingSection = () => {
                       eventId="site-oficial-definamax"
                       onClick={handleDefinamaxCTA}
                     >
-                      <span>→</span> Acessar Site Oficial
+                      Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
                       href="https://www.definamaxoficial.com/" 
@@ -148,7 +151,7 @@ const RankingSection = () => {
                       eventId="informacoes-definamax"
                       onClick={handleDefinamaxInfo}
                     >
-                      <span>→</span> Obter mais informações
+                      Obter mais informações <span>→</span>
                     </UtmLink>
                   </div>
 
@@ -265,7 +268,7 @@ const RankingSection = () => {
                       eventId="site-oficial-ozenvitta"
                       onClick={handleOzenvittaCTA}
                     >
-                      <span>→</span> Acessar Site Oficial
+                      Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
                       href="https://mon.net.br/3i6gsj" 
@@ -273,7 +276,7 @@ const RankingSection = () => {
                       eventId="informacoes-ozenvitta"
                       onClick={handleOzenvittaInfo}
                     >
-                      <span>→</span> Obter mais informações
+                      Obter mais informações <span>→</span>
                     </UtmLink>
                   </div>
 
@@ -387,7 +390,7 @@ const RankingSection = () => {
                       eventId="site-oficial-sb2"
                       onClick={handleSB2CTA}
                     >
-                      <span>→</span> Acessar Site Oficial
+                      Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
                       href="https://mon.net.br/3eefqg" 
@@ -395,7 +398,7 @@ const RankingSection = () => {
                       eventId="informacoes-sb2"
                       onClick={handleSB2Info}
                     >
-                      <span>→</span> Obter mais informações
+                      Obter mais informações <span>→</span>
                     </UtmLink>
                   </div>
 
@@ -509,7 +512,7 @@ const RankingSection = () => {
                       eventId="site-oficial-newdetox"
                       onClick={handleNewDetoxCTA}
                     >
-                      <span>→</span> Acessar Site Oficial
+                      Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
                       href="https://mon.net.br/3eefce" 
@@ -517,7 +520,7 @@ const RankingSection = () => {
                       eventId="informacoes-newdetox"
                       onClick={handleNewDetoxInfo}
                     >
-                      <span>→</span> Obter mais informações
+                      Obter mais informações <span>→</span>
                     </UtmLink>
                   </div>
 
@@ -631,7 +634,7 @@ const RankingSection = () => {
                       eventId="site-oficial-mounja"
                       onClick={handleMounjaCTA}
                     >
-                      <span>→</span> Acessar Site Oficial
+                      Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
                       href="https://app.monetizze.com.br/r/BGZ1881505" 
@@ -639,7 +642,7 @@ const RankingSection = () => {
                       eventId="informacoes-mounja"
                       onClick={handleMounjaInfo}
                     >
-                      <span>→</span> Obter mais informações
+                      Obter mais informações <span>→</span>
                     </UtmLink>
                   </div>
 

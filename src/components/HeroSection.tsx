@@ -61,6 +61,25 @@ const HeroSection = () => {
               <span className="flex-1 text-center leading-tight">CONHEÇA OS 5 MELHORES<br className="sm:hidden" /> REMÉDIOS PARA EMAGRECER</span>
               <span className="ml-2">↓</span>
             </ScrollLink>
+
+            {/* Seta indicativa de mais conteúdo */}
+            <div className="flex justify-center mt-8">
+              <div className="animate-bounce">
+                <svg 
+                  className="w-6 h-6 text-gray-500" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Imagem do lado direito (apenas desktop) */}
