@@ -10,8 +10,6 @@ const HeroSection = () => {
     // Converter para timezone de São Paulo usando toLocaleDateString diretamente
     const options: Intl.DateTimeFormatOptions = {
       timeZone: 'America/Sao_Paulo',
-      weekday: 'long',
-      day: 'numeric',
       month: 'long', 
       year: 'numeric'
     };
