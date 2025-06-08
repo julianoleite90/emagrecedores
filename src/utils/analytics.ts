@@ -42,20 +42,22 @@ export const trackQuizCompleted = (answers: Record<string, string>) => {
   });
 };
 
-// Product tracking events
+// Product tracking events - agora incluindo nome do produto no evento
 export const trackProductCTA = (productName: string, position: number) => {
-  trackEvent('product_cta_click', {
+  trackEvent(`cta_${productName.toLowerCase()}`, {
     product_name: productName,
     product_position: position,
+    action: 'site_oficial',
     event_category: 'Product CTA',
     event_label: `CTA ${productName}`
   });
 };
 
 export const trackProductInfo = (productName: string, position: number) => {
-  trackEvent('product_info_click', {
+  trackEvent(`info_${productName.toLowerCase()}`, {
     product_name: productName,
     product_position: position,
+    action: 'informacoes',
     event_category: 'Product Info',
     event_label: `Informações ${productName}`
   });
