@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef } from 'react';
 import ScrollLink from './ScrollLink';
+import { trackQuizStep, trackQuizCompleted, trackQuizCTA } from '@/utils/analytics';
 
 interface WhyConsiderSectionProps {
   onQuizComplete?: (completed: boolean) => void;
@@ -9,6 +10,7 @@ interface WhyConsiderSectionProps {
 const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [answers, setAnswers] = useState({
+    motivation: '',
     goal: '',
     challenge: '',
     timeframe: ''
@@ -17,10 +19,19 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
   // Refs for each question section
   const question2Ref = useRef<HTMLDivElement>(null);
   const question3Ref = useRef<HTMLDivElement>(null);
+  const question4Ref = useRef<HTMLDivElement>(null);
   const resultRef = useRef<HTMLDivElement>(null);
 
   const questions = {
     1: {
+      title: 'Você verdadeiramente deseja emagrecer e ter uma vida mais saudável e mais disposição?',
+      subtitle: 'Seja sincera(o) isso é fundamental para conquistar os objetivos de emagrecimento.',
+      options: [
+        { id: 'sim', text: 'Sim' },
+        { id: 'nao', text: 'Não' }
+      ]
+    },
+    2: {
       title: 'Qual é seu maior objetivo para emagrecer?',
       options: [
         { id: 'cintura', text: 'Perder até 8 cm de cintura rapidamente' },
@@ -30,7 +41,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
         { id: 'peso', text: 'Perder 5 kg em 30 dias' }
       ]
     },
-    2: {
+    3: {
       title: 'Qual é o seu maior desafio atual?',
       options: [
         { id: 'fome', text: 'Controlar a fome e compulsão' },
@@ -40,7 +51,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
         { id: 'tempo', text: 'Falta de tempo para exercícios' }
       ]
     },
-    3: {
+    4: {
       title: 'Em quanto tempo você quer ver resultados?',
       options: [
         { id: '7dias', text: 'Em 7 dias (resultados rápidos)' },
@@ -55,7 +66,14 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
     const newAnswers = { ...answers, [questionKey]: answerId };
     setAnswers(newAnswers);
     
-    if (currentStep < 3) {
+    // Get the text for the selected answer
+    const questionNum = currentStep;
+    const selectedOption = questions[questionNum as keyof typeof questions].options.find(opt => opt.id === answerId);
+    
+    // Track quiz step completion
+    trackQuizStep(questionNum, selectedOption?.text);
+    
+    if (currentStep < 4) {
       setTimeout(() => {
         setCurrentStep(currentStep + 1);
         // Scroll to next question after it appears
@@ -72,12 +90,26 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
               block: 'start',
               inline: 'nearest' 
             });
+          } else if (currentStep === 3 && question4Ref.current) {
+            question4Ref.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start',
+              inline: 'nearest' 
+            });
           }
         }, 100); // Small delay to ensure the element is rendered
       }, 300);
     } else {
-      // Quiz completed, notify parent component
-      const completed = newAnswers.goal && newAnswers.challenge && newAnswers.timeframe;
+      // Quiz completed, track completion event
+      trackQuizCompleted({
+        motivation: newAnswers.motivation,
+        goal: newAnswers.goal,
+        challenge: newAnswers.challenge,
+        timeframe: newAnswers.timeframe
+      });
+      
+      // Notify parent component
+      const completed = newAnswers.motivation && newAnswers.goal && newAnswers.challenge && newAnswers.timeframe;
       if (completed && onQuizComplete) {
         setTimeout(() => {
           onQuizComplete(true);
@@ -95,6 +127,10 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
         }
       }, 400);
     }
+  };
+
+  const handleQuizCTA = () => {
+    trackQuizCTA();
   };
 
   const getPersonalizedResult = () => {
@@ -127,7 +163,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
     return recommendations[goal as keyof typeof recommendations] || recommendations.peso;
   };
 
-  const isQuizComplete = currentStep === 3 && answers.goal && answers.challenge && answers.timeframe;
+  const isQuizComplete = currentStep === 4 && answers.motivation && answers.goal && answers.challenge && answers.timeframe;
 
   return (
     <section className="py-12 bg-gray-50">
@@ -137,7 +173,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
             Qual Emagrecedor Vai Te Ajudar a <span className="text-green-600">Perder Peso?</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Responda 3 perguntas em 1 minuto e encontre o emagrecedor ideal para alcançar seus objetivos de perda de peso!
+            Responda 4 perguntas em 1 minuto e encontre o emagrecedor ideal para alcançar seus objetivos de perda de peso!
           </p>
         </div>
 
@@ -146,33 +182,72 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
           <div className="mb-8">
             <div className="flex justify-between items-center mb-2">
               <span className="text-sm text-gray-500">Progresso</span>
-              <span className="text-sm text-gray-500">{Math.min(currentStep, 3)}/3</span>
+              <span className="text-sm text-gray-500">{Math.min(currentStep, 4)}/4</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
                 className="bg-green-600 h-2 rounded-full transition-all duration-500"
-                style={{ width: `${(Math.min(currentStep, 3) / 3) * 100}%` }}
+                style={{ width: `${(Math.min(currentStep, 4) / 4) * 100}%` }}
               ></div>
             </div>
           </div>
 
-          {/* Question 1 */}
+          {/* Question 1 - Motivation */}
           {currentStep >= 1 && (
             <div className={`mb-8 ${currentStep > 1 ? 'opacity-50' : ''}`}>
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 1. {questions[1].title}
               </h3>
+              <p className="text-gray-600 mb-6 italic">
+                {questions[1].subtitle}
+              </p>
               <div className="grid gap-3">
                 {questions[1].options.map((option) => (
                   <button
                     key={option.id}
-                    onClick={() => handleAnswer('goal', option.id)}
+                    onClick={() => handleAnswer('motivation', option.id)}
                     disabled={currentStep > 1}
+                    className={`p-4 text-left border-2 rounded-lg transition-all duration-300 ${
+                      answers.motivation === option.id
+                        ? 'border-green-500 bg-green-50'
+                        : 'border-gray-200 hover:border-green-300'
+                    } ${currentStep > 1 ? 'cursor-not-allowed' : 'hover:shadow-md'}`}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 ${
+                        answers.motivation === option.id
+                          ? 'border-green-500 bg-green-500'
+                          : 'border-gray-300'
+                      }`}>
+                        {answers.motivation === option.id && (
+                          <div className="w-2 h-2 bg-white rounded-full m-auto mt-1"></div>
+                        )}
+                      </div>
+                      <span className="text-gray-700 font-medium">{option.text}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Question 2 - Goal */}
+          {currentStep >= 2 && (
+            <div ref={question2Ref} className={`mb-8 ${currentStep > 2 ? 'opacity-50' : ''}`}>
+              <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                2. {questions[2].title}
+              </h3>
+              <div className="grid gap-3">
+                {questions[2].options.map((option) => (
+                  <button
+                    key={option.id}
+                    onClick={() => handleAnswer('goal', option.id)}
+                    disabled={currentStep > 2}
                     className={`p-4 text-left border-2 rounded-lg transition-all duration-300 ${
                       answers.goal === option.id
                         ? 'border-green-500 bg-green-50'
                         : 'border-gray-200 hover:border-green-300'
-                    } ${currentStep > 1 ? 'cursor-not-allowed' : 'hover:shadow-md'}`}
+                    } ${currentStep > 2 ? 'cursor-not-allowed' : 'hover:shadow-md'}`}
                   >
                     <div className="flex items-center space-x-3">
                       <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 ${
@@ -192,23 +267,23 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
             </div>
           )}
 
-          {/* Question 2 */}
-          {currentStep >= 2 && (
-            <div ref={question2Ref} className={`mb-8 ${currentStep > 2 ? 'opacity-50' : ''}`}>
+          {/* Question 3 - Challenge */}
+          {currentStep >= 3 && (
+            <div ref={question3Ref} className={`mb-8 ${currentStep > 3 ? 'opacity-50' : ''}`}>
               <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                2. {questions[2].title}
+                3. {questions[3].title}
               </h3>
               <div className="grid gap-3">
-                {questions[2].options.map((option) => (
+                {questions[3].options.map((option) => (
                   <button
                     key={option.id}
                     onClick={() => handleAnswer('challenge', option.id)}
-                    disabled={currentStep > 2}
+                    disabled={currentStep > 3}
                     className={`p-4 text-left border-2 rounded-lg transition-all duration-300 ${
                       answers.challenge === option.id
                         ? 'border-green-500 bg-green-50'
                         : 'border-gray-200 hover:border-green-300'
-                    } ${currentStep > 2 ? 'cursor-not-allowed' : 'hover:shadow-md'}`}
+                    } ${currentStep > 3 ? 'cursor-not-allowed' : 'hover:shadow-md'}`}
                   >
                     <div className="flex items-center space-x-3">
                       <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 ${
@@ -228,14 +303,14 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
             </div>
           )}
 
-          {/* Question 3 */}
-          {currentStep >= 3 && (
-            <div ref={question3Ref} className="mb-8">
+          {/* Question 4 - Timeframe */}
+          {currentStep >= 4 && (
+            <div ref={question4Ref} className="mb-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                3. {questions[3].title}
+                4. {questions[4].title}
               </h3>
               <div className="grid gap-3">
-                {questions[3].options.map((option) => (
+                {questions[4].options.map((option) => (
                   <button
                     key={option.id}
                     onClick={() => handleAnswer('timeframe', option.id)}
@@ -289,6 +364,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
               <ScrollLink 
                 targetId="ranking"
                 className="inline-flex bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-300 items-center space-x-2"
+                onClick={handleQuizCTA}
               >
                 <span>Ver Ranking Completo dos Melhores Emagrecedores</span>
                 <span>↓</span>

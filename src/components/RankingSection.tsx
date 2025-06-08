@@ -1,8 +1,25 @@
 import Image from 'next/image';
 import UtmLink from './UtmLink';
 import SectionTracker from './SectionTracker';
+import { trackProductCTA, trackProductInfo } from '@/utils/analytics';
 
 const RankingSection = () => {
+  // Tracking handlers for each product
+  const handleDefinamaxCTA = () => trackProductCTA('Definamax', 1);
+  const handleDefinamaxInfo = () => trackProductInfo('Definamax', 1);
+  
+  const handleOzenvittaCTA = () => trackProductCTA('Ozenvitta', 2);
+  const handleOzenvittaInfo = () => trackProductInfo('Ozenvitta', 2);
+  
+  const handleSB2CTA = () => trackProductCTA('SB2', 3);
+  const handleSB2Info = () => trackProductInfo('SB2', 3);
+  
+  const handleNewDetoxCTA = () => trackProductCTA('NewDetox', 4);
+  const handleNewDetoxInfo = () => trackProductInfo('NewDetox', 4);
+  
+  const handleMounjaCTA = () => trackProductCTA('Mounja', 5);
+  const handleMounjaInfo = () => trackProductInfo('Mounja', 5);
+
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white" id="ranking">
       <div className="max-w-6xl mx-auto px-6">
@@ -121,6 +138,7 @@ const RankingSection = () => {
                       href="https://www.definamaxoficial.com/" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-definamax"
+                      onClick={handleDefinamaxCTA}
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
@@ -128,6 +146,7 @@ const RankingSection = () => {
                       href="https://www.definamaxoficial.com/" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-definamax"
+                      onClick={handleDefinamaxInfo}
                     >
                       <span>→</span> Obter mais informações
                     </UtmLink>
@@ -245,6 +264,7 @@ const RankingSection = () => {
                       href="https://mon.net.br/3i6gsj" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-ozenvitta"
+                      onClick={handleOzenvittaCTA}
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
@@ -252,6 +272,7 @@ const RankingSection = () => {
                       href="https://mon.net.br/3i6gsj" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-ozenvitta"
+                      onClick={handleOzenvittaInfo}
                     >
                       <span>→</span> Obter mais informações
                     </UtmLink>
@@ -366,6 +387,7 @@ const RankingSection = () => {
                       href="https://mon.net.br/3eefqg" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-sb2"
+                      onClick={handleSB2CTA}
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
@@ -373,6 +395,7 @@ const RankingSection = () => {
                       href="https://mon.net.br/3eefqg" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-sb2"
+                      onClick={handleSB2Info}
                     >
                       <span>→</span> Obter mais informações
                     </UtmLink>
@@ -487,6 +510,7 @@ const RankingSection = () => {
                       href="https://mon.net.br/3eefce" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-newdetox"
+                      onClick={handleNewDetoxCTA}
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
@@ -494,6 +518,7 @@ const RankingSection = () => {
                       href="https://mon.net.br/3eefce" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-newdetox"
+                      onClick={handleNewDetoxInfo}
                     >
                       <span>→</span> Obter mais informações
                     </UtmLink>
@@ -608,6 +633,7 @@ const RankingSection = () => {
                       href="https://app.monetizze.com.br/r/BGZ1881505" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-mounja"
+                      onClick={handleMounjaCTA}
                     >
                       <span>→</span> Acessar Site Oficial
                     </UtmLink>
@@ -615,6 +641,7 @@ const RankingSection = () => {
                       href="https://app.monetizze.com.br/r/BGZ1881505" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-mounja"
+                      onClick={handleMounjaInfo}
                     >
                       <span>→</span> Obter mais informações
                     </UtmLink>

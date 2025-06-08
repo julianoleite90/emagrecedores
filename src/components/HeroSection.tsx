@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import ScrollLink from './ScrollLink';
+import { trackHeroCTA } from '@/utils/analytics';
 
 const HeroSection = () => {
   const formatDate = () => {
     return "Tempo de leitura: 3 minutos";
+  };
+
+  const handleCTAClick = () => {
+    trackHeroCTA();
   };
 
   return (
@@ -51,6 +56,7 @@ const HeroSection = () => {
             <ScrollLink 
               targetId="ranking"
               className="inline-flex bg-[#00A040] hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
+              onClick={handleCTAClick}
             >
               <span className="flex-1 text-center leading-tight">CONHEÇA OS 5 MELHORES<br className="sm:hidden" /> REMÉDIOS PARA EMAGRECER</span>
               <span className="ml-2">↓</span>

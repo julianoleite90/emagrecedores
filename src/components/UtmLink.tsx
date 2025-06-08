@@ -8,6 +8,7 @@ interface UtmLinkProps {
   className?: string;
   children: React.ReactNode;
   eventId: string;
+  onClick?: () => void;
 }
 
 declare global {
@@ -16,7 +17,7 @@ declare global {
   }
 }
 
-const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
+const UtmLink = ({ href, className, children, eventId, onClick }: UtmLinkProps) => {
   const [utmHref, setUtmHref] = useState(href);
 
   useEffect(() => {
@@ -24,6 +25,12 @@ const UtmLink = ({ href, className, children, eventId }: UtmLinkProps) => {
   }, [href]);
 
   const handleClick = () => {
+    // Execute custom onClick first if provided
+    if (onClick) {
+      onClick();
+    }
+    
+    // Then execute existing tracking
     const [productId, ctaType] = eventId.split('-');
     if (window.trackCTAClick) {
       console.log('CTA clicked, tracking:', { productId, ctaType });
