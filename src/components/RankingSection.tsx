@@ -28,7 +28,7 @@ const RankingSection = () => {
           <SectionTracker sectionId="ranking-header">
             <div className="py-12 text-center">
               <div className="inline-block px-6 py-2 bg-green-50 rounded-full text-green-600 font-medium text-sm mb-4">
-                Ranking 2025
+                Ranking atualizado 2025
               </div>
               <h2 className="text-4xl font-bold text-gray-900 max-w-3xl mx-auto leading-tight mb-4">
                 Os 5 Remédios Mais Eficazes para Emagrecer em 2025
@@ -661,115 +661,41 @@ const RankingSection = () => {
 
           {/* Seção de Conclusão */}
           <SectionTracker sectionId="conclusao">
-            <div className="bg-gradient-to-b from-gray-100 to-gray-50/80 py-16">
-              <div className="max-w-6xl mx-auto px-6">
-                <div className="max-w-4xl mx-auto">
-                  <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-                      Conclusão da Nossa Análise
-                    </h2>
-
-                    <div className="space-y-6 text-gray-700">
-                      <p className="leading-relaxed">
-                        Com base em nossa extensa avaliação, que incluiu análise de resultados reais, 
-                        depoimentos de usuários e estudos de eficácia, consideramos esses 5 produtos como as 
-                        melhores opções para um emagrecimento rápido, saudável e seguro em 2025.
-                      </p>
-
-                      <div className="bg-green-50 p-6 rounded-xl">
-                        <h3 className="text-xl font-semibold text-green-800 mb-4">
-                          Principais Diferenciais dos Produtos Selecionados:
-                        </h3>
-                        <ul className="space-y-3">
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">✓</span>
-                            <span>Fórmulas naturais com ingredientes cientificamente comprovados</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">✓</span>
-                            <span>Alto índice de satisfação entre os usuários (acima de 75%)</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">✓</span>
-                            <span>Resultados visíveis em curto prazo (15-30 dias)</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">✓</span>
-                            <span>Fabricação em laboratórios certificados</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">✓</span>
-                            <span>Garantia de satisfação e política de reembolso</span>
-                          </li>
-                        </ul>
+            <div className="bg-gradient-to-b from-gray-100 to-gray-50/80 py-8">
+              <div className="max-w-4xl mx-auto px-6">
+                <div className="bg-white rounded-2xl shadow-xl p-6">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Conclusão
+                  </h2>
+                  <p className="text-gray-700 text-center leading-relaxed mb-6">
+                    Esses 5 produtos representam as melhores opções para um emagrecimento seguro em 2025. 
+                    Todos possuem fórmulas naturais, resultados comprovados e garantia de satisfação.
+                  </p>
+                  
+                  <div className="text-left max-w-2xl mx-auto">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Ranking Final:</h3>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
+                        <span className="bg-green-600 text-white font-bold text-sm px-2 py-1 rounded">1°</span>
+                        <span className="font-semibold text-gray-900">Definamax</span>
+                        <span className="text-sm text-green-700">- Mais recomendado</span>
                       </div>
-
-                      <div className="bg-orange-50 p-6 rounded-xl">
-                        <h3 className="text-xl font-semibold text-orange-800 mb-4 flex items-center gap-2">
-                          <span className="text-orange-500">⚠</span>
-                          Aviso Importante:
-                        </h3>
-                        <p className="leading-relaxed">
-                          Recomendamos enfaticamente que a compra seja realizada exclusivamente através dos sites 
-                          oficiais dos produtos. Isso garante:
-                        </p>
-                        <ul className="mt-4 space-y-2">
-                          <li className="flex items-start gap-3">
-                            <span className="text-orange-600 mt-1">•</span>
-                            <span>Produto 100% original e dentro do prazo de validade</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-orange-600 mt-1">•</span>
-                            <span>Garantia de satisfação ou seu dinheiro de volta</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-orange-600 mt-1">•</span>
-                            <span>Suporte ao cliente e acompanhamento pós-venda</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-orange-600 mt-1">•</span>
-                            <span>Pagamento seguro e entrega garantida</span>
-                          </li>
-                        </ul>
+                      <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                        <span className="bg-gray-600 text-white font-bold text-sm px-2 py-1 rounded">2°</span>
+                        <span className="font-medium text-gray-800">Ozenvitta</span>
                       </div>
-
-                      <div className="bg-green-50 p-6 rounded-xl">
-                        <h3 className="text-xl font-semibold text-green-800 mb-4">
-                          Como Escolher o Produto Ideal:
-                        </h3>
-                        <p className="mb-4">
-                          Cada produto em nossa lista tem características únicas que podem se adequar melhor 
-                          às suas necessidades específicas:
-                        </p>
-                        <ul className="space-y-2">
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">→</span>
-                            <span><strong>Definamax:</strong> Ideal para quem busca redução de medidas e controle de apetite</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">→</span>
-                            <span><strong>Ozenvitta:</strong> Perfeito para quem tem compulsão alimentar</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">→</span>
-                            <span><strong>SB2 Turbo:</strong> Excelente para aceleração do metabolismo</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">→</span>
-                            <span><strong>New Detox:</strong> Ótimo para desintoxicação e redução de inchaço</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="text-green-600 mt-1">→</span>
-                            <span><strong>Mounja Slim:</strong> Recomendado para quem precisa de resultados rápidos</span>
-                          </li>
-                        </ul>
+                      <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                        <span className="bg-gray-600 text-white font-bold text-sm px-2 py-1 rounded">3°</span>
+                        <span className="font-medium text-gray-800">SB2 Turbo</span>
                       </div>
-
-                      <p className="text-center text-gray-600 italic">
-                        Para acessar o site oficial de qualquer produto, basta clicar nos botões disponíveis 
-                        em cada seção acima. Todos os links são seguros e você será redirecionado diretamente 
-                        para a página oficial do fabricante.
-                      </p>
+                      <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                        <span className="bg-gray-600 text-white font-bold text-sm px-2 py-1 rounded">4°</span>
+                        <span className="font-medium text-gray-800">New Detox</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                        <span className="bg-gray-600 text-white font-bold text-sm px-2 py-1 rounded">5°</span>
+                        <span className="font-medium text-gray-800">Mounja Slim</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -779,50 +705,14 @@ const RankingSection = () => {
 
           {/* Seção O Que Fazer Agora */}
           <SectionTracker sectionId="proximos-passos">
-            <div className="bg-white py-16">
-              <div className="max-w-6xl mx-auto px-6">
-                <div className="max-w-4xl mx-auto text-center">
-                  <div className="inline-block px-6 py-2 bg-green-50 rounded-full text-green-600 font-medium text-sm mb-4">
-                    Próximos Passos
-                  </div>
-                  <h2 className="text-4xl font-bold text-gray-900 mb-8">
-                    E o que devo fazer agora?
-                  </h2>
-                  <div className="prose prose-lg mx-auto text-gray-700">
-                    <p className="mb-6">
-                      Tudo que você precisa fazer é escolher o emagrecedor que mais faz sentido para as suas 
-                      necessidades, e tomar conforme a recomendação do fabricante.
-                    </p>
-                    <p className="mb-6">
-                      Lembre-se que cada organismo é único, então é importante:
-                    </p>
-                    <ul className="text-left space-y-3 mb-8">
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-600 mt-1">✓</span>
-                        <span>Seguir corretamente a posologia indicada na embalagem</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-600 mt-1">✓</span>
-                        <span>Manter uma alimentação equilibrada durante o tratamento</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-600 mt-1">✓</span>
-                        <span>Beber bastante água ao longo do dia</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-600 mt-1">✓</span>
-                        <span>Se possível, combinar com atividade física regular</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-600 mt-1">✓</span>
-                        <span>Manter o uso consistente para melhores resultados</span>
-                      </li>
-                    </ul>
-                    <p className="text-green-900 font-medium">
-                      Escolha o produto que melhor atende suas necessidades e comece sua jornada para uma vida mais saudável hoje mesmo!
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white py-8">
+              <div className="max-w-4xl mx-auto px-6 text-center">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  E o que devo fazer agora?
+                </h2>
+                <p className="text-gray-700">
+                  Agora a escolha é sua! Com base em nossa análise aprofundada, tome sua decisão e escolha o produto que mais se adequa às suas necessidades.
+                </p>
               </div>
             </div>
           </SectionTracker>

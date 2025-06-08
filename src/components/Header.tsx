@@ -33,7 +33,7 @@ const Header = () => {
                   targetId="ranking"
                   className="text-gray-900 font-medium hover:text-gray-600 transition-colors cursor-pointer"
                 >
-                  Ranking 2025
+                  Ranking atualizado 2025
                 </ScrollLink>
               </li>
               <li>

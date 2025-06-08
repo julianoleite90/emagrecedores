@@ -2,10 +2,11 @@ import Image from 'next/image';
 
 const SpecialistSection = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 max-w-4xl mx-auto mb-8">
-      <div className="flex flex-row items-start gap-4">
-        <div className="relative flex-shrink-0">
-          <div className="w-32 h-32 md:w-72 md:h-72 rounded-full border-4 border-green-500 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 max-w-4xl mx-auto mb-8">
+      <div className="grid grid-cols-3 gap-4">
+        {/* COLUNA DA ESQUERDA - APENAS IMAGEM */}
+        <div className="col-span-1">
+          <div className="w-full aspect-square rounded-full border-4 border-green-500 overflow-hidden">
             <Image
               src="/medica-150.webp"
               alt="Dra. Ana Costa - Especialista em Emagrecimento"
@@ -17,12 +18,14 @@ const SpecialistSection = () => {
             />
           </div>
         </div>
-        <div className="flex-1">
+        
+        {/* COLUNA DA DIREITA - APENAS CONTEÚDO */}
+        <div className="col-span-2">
           <div className="mb-3">
-            <h3 className="text-green-600 font-bold text-base md:text-lg">Análise Liderada por Especialistas</h3>
+            <h3 className="text-green-600 font-bold text-sm md:text-lg">Análise Liderada por Especialistas</h3>
           </div>
-          <div className="text-gray-700 space-y-4">
-            <p className="text-sm md:text-base">
+          <div className="text-gray-700">
+            <p className="text-xs md:text-base leading-relaxed">
               Dra. Ana Costa, especialista com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
             </p>
           </div>

@@ -4,33 +4,34 @@ const ExpertSection = () => {
   return (
     <section className="py-8 md:py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-12">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            {/* Foto do especialista */}
-            <div className="w-32 h-32 md:w-48 md:h-48 relative shrink-0">
-              <div className="absolute inset-0 rounded-full border-4 border-green-500 shadow-lg">
+        <div className="bg-white rounded-2xl shadow-xl p-4 md:p-12">
+          <div className="grid grid-cols-3 gap-4 md:flex md:flex-row md:items-center md:gap-12">
+            {/* COLUNA DA ESQUERDA - APENAS IMAGEM */}
+            <div className="col-span-1 md:w-48 md:h-48 relative shrink-0">
+              <div className="w-full aspect-square rounded-full border-4 border-green-500 shadow-lg overflow-hidden">
                 <Image
                   src="/medica-150.webp"
                   alt="Dra. Ana Costa"
-                  fill
-                  className="rounded-full object-cover"
+                  width={192}
+                  height={192}
+                  className="object-cover w-full h-full"
                   priority
                 />
               </div>
             </div>
 
-            {/* Conteúdo */}
-            <div className="flex-1 text-center md:text-left">
+            {/* COLUNA DA DIREITA - APENAS CONTEÚDO */}
+            <div className="col-span-2 md:flex-1 text-left">
               {/* Título */}
-              <div className="mb-4">
-                <h3 className="text-lg md:text-xl font-semibold text-green-600 mb-2">
+              <div className="mb-3 md:mb-4">
+                <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">
                   Análise Liderada por Especialistas
                 </h3>
               </div>
 
               {/* Descrição */}
-              <div className="text-gray-700 space-y-4">
-                <p>
+              <div className="text-gray-700">
+                <p className="text-xs md:text-base leading-relaxed">
                   Dra. Ana Costa, especialista com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
                 </p>
               </div>

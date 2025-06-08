@@ -12,8 +12,23 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-gray-100 pt-8 pb-16 md:py-16">
+    <section className="bg-gradient-to-b from-gray-50 to-gray-100 pt-0 pb-8 md:pb-12">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Menu Mobile */}
+        <div className="block lg:hidden mb-8">
+          <nav className="flex justify-center space-x-1 bg-white rounded-lg p-2 shadow-sm">
+            <button className="flex-1 text-xs font-medium text-gray-700 py-2 px-1 rounded-md bg-gray-50 text-center whitespace-nowrap">
+              Melhores Remedios
+            </button>
+            <button className="flex-1 text-xs font-medium text-gray-700 py-2 px-1 rounded-md text-center whitespace-nowrap">
+              Ranking Oficial
+            </button>
+            <button className="flex-1 text-xs font-medium text-gray-700 py-2 px-1 rounded-md text-center whitespace-nowrap">
+              Especialistas
+            </button>
+          </nav>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Conteúdo do lado esquerdo */}
           <div className="space-y-4">
@@ -27,15 +42,10 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Perca Peso com Segurança: Os 5 Melhores Remédios Para Emagrecer de 2025</div>
+                <div className="text-gray-900">Análise dos 5 Melhores Remédios para Emagrecer em 2025</div>
               </h1>
-              <h2 className="text-lg lg:text-xl text-gray-600 mb-4">Frustrado com dietas que não funcionam? Descubra os emagrecedores naturais que já ajudaram milhares a perder até 8 cm de cintura em até 30 dias!</h2>
+              <h2 className="text-lg lg:text-xl text-gray-600 mb-4 underline decoration-green-500 decoration-2">Aprovados pela anvisa</h2>
             </div>
-
-            {/* Subtítulo com destaque */}
-            <p className="text-gray-700 leading-relaxed">
-            <strong>Emagrecer Não Precisa Ser um Desafio</strong> - Cansado de tentar perder peso sem sucesso? Você não está sozinho. Nossa equipe, liderada pela Dra. Ana Costa, analisou mais de 300 estudos e depoimentos reais para trazer o ranking dos melhores emagrecedores de 2025. Encontre o emagrecedor ideal para perder peso de forma segura e eficaz.
-            </p>
 
             {/* Imagem em mobile */}
             <div className="block lg:hidden relative h-[450px] w-full mt-[2px] mb-6">
@@ -52,6 +62,19 @@ const HeroSection = () => {
               </picture>
             </div>
 
+            {/* Subtítulo com destaque */}
+            <p className="text-gray-700 leading-relaxed">
+            Em 2025, os remédios para emagrecer, especialmente os que têm base natural, estão cada vez mais avançados e acessíveis. Hoje, existem opções que ajudam a controlar o apetite, acelerar o metabolismo e até melhorar a queima de gordura, tudo isso para facilitar o processo de perda de peso.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+            Em meio a tantas opções, fica difícil saber qual remédio realmente funciona e vale a pena investir. Por isso, fizemos uma análise detalhada dos produtos mais populares e eficazes, considerando não só os resultados na perda de peso, mas também os benefícios para a saúde, a facilidade de uso e os cuidados que você precisa ter para usar com segurança.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+            Separamos os 5 melhores remédios para emagrecer que você encontra no mercado, explicando como funcionam, seus benefícios e cuidados que você deve ter ao usar cada um deles.
+            </p>
+
             {/* Botão CTA */}
             <ScrollLink 
               targetId="quiz"
@@ -63,7 +86,7 @@ const HeroSection = () => {
             </ScrollLink>
 
             {/* Seta indicativa de mais conteúdo */}
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-4">
               <div className="animate-bounce">
                 <svg 
                   className="w-6 h-6 text-gray-500" 
