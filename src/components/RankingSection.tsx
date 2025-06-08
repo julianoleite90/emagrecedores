@@ -156,8 +156,7 @@ const RankingSection = () => {
                     <p className="text-gray-700 text-sm flex items-start gap-2">
                       <span className="text-orange-500">⚠</span>
                       <span>
-                        Atenção: Não somos vendedores ou representantes do Definamax. Para mais informações sobre o produto, acesse
-                        o site oficial clicando nos botões acima.
+                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
                       </span>
                     </p>
                   </div>
@@ -282,8 +281,7 @@ const RankingSection = () => {
                     <p className="text-gray-700 text-sm flex items-start gap-2">
                       <span className="text-orange-500">⚠</span>
                       <span>
-                        Atenção: Não somos vendedores ou representantes do Ozenvitta. Para mais informações sobre o produto, acesse
-                        o site oficial clicando nos botões acima.
+                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
                       </span>
                     </p>
                   </div>
@@ -405,8 +403,7 @@ const RankingSection = () => {
                     <p className="text-gray-700 text-sm flex items-start gap-2">
                       <span className="text-orange-500">⚠</span>
                       <span>
-                        Atenção: Não somos vendedores ou representantes do SB2 Turbo. Para mais informações sobre o produto, acesse
-                        o site oficial clicando nos botões acima.
+                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
                       </span>
                     </p>
                   </div>
@@ -528,8 +525,7 @@ const RankingSection = () => {
                     <p className="text-gray-700 text-sm flex items-start gap-2">
                       <span className="text-orange-500">⚠</span>
                       <span>
-                        Atenção: Não somos vendedores ou representantes do New Detox. Para mais informações sobre o produto, acesse
-                        o site oficial clicando nos botões acima.
+                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
                       </span>
                     </p>
                   </div>
@@ -651,8 +647,7 @@ const RankingSection = () => {
                     <p className="text-gray-700 text-sm flex items-start gap-2">
                       <span className="text-orange-500">⚠</span>
                       <span>
-                        Atenção: Não somos vendedores ou representantes do Mounja Slim. Para mais informações sobre o produto, acesse
-                        o site oficial clicando nos botões acima.
+                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
                       </span>
                     </p>
                   </div>

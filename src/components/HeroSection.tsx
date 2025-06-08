@@ -54,7 +54,7 @@ const HeroSection = () => {
 
             {/* Botão CTA */}
             <ScrollLink 
-              targetId="ranking"
+              targetId="quiz"
               className="inline-flex bg-[#00A040] hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
               onClick={handleCTAClick}
             >
