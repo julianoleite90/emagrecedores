@@ -19,7 +19,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
           </h2>
           
           <p className="text-lg text-gray-700 leading-relaxed text-left max-w-4xl mx-auto">
-            Antes de sair atrás do "remédio milagroso", porque você viu uma publicidade no facebook ou no tiktok é essencial entender como esses produtos realmente funcionam e o que esperar deles. Nem todo remédio é igual, e saber a diferença entre as opções disponíveis pode fazer toda a diferença nos seus resultados — e na sua saúde. Neste momento, você vai descobrir os principais segredos por trás dos remédios para emagrecer, quais cuidados tomar e como escolher a opção certa para o seu corpo. Prepare-se para tomar uma decisão informada e segura! Conheça a lista com os 5 melhores para emagrecer, por ordem de eficácia.
+            Antes de sair atrás do &ldquo;remédio milagroso&rdquo;, porque você viu uma publicidade no facebook ou no tiktok é essencial entender como esses produtos realmente funcionam e o que esperar deles. Nem todo remédio é igual, e saber a diferença entre as opções disponíveis pode fazer toda a diferença nos seus resultados — e na sua saúde. Neste momento, você vai descobrir os principais segredos por trás dos remédios para emagrecer, quais cuidados tomar e como escolher a opção certa para o seu corpo. Prepare-se para tomar uma decisão informada e segura! Conheça a lista com os 5 melhores para emagrecer, por ordem de eficácia.
           </p>
         </div>
       </div>
