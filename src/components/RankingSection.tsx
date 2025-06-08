@@ -35,7 +35,7 @@ const RankingSection = () => {
                     <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Definamax</h4>
                     <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Recomendado</span>
                   </div>
-                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">As Fibras que absorvem gordura</p>
+                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">A fórmula mais usada para reduzir a absorção de gordura e perder de 5 a 8kg em 30 dias.</p>
                 </div>
                 <div className="flex flex-col items-end">
                   <div className="flex items-center gap-2 mb-1">
@@ -71,7 +71,7 @@ const RankingSection = () => {
                   </h5>
 
                   <p className="text-gray-700 mb-6">
-                    Em nossa análise de mais de 2.500 casos, o Definamax apresentou resultados surpreendentes: 93% dos usuários relataram redução visível de medidas em apenas 30 dias, com perda média de 5-7kg e redução de até 8cm na cintura.
+                    Em nossa análise de mais de 2.500 casos, o Definamax apresentou resultados surpreendentes: 93% dos usuários relataram redução visível de medidas em apenas 30 dias, com perda média de 5-8kg e redução de até 8cm na cintura.
                   </p>
 
                   <div className="bg-green-50 p-4 sm:p-6 rounded-lg mb-6">
@@ -114,16 +114,7 @@ const RankingSection = () => {
                     </div>
                   </div>
 
-                  <p className="text-gray-900 mb-6">
-                    O Definamax também oferece um teste de IMC (Índice de Massa Corporal) gratuito para você
-                    entender melhor como está sua saúde corporal. Para realizar o seu teste, <UtmLink 
-                      href="https://www.definamaxoficial.com/avaliacao"
-                      className="text-green-600 hover:text-green-800 underline cursor-pointer"
-                      eventId="imc-definamax"
-                    >
-                      clique aqui
-                    </UtmLink>.
-                  </p>
+
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 

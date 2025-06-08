@@ -3,21 +3,7 @@ import ScrollLink from './ScrollLink';
 
 const HeroSection = () => {
   const formatDate = () => {
-    // Obter data atual no timezone de Brasília de forma mais confiável
-    // Forçar a atualização da data garantindo que não use cache
-    const currentDateTime = new Date(Date.now());
-    
-    // Converter para timezone de São Paulo usando toLocaleDateString diretamente
-    const options: Intl.DateTimeFormatOptions = {
-      timeZone: 'America/Sao_Paulo',
-      month: 'long', 
-      year: 'numeric'
-    };
-    
-    const brasiliaDateString = currentDateTime.toLocaleDateString('pt-BR', options);
-    
-    // Capitaliza a primeira letra
-    return brasiliaDateString.charAt(0).toUpperCase() + brasiliaDateString.slice(1);
+    return "Tempo de leitura: 3 minutos";
   };
 
   return (
@@ -36,14 +22,14 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer em 2025 <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Analisados!</span></div>
+                <div className="text-gray-900">Perca Peso com Segurança: Os 5 Melhores <span className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[3px] after:bg-green-500">Remédios Para Emagrecer de 2025</span></div>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Descubra quais opções científicas estão ajudando milhares a alcançar seus objetivos de forma segura – veja nossa análise completa.</h2>
+              <h2 className="text-lg lg:text-xl text-gray-600 mb-4">Frustrado com dietas que não funcionam? Descubra os emagrecedores naturais que já ajudaram milhares a perder até 8 cm de cintura em até 30 dias!</h2>
             </div>
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-            Já tentou emagrecer sem sucesso? Muitas pessoas enfrentam essa dificuldade, mas a ciência avançou. Nesta análise, nossa equipe revela o ranking dos 5 melhores remédios de 2025, validados por estudos clínicos e experiência especializada.
+            <strong>Emagrecer Não Precisa Ser um Desafio</strong> - Cansado de tentar perder peso sem sucesso? Você não está sozinho. Nossa equipe, liderada pela Dra. Ana Costa, analisou mais de 300 estudos e depoimentos reais para trazer o ranking dos melhores emagrecedores de 2025. Encontre o emagrecedor ideal para perder peso de forma segura e eficaz.
             </p>
 
             {/* Imagem em mobile */}
@@ -56,11 +42,6 @@ const HeroSection = () => {
                 priority
               />
             </div>
-
-            {/* Primeiro parágrafo */}
-            <p className="text-gray-700 leading-relaxed">
-            Com a liderança da Dra. Ana Costa, especialista renomada em emagrecimento, analisamos centenas de estudos e depoimentos reais. Abaixo, explore nosso ranking com os 5 melhores remédios de 2025 e descubra qual se adapta melhor aos seus objetivos de emagrecimento.
-            </p>
 
 
             {/* Botão CTA */}

@@ -21,20 +21,17 @@ const ExpertSection = () => {
 
             {/* Conteúdo */}
             <div className="flex-1 text-center md:text-left">
-              {/* Citação */}
-              <div className="text-gray-700 space-y-4">
-                <p>
-                  &ldquo;Analisamos rigorosamente a eficácia, segurança e depoimentos reais para trazer uma seleção que realmente funciona.&rdquo;
-                </p>
+              {/* Título */}
+              <div className="mb-4">
+                <h3 className="text-lg md:text-xl font-semibold text-green-600 mb-2">
+                  Análise Liderada por Especialistas
+                </h3>
               </div>
 
-              {/* Nome e Especialidade */}
-              <div>
-                <h3 className="text-lg md:text-xl font-semibold text-green-600 mb-1">
-                  Dra. Ana Costa
-                </h3>
-                <p className="text-gray-600 text-sm md:text-base">
-                  Especialista em Emagrecimento
+              {/* Descrição */}
+              <div className="text-gray-700 space-y-4">
+                <p>
+                  Dra. Ana Costa, especialista com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
                 </p>
               </div>
             </div>
