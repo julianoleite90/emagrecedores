@@ -93,8 +93,8 @@ Rastreia cliques nos botões "Obter mais informações" de cada produto:
 ## Produtos Rastreados
 
 1. **Definamax** (1° lugar) - `cta_definamax` / `info_definamax`
-2. **Ozenvitta** (2° lugar) - `cta_ozenvitta` / `info_ozenvitta`
-3. **SB2** (3° lugar) - `cta_sb2` / `info_sb2`
+2. **SB2** (2° lugar) - `cta_sb2` / `info_sb2`
+3. **Ozenvitta** (3° lugar) - `cta_ozenvitta` / `info_ozenvitta`
 4. **NewDetox** (4° lugar) - `cta_newdetox` / `info_newdetox`
 5. **Mounja** (5° lugar) - `cta_mounja` / `info_mounja`
 
