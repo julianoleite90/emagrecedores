@@ -11,7 +11,7 @@ const ExpertSection = () => {
               <div className="w-full aspect-square rounded-full border-4 border-green-500 shadow-lg overflow-hidden">
                 <Image
                   src="/medica-150.webp"
-                  alt="Dra. Ana Costa"
+                  alt="Especialista Ana Costa"
                   width={192}
                   height={192}
                   className="object-cover w-full h-full"
@@ -32,7 +32,7 @@ const ExpertSection = () => {
               {/* Descrição */}
               <div className="text-gray-700">
                 <p className="text-xs md:text-base leading-relaxed">
-                  Dra. Ana Costa, especialista com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
+                  Especialista Ana Costa, com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
                 </p>
               </div>
             </div>

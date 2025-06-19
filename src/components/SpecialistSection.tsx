@@ -9,7 +9,7 @@ const SpecialistSection = () => {
           <div className="w-full aspect-square rounded-full border-4 border-green-500 overflow-hidden">
             <Image
               src="/medica-150.webp"
-              alt="Dra. Ana Costa - Especialista em Emagrecimento"
+              alt="Especialista Ana Costa - Especialista em Emagrecimento"
               width={288}
               height={288}
               priority
@@ -26,7 +26,7 @@ const SpecialistSection = () => {
           </div>
           <div className="text-gray-700">
             <p className="text-xs md:text-base leading-relaxed">
-              Dra. Ana Costa, especialista com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
+              Especialista Ana Costa, com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
             </p>
           </div>
         </div>
