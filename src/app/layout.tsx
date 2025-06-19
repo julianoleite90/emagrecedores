@@ -39,12 +39,17 @@ export default function RootLayout({
           src={`https://www.googletagmanager.com/gtag/js?id=G-E7W8NMCRJ6`}
           strategy="afterInteractive"
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-RTEPB48RDY`}
+          strategy="afterInteractive"
+        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-E7W8NMCRJ6');
+            gtag('config', 'G-RTEPB48RDY');
 
             // Definindo funções de rastreamento globalmente
             window.trackSectionView = function(sectionId) {
