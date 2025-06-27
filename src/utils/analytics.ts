@@ -42,6 +42,27 @@ export const trackQuizCompleted = (answers: Record<string, string>) => {
   });
 };
 
+// Definamax specific tracking events
+export const trackDefinamaxSiteOficial = () => {
+  trackEvent('clique-soficial-definamax', {
+    product_name: 'Definamax',
+    product_position: 1,
+    action: 'site_oficial',
+    event_category: 'Definamax CTA',
+    event_label: 'Acessar Site Oficial Definamax'
+  });
+};
+
+export const trackDefinamaxInfo = () => {
+  trackEvent('clique-info-definamax', {
+    product_name: 'Definamax',
+    product_position: 1,
+    action: 'informacoes',
+    event_category: 'Definamax Info',
+    event_label: 'Obter Mais Informações Definamax'
+  });
+};
+
 // Product tracking events - agora incluindo nome do produto no evento
 export const trackProductCTA = (productName: string, position: number) => {
   trackEvent(`cta_${productName.toLowerCase()}`, {

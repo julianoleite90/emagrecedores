@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import UtmLink from './UtmLink';
 import SectionTracker from './SectionTracker';
-import { trackProductCTA, trackProductInfo } from '@/utils/analytics';
+import { trackProductCTA, trackProductInfo, trackDefinamaxSiteOficial, trackDefinamaxInfo } from '@/utils/analytics';
 
 const RankingSection = () => {
   // Tracking handlers for each product - updating positions
-  const handleDefinamaxCTA = () => trackProductCTA('Definamax', 1);
-  const handleDefinamaxInfo = () => trackProductInfo('Definamax', 1);
+  const handleDefinamaxCTA = () => trackDefinamaxSiteOficial();
+  const handleDefinamaxInfo = () => trackDefinamaxInfo();
   
   const handlePhynamaxCTA = () => trackProductCTA('Definamax', 2);
   const handlePhynamaxInfo = () => trackProductInfo('Definamax', 2);
