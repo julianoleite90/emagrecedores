@@ -21,27 +21,13 @@ const RankingSection = () => {
   const handleNewDetoxInfo = () => trackProductInfo('NewDetox', 5);
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white" id="ranking">
+    <section className="bg-gradient-to-b from-gray-50 to-white pt-2" id="ranking">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          {/* Header Section */}
-          <SectionTracker sectionId="ranking-header">
-            <div className="py-12 text-center">
-              <div className="inline-block px-6 py-2 bg-green-50 rounded-full text-green-600 font-medium text-sm mb-4">
-                Ranking atualizado 2025
-              </div>
-              <h2 className="text-4xl font-bold text-gray-900 max-w-3xl mx-auto leading-tight mb-4">
-                Os 5 Remédios Mais Eficazes para Emagrecer em 2025
-              </h2>
-              <p className="text-gray-800 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed tracking-normal">
-                Análise completa das fórmulas mais eficientes para perda de peso, baseada em resultados reais e satisfação dos usuários
-              </p>
-            </div>
-          </SectionTracker>
 
           {/* Primeiro Produto */}
           <SectionTracker sectionId="definamax">
-            <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
+            <div className="mt-4 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
               <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
                 1° Lugar
               </div>

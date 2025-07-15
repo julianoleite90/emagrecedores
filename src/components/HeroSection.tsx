@@ -14,20 +14,7 @@ const HeroSection = () => {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-gray-100 pt-0 pb-8 md:pb-12">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Menu Mobile */}
-        <div className="block lg:hidden mb-8">
-          <nav className="flex justify-center space-x-1 bg-white rounded-lg p-2 shadow-sm">
-            <button className="flex-1 text-xs font-medium text-gray-700 py-2 px-1 rounded-md bg-gray-50 text-center whitespace-nowrap">
-              Melhores Remedios
-            </button>
-            <button className="flex-1 text-xs font-medium text-gray-700 py-2 px-1 rounded-md text-center whitespace-nowrap">
-              Ranking Oficial
-            </button>
-            <button className="flex-1 text-xs font-medium text-gray-700 py-2 px-1 rounded-md text-center whitespace-nowrap">
-              Especialistas
-            </button>
-          </nav>
-        </div>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Conteúdo do lado esquerdo */}
@@ -42,9 +29,9 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Análise dos 5 Melhores Remédios para Emagrecer em 2025</div>
+                <div className="text-gray-900">Análise detalhada dos melhores remédios para emagrecer</div>
               </h1>
-              <h2 className="text-lg lg:text-xl text-gray-600 mb-4 underline decoration-green-500 decoration-2">Aprovados pela anvisa</h2>
+              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Quais realmente funcionam?</h2>
             </div>
 
             {/* Imagem em mobile */}
@@ -64,15 +51,13 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-            Em 2025, os remédios para emagrecer, especialmente os que têm base natural, estão cada vez mais avançados e acessíveis. Hoje, existem opções que ajudam a controlar o apetite, acelerar o metabolismo e até melhorar a queima de gordura, tudo isso para facilitar o processo de perda de peso.
+            Você já tentou vários remédios para emagrecer e não viu resultado? Ou pior: sofreu com efeitos colaterais como ansiedade, insônia ou até problemas no coração?
+            Em 2025, surgiram novas fórmulas naturais e medicamentos controlados que prometem emagrecimento rápido, mas será que eles funcionam de verdade?
+            Nesta análise, testamos e comparamos os 5 remédios mais buscados do mercado, desde termogênicos até inibidores de apetite
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-            Em meio a tantas opções, fica difícil saber qual remédio realmente funciona e vale a pena investir. Por isso, fizemos uma análise detalhada dos produtos mais populares e eficazes, considerando não só os resultados na perda de peso, mas também os benefícios para a saúde, a facilidade de uso e os cuidados que você precisa ter para usar com segurança.
-            </p>
-
-            <p className="text-gray-700 leading-relaxed">
-            Separamos os 5 melhores remédios para emagrecer que você encontra no mercado, explicando como funcionam, seus benefícios e cuidados que você deve ter ao usar cada um deles.
+            Antes de decidir por qualquer produto, é fundamental entender seu próprio corpo e objetivos. Alguns emagrecedores são ótimos para controlar a compulsão alimentar, enquanto outros agem melhor na queima de gordura localizada.
             </p>
 
             {/* Botão CTA */}
@@ -81,7 +66,7 @@ const HeroSection = () => {
               className="inline-flex bg-[#00A040] hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
               onClick={handleCTAClick}
             >
-                              <span className="flex-1 text-center leading-tight">CONHEÇA OS 5 MELHORES REMEDIOS</span>
+                              <span className="flex-1 text-center leading-tight">VEJA AGORA OS 5 REMÉDIOS PARA EMAGRECER</span>
               <span className="ml-2">↓</span>
             </ScrollLink>
 
