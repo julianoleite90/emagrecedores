@@ -19,7 +19,7 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
           </h2>
           
           <p className="text-lg text-gray-700 leading-relaxed text-left max-w-4xl mx-auto">
-            Você já se sentiu tentado(a) a comprar um 'remédio milagroso' depois de ver anúncios no TikTok ou depoimentos bombásticos no Facebook?
+            Você já se sentiu tentado(a) a comprar um &ldquo;remédio milagroso&rdquo; depois de ver anúncios no TikTok ou depoimentos bombásticos no Facebook?
             A verdade é que muitos desses produtos são furadas — alguns até perigosos para a saúde.
             Mas calma! Existem, sim, remédios para emagrecer que funcionam, desde que você escolha os certos e use da forma correta.
             Neste guia, vamos revelar: Os 5 melhores emagrecedores de 2025, testados e aprovados por especialistas.
