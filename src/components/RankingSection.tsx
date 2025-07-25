@@ -5,11 +5,11 @@ import { trackProductCTA, trackProductInfo, trackDefinamaxSiteOficial, trackDefi
 
 const RankingSection = () => {
   // Tracking handlers for each product - updating positions
+  const handlePhynamaxCTA = () => trackProductCTA('Phynamax', 1);
+  const handlePhynamaxInfo = () => trackProductInfo('Phynamax', 1);
+  
   const handleDefinamaxCTA = () => trackDefinamaxSiteOficial();
   const handleDefinamaxInfo = () => trackDefinamaxInfo();
-  
-  const handlePhynamaxCTA = () => trackProductCTA('Definamax', 2);
-  const handlePhynamaxInfo = () => trackProductInfo('Definamax', 2);
   
   const handleOzenvittaCTA = () => trackProductCTA('Ozenvitta', 3);
   const handleOzenvittaInfo = () => trackProductInfo('Ozenvitta', 3);
@@ -25,8 +25,8 @@ const RankingSection = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-4xl mx-auto">
 
-          {/* Primeiro Produto */}
-          <SectionTracker sectionId="definamax">
+          {/* Primeiro Produto - Phynamax */}
+          <SectionTracker sectionId="phynamax">
             <div className="mt-4 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
               <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
                 1° Lugar
@@ -35,139 +35,10 @@ const RankingSection = () => {
               <div className="flex justify-between items-start mb-6 pt-2 flex-col sm:flex-row gap-4 sm:gap-0">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Definamax</h4>
+                    <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Phynamax</h4>
                     <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Mais recomendado</span>
                   </div>
-                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">A fórmula mais avançada do mercado: Elimina até 7kg em 30 dias com resultados visíveis nas primeiras semanas.</p>
-                </div>
-                <div className="flex flex-col items-end">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="text-lg sm:text-xl font-bold text-gray-900">4.9</div>
-                    <div className="text-yellow-400 text-lg">★★★★★</div>
-                  </div>
-                  <div className="text-xs text-gray-500">Avaliação dos usuários</div>
-                </div>
-              </div>
-
-              <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-4"></div>
-              
-              <div className="flex flex-col sm:flex-row gap-6 mb-6" id="definamax">
-                <div className="w-full sm:w-64 shrink-0">
-                  <Image
-                    src="/definamax-400.webp"
-                    alt="Definamax: Tecnologia avançada para redução de medidas"
-                    width={256}
-                    height={384}
-                    className="rounded-lg mx-auto sm:mx-0"
-                    loading="lazy"
-                    sizes="(max-width: 640px) 100vw, 256px"
-                    quality={85}
-                  />
-                  <p className="text-xs text-gray-600 text-center mt-2">
-                    Definamax: Tecnologia avançada para redução de medidas
-                  </p>
-                </div>
-
-                <div className="flex-1">
-                  <h5 className="text-2xl font-bold text-gray-900 mb-4">
-                    Por que o Definamax é considerado o mais eficaz para o emagrecimento?
-                  </h5>
-
-                  <p className="text-gray-700 mb-6">
-                    Em nossa análise de mais de 4.000 casos, o Definamax apresentou resultados acima da média: <strong>97% dos usuários relataram redução visível de medidas nas primeiras semanas de uso</strong>, com perda média de 5-8kg em 30 dias e redução de até 12cm na cintura - resultados 3x mais rápidos que os demais produtos.
-                  </p>
-
-                  <div className="bg-green-50 p-4 sm:p-6 rounded-lg mb-6">
-                    <h6 className="text-gray-800 font-semibold mb-4">Resultados do emagrecedor:</h6>
-                    <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center relative">
-                      <div className="p-2 sm:p-3">
-                        <div className="text-xl sm:text-2xl font-bold text-green-600">-12cm</div>
-                        <div className="text-sm sm:text-base text-gray-600">na Cintura</div>
-                      </div>
-                      <div className="relative p-2 sm:p-3">
-                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-green-200 to-transparent"></div>
-                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-green-200 to-transparent"></div>
-                        <div className="text-xl sm:text-2xl font-bold text-green-600">95%</div>
-                        <div className="text-sm sm:text-base text-gray-600">Menos Fome</div>
-                      </div>
-                      <div className="p-2 sm:p-3">
-                        <div className="text-xl sm:text-2xl font-bold text-green-600">97%</div>
-                        <div className="text-sm sm:text-base text-gray-600">Satisfação</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-900 mb-6">
-                    O que faz o Definamax tão eficaz para perder peso é a sua tecnologia EXCLUSIVA de fibras inteligentes nano-encapsuladas, que captura até 85% da
-                    gordura dos alimentos antes da absorção - uma inovação única no mercado. Isso significa que você naturalmente absorve menos
-                    calorias a cada refeição, com <strong>resultados visíveis já nos primeiros 3 dias</strong>, mesmo sem mudanças drásticas na alimentação.
-                  </p>
-
-                  <p className="text-gray-900 mb-6">O diferencial exclusivo do Definamax é sua ação quádrupla:</p>
-
-                  <div className="space-y-4 mb-6">
-                    <div className="text-gray-900">
-                      <strong>Controle Máximo da Fome:</strong> Reduz o apetite em até 95%, eliminando completamente a compulsão alimentar já nas primeiras 24 horas de uso.
-                    </div>
-                    <div className="text-gray-900">
-                      <strong>Queima Acelerada 24h:</strong> Aumenta a queima de gordura em até 50%, atuando continuamente mesmo durante o sono - 2x mais potente que produtos similares.
-                    </div>
-                    <div className="text-gray-900">
-                      <strong>Redução Localizada Express:</strong> Atua especificamente nas áreas mais difíceis como abdômen, coxas e braços com resultados visíveis em 72 horas.
-                    </div>
-                    <div className="text-gray-900">
-                      <strong>Bloqueio Inteligente:</strong> Tecnologia patenteada que bloqueia até 85% da absorção de carboidratos e gorduras, exclusivo do Definamax.
-                    </div>
-                  </div>
-
-
-
-                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                    <UtmLink 
-                      href="https://www.definamaxoficial.com/" 
-                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
-                      eventId="site-oficial-definamax"
-                      onClick={handleDefinamaxCTA}
-                    >
-                      Acessar Site Oficial <span>→</span>
-                    </UtmLink>
-                    <UtmLink 
-                      href="https://www.definamaxoficial.com/" 
-                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
-                      eventId="informacoes-definamax"
-                      onClick={handleDefinamaxInfo}
-                    >
-                      Obter mais informações <span>→</span>
-                    </UtmLink>
-                  </div>
-
-                  <div className="mt-6 bg-orange-50 p-4 rounded-lg">
-                    <p className="text-gray-700 text-sm flex items-start gap-2">
-                      <span className="text-orange-500">⚠</span>
-                      <span>
-                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SectionTracker>
-
-          {/* Segundo Produto - Phynamax (Definamax) */}
-          <SectionTracker sectionId="phynamax">
-            <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
-              <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
-                2° Lugar
-              </div>
-              
-              <div className="flex justify-between items-start mb-6 pt-2 flex-col sm:flex-row gap-4 sm:gap-0">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Phynamax</h4>
-                    <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Altamente recomendado</span>
-                  </div>
-                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">Tecnologia avançada para redução de medidas com resultados rápidos.</p>
+                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">A fórmula mais avançada do mercado: Elimina até 6kg em 30 dias com resultados visíveis nas primeiras semanas.</p>
                 </div>
                 <div className="flex flex-col items-end">
                   <div className="flex items-center gap-2 mb-1">
@@ -199,11 +70,11 @@ const RankingSection = () => {
 
                 <div className="flex-1">
                   <h5 className="text-2xl font-bold text-gray-900 mb-4">
-                    Por que o Phynamax é considerado altamente eficaz para o emagrecimento?
+                    Por que o Phynamax é considerado o mais eficaz para o emagrecimento?
                   </h5>
 
                   <p className="text-gray-700 mb-6">
-                    Em nossa análise de mais de 4.000 casos, o Phynamax apresentou resultados excepcionais: <strong>95% dos usuários relataram redução visível de medidas nas primeiras semanas de uso</strong>, com perda média de 4-6kg em 30 dias e redução de até 10cm na cintura - resultados consistentes e duradouros.
+                    Em nossa análise de mais de 4.000 casos, o Phynamax apresentou resultados acima da média: <strong>95% dos usuários relataram redução visível de medidas nas primeiras semanas de uso</strong>, com perda média de 4-6kg em 30 dias e redução de até 10cm na cintura - resultados 3x mais rápidos que os demais produtos.
                   </p>
 
                   <div className="bg-green-50 p-4 sm:p-6 rounded-lg mb-6">
@@ -227,28 +98,28 @@ const RankingSection = () => {
                   </div>
 
                   <p className="text-gray-900 mb-6">
-                    O que faz o Phynamax tão eficaz para perder peso é a sua tecnologia de fibras inteligentes nano-encapsuladas, que captura até 80% da
-                    gordura dos alimentos antes da absorção. Isso significa que você naturalmente absorve menos
+                    O que faz o Phynamax tão eficaz para perder peso é a sua tecnologia EXCLUSIVA de fibras inteligentes nano-encapsuladas, que captura até 80% da
+                    gordura dos alimentos antes da absorção - uma inovação única no mercado. Isso significa que você naturalmente absorve menos
                     calorias a cada refeição, com <strong>resultados visíveis já nos primeiros 5 dias</strong>, mesmo sem mudanças drásticas na alimentação.
                   </p>
 
-                  <p className="text-gray-900 mb-6">O diferencial do Phynamax é sua ação tripla:</p>
+                  <p className="text-gray-900 mb-6">O diferencial exclusivo do Phynamax é sua ação tripla:</p>
 
                   <div className="space-y-4 mb-6">
                     <div className="text-gray-900">
-                      <strong>Controle Eficaz da Fome:</strong> Reduz o apetite em até 90%, eliminando a compulsão alimentar nas primeiras 48 horas de uso.
+                      <strong>Controle Eficaz da Fome:</strong> Reduz o apetite em até 90%, eliminando a compulsão alimentar já nas primeiras 48 horas de uso.
                     </div>
                     <div className="text-gray-900">
-                      <strong>Queima Acelerada:</strong> Aumenta a queima de gordura em até 45%, atuando continuamente mesmo durante o sono.
+                      <strong>Queima Acelerada 24h:</strong> Aumenta a queima de gordura em até 45%, atuando continuamente mesmo durante o sono - 2x mais potente que produtos similares.
                     </div>
                     <div className="text-gray-900">
-                      <strong>Bloqueio Inteligente:</strong> Tecnologia que bloqueia até 80% da absorção de carboidratos e gorduras.
+                      <strong>Bloqueio Inteligente:</strong> Tecnologia que bloqueia até 80% da absorção de carboidratos e gorduras, exclusivo do Phynamax.
                     </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
-                      href="https://lista.mercadolivre.com.br/phynamax" 
+                      href="https://www.phynamaxoficial.com/" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-phynamax"
                       onClick={handlePhynamaxCTA}
@@ -256,10 +127,137 @@ const RankingSection = () => {
                       Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
-                      href="https://lista.mercadolivre.com.br/phynamax" 
+                      href="https://www.phynamaxoficial.com/" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-phynamax"
                       onClick={handlePhynamaxInfo}
+                    >
+                      Obter mais informações <span>→</span>
+                    </UtmLink>
+                  </div>
+
+                  <div className="mt-6 bg-orange-50 p-4 rounded-lg">
+                    <p className="text-gray-700 text-sm flex items-start gap-2">
+                      <span className="text-orange-500">⚠</span>
+                      <span>
+                        Para conhecer melhor o produto, clique nos botões acima e seja redirecionado para o site oficial do produto.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SectionTracker>
+
+          {/* Segundo Produto - Definamax */}
+          <SectionTracker sectionId="definamax">
+            <div className="mt-12 bg-white rounded-2xl shadow-xl p-8 mb-12 relative">
+              <div className="absolute -top-5 left-8 bg-green-600 text-white px-6 py-2 rounded">
+                2° Lugar
+              </div>
+              
+              <div className="flex justify-between items-start mb-6 pt-2 flex-col sm:flex-row gap-4 sm:gap-0">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Definamax</h4>
+                    <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Altamente recomendado</span>
+                  </div>
+                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">Tecnologia avançada para redução de medidas com resultados rápidos.</p>
+                </div>
+                <div className="flex flex-col items-end">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="text-lg sm:text-xl font-bold text-gray-900">4.9</div>
+                    <div className="text-yellow-400 text-lg">★★★★★</div>
+                  </div>
+                  <div className="text-xs text-gray-500">Avaliação dos usuários</div>
+                </div>
+              </div>
+
+              <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-4"></div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 mb-6" id="definamax">
+                <div className="w-full sm:w-64 shrink-0">
+                  <Image
+                    src="/definamax-400.webp"
+                    alt="Definamax: Tecnologia avançada para redução de medidas"
+                    width={256}
+                    height={384}
+                    className="rounded-lg mx-auto sm:mx-0"
+                    loading="lazy"
+                    sizes="(max-width: 640px) 100vw, 256px"
+                    quality={85}
+                  />
+                  <p className="text-xs text-gray-600 text-center mt-2">
+                    Definamax: Tecnologia avançada para redução de medidas
+                  </p>
+                </div>
+
+                <div className="flex-1">
+                  <h5 className="text-2xl font-bold text-gray-900 mb-4">
+                    Por que o Definamax é considerado altamente eficaz para o emagrecimento?
+                  </h5>
+
+                  <p className="text-gray-700 mb-6">
+                    Em nossa análise de mais de 4.000 casos, o Definamax apresentou resultados excepcionais: <strong>97% dos usuários relataram redução visível de medidas nas primeiras semanas de uso</strong>, com perda média de 5-8kg em 30 dias e redução de até 12cm na cintura - resultados consistentes e duradouros.
+                  </p>
+
+                  <div className="bg-green-50 p-4 sm:p-6 rounded-lg mb-6">
+                    <h6 className="text-gray-800 font-semibold mb-4">Resultados do emagrecedor:</h6>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center relative">
+                      <div className="p-2 sm:p-3">
+                        <div className="text-xl sm:text-2xl font-bold text-green-600">-12cm</div>
+                        <div className="text-sm sm:text-base text-gray-600">na Cintura</div>
+                      </div>
+                      <div className="relative p-2 sm:p-3">
+                        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-green-200 to-transparent"></div>
+                        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-gradient-to-b from-transparent via-green-200 to-transparent"></div>
+                        <div className="text-xl sm:text-2xl font-bold text-green-600">95%</div>
+                        <div className="text-sm sm:text-base text-gray-600">Menos Fome</div>
+                      </div>
+                      <div className="p-2 sm:p-3">
+                        <div className="text-xl sm:text-2xl font-bold text-green-600">97%</div>
+                        <div className="text-sm sm:text-base text-gray-600">Satisfação</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-900 mb-6">
+                    O que faz o Definamax tão eficaz para perder peso é a sua tecnologia de fibras inteligentes nano-encapsuladas, que captura até 85% da
+                    gordura dos alimentos antes da absorção. Isso significa que você naturalmente absorve menos
+                    calorias a cada refeição, com <strong>resultados visíveis já nos primeiros 3 dias</strong>, mesmo sem mudanças drásticas na alimentação.
+                  </p>
+
+                  <p className="text-gray-900 mb-6">O diferencial do Definamax é sua ação quádrupla:</p>
+
+                  <div className="space-y-4 mb-6">
+                    <div className="text-gray-900">
+                      <strong>Controle Máximo da Fome:</strong> Reduz o apetite em até 95%, eliminando completamente a compulsão alimentar já nas primeiras 24 horas de uso.
+                    </div>
+                    <div className="text-gray-900">
+                      <strong>Queima Acelerada:</strong> Aumenta a queima de gordura em até 50%, atuando continuamente mesmo durante o sono.
+                    </div>
+                    <div className="text-gray-900">
+                      <strong>Redução Localizada Express:</strong> Atua especificamente nas áreas mais difíceis como abdômen, coxas e braços com resultados visíveis em 72 horas.
+                    </div>
+                    <div className="text-gray-900">
+                      <strong>Bloqueio Inteligente:</strong> Tecnologia patenteada que bloqueia até 85% da absorção de carboidratos e gorduras.
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                    <UtmLink 
+                      href="https://www.definamaxoficial.com/" 
+                      className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
+                      eventId="site-oficial-definamax"
+                      onClick={handleDefinamaxCTA}
+                    >
+                      Acessar Site Oficial <span>→</span>
+                    </UtmLink>
+                    <UtmLink 
+                      href="https://www.definamaxoficial.com/" 
+                      className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
+                      eventId="informacoes-definamax"
+                      onClick={handleDefinamaxInfo}
                     >
                       Obter mais informações <span>→</span>
                     </UtmLink>
@@ -664,12 +662,12 @@ const RankingSection = () => {
                     <div className="space-y-2">
                       <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
                         <span className="bg-green-600 text-white font-bold text-sm px-2 py-1 rounded">1°</span>
-                        <span className="font-semibold text-gray-900">Definamax</span>
+                        <span className="font-semibold text-gray-900">Phynamax</span>
                         <span className="text-sm text-green-700">- Mais recomendado</span>
                       </div>
                       <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
                         <span className="bg-gray-600 text-white font-bold text-sm px-2 py-1 rounded">2°</span>
-                        <span className="font-medium text-gray-800">Phynamax</span>
+                        <span className="font-medium text-gray-800">Definamax</span>
                       </div>
                       <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
                         <span className="bg-gray-600 text-white font-bold text-sm px-2 py-1 rounded">3°</span>
