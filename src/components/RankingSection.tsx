@@ -246,7 +246,7 @@ const RankingSection = () => {
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-6">
                     <UtmLink 
-                      href="https://www.definamaxoficial.com/" 
+                      href="https://www.definamaxoficial.com/produto" 
                       className="w-full bg-[#00C853] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#00B848] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="site-oficial-definamax"
                       onClick={handleDefinamaxCTA}
@@ -254,7 +254,7 @@ const RankingSection = () => {
                       Acessar Site Oficial <span>→</span>
                     </UtmLink>
                     <UtmLink 
-                      href="https://www.definamaxoficial.com/" 
+                      href="https://www.definamaxoficial.com/produto" 
                       className="w-full bg-[#FF6B00] text-white text-center py-4 sm:py-4 px-4 rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2 text-base sm:text-base font-semibold"
                       eventId="informacoes-definamax"
                       onClick={handleDefinamaxInfo}
