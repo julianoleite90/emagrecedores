@@ -7,13 +7,13 @@ const ExpertSection = () => {
         <div className="bg-white rounded-2xl shadow-xl p-4 md:p-12">
           <div className="grid grid-cols-3 gap-4 md:flex md:flex-row md:items-center md:gap-12">
             {/* COLUNA DA ESQUERDA - APENAS IMAGEM */}
-            <div className="col-span-1 md:w-48 md:h-48 relative shrink-0">
+            <div className="col-span-1 md:w-32 md:h-32 relative shrink-0">
               <div className="w-full aspect-square rounded-full border-4 border-green-500 shadow-lg overflow-hidden">
                 <Image
                   src="/medica-150.webp"
-                  alt="Especialista Ana Costa"
-                  width={192}
-                  height={192}
+                  alt="Ana Albuquerque - Especialista em emagrecimento"
+                  width={128}
+                  height={128}
                   className="object-cover w-full h-full"
                   priority
                 />
@@ -25,14 +25,17 @@ const ExpertSection = () => {
               {/* Título */}
               <div className="mb-3 md:mb-4">
                 <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">
-                  Análise Liderada por Especialistas
+                  A INTERNET ESTÁ INUNDADA POR PRODUTOS QUE NÃO ENTREGAM RESULTADOS
                 </h3>
               </div>
 
               {/* Descrição */}
               <div className="text-gray-700">
-                <p className="text-xs md:text-base leading-relaxed">
-                  Especialista Ana Costa, com 15 anos de experiência, liderou nossa análise rigorosa de eficácia, segurança e satisfação dos usuários, garantindo recomendações confiáveis.
+                <p className="text-xs md:text-base leading-relaxed mb-3">
+                  "Uma fórmula eficaz precisa ter pelo menos <strong>600mg</strong> de bioativos que agem no controle da saciedade, diminui a compulsão, e que regula o organismo."
+                </p>
+                <p className="text-xs md:text-sm font-medium text-gray-800">
+                  Ana Albuquerque - Especialista em emagrecimento
                 </p>
               </div>
             </div>

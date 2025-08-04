@@ -21,7 +21,7 @@ const HeroSection = () => {
           <div className="space-y-4">
             {/* Data de atualização */}
             <div className="pt-2 md:pt-6">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm italic">
                 {formatDate()}
               </p>
             </div>
@@ -29,9 +29,9 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Análise detalhada dos melhores remédios para emagrecer</div>
+                <div className="text-gray-900">Descubra os Remédios para Emagrecer que Realmente Funcionam em 2025</div>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4">Quais realmente funcionam?</h2>
+              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4 italic">Os 5 mais eficazes do ano</h2>
             </div>
 
             {/* Imagem em mobile */}
@@ -51,13 +51,15 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-            Você já tentou vários remédios para emagrecer e não viu resultado? Ou pior: sofreu com efeitos colaterais como ansiedade, insônia ou até problemas no coração?
-            Em 2025, surgiram novas fórmulas naturais e medicamentos controlados que prometem emagrecimento rápido, mas será que eles funcionam de verdade?
-            Nesta análise, testamos e comparamos os 5 remédios mais buscados do mercado, desde termogênicos até inibidores de apetite
+            Perder peso pode parecer uma batalha impossível: dietas exaustivas, academia e remédios de farmácias ou online para eliminar gordura teimosa. Mas estudos revelam que 80% das pessoas falham em manter a perda a longo prazo, apesar dos esforços. E isso não é culpa sua – o erro está nos produtos que prometem milagres sem entregar.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-            Antes de decidir por qualquer produto, é fundamental entender seu próprio corpo e objetivos. Alguns emagrecedores são ótimos para controlar a compulsão alimentar, enquanto outros agem melhor na queima de gordura localizada.
+            A verdade: a maioria dos suplementos carece de provas científicas, com revisões mostrando que nenhum supera placebos em testes rigorosos. Muitos têm ingredientes insuficientes ou mal regulados, causando decepções e riscos à saúde.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+            Por isso, na Análise Melhores Emagrecedores – sua fonte imparcial –, investigamos fórmulas eficazes de 2025. Liderada pela Especialista Ana Albuquerque, analisamos dezenas de opções e selecionamos os 5 tops com base em: tempo de resultados, ingredientes, preço, opiniões de usuários e segurança por estudos independentes.
             </p>
 
             {/* Botão CTA */}
@@ -66,28 +68,11 @@ const HeroSection = () => {
               className="inline-flex bg-[#00A040] hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
               onClick={handleCTAClick}
             >
-                              <span className="flex-1 text-center leading-tight">VEJA AGORA OS 5 REMÉDIOS PARA EMAGRECER</span>
+                              <span className="flex-1 text-center leading-tight">DESCUBRA OS 5 MELHORES DE 2025</span>
               <span className="ml-2">↓</span>
             </ScrollLink>
 
-            {/* Seta indicativa de mais conteúdo */}
-            <div className="flex justify-center mt-4">
-              <div className="animate-bounce">
-                <svg 
-                  className="w-6 h-6 text-gray-500" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3" 
-                  />
-                </svg>
-              </div>
-            </div>
+
           </div>
 
           {/* Imagem do lado direito (apenas desktop) */}

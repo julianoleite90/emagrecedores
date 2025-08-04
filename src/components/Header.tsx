@@ -4,9 +4,9 @@ import Image from 'next/image';
 const Header = () => {
   return (
     <header className="bg-white border-b py-6">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="w-full md:w-auto flex justify-center md:justify-start">
+          <div className="w-full md:w-auto flex justify-start">
             <Image
               src="/2logo.png"
               alt="Logo"
