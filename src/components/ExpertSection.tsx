@@ -32,7 +32,7 @@ const ExpertSection = () => {
               {/* Descrição */}
               <div className="text-gray-700">
                 <p className="text-xs md:text-base leading-relaxed mb-3">
-                  "Uma fórmula eficaz precisa ter pelo menos <strong>600mg</strong> de bioativos que agem no controle da saciedade, diminui a compulsão, e que regula o organismo."
+                  &ldquo;Uma fórmula eficaz precisa ter pelo menos <strong>600mg</strong> de bioativos que agem no controle da saciedade, diminui a compulsão, e que regula o organismo.&rdquo;
                 </p>
                 <p className="text-xs md:text-sm font-medium text-gray-800">
                   Ana Albuquerque - Especialista em emagrecimento
