@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste de Imagens</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .image-container { margin: 20px 0; border: 2px solid #333; }
+        img { max-width: 100%; height: auto; display: block; }
+        .mobile { max-width: 400px; }
+        .desktop { max-width: 600px; }
+    </style>
+</head>
+<body>
+    <h1>Teste das Imagens do Hero</h1>
+    
+    <div class="image-container mobile">
+        <h2>Mobile (hmob.png)</h2>
+        <img src="/hmob.png" alt="Hero Mobile" onload="console.log('Mobile image loaded')" onerror="console.log('Mobile image failed')">
+    </div>
+    
+    <div class="image-container desktop">
+        <h2>Desktop (hdesk.png)</h2>
+        <img src="/hdesk.png" alt="Hero Desktop" onload="console.log('Desktop image loaded')" onerror="console.log('Desktop image failed')">
+    </div>
+    
+    <div class="image-container">
+        <h2>Logo (logo.png)</h2>
+        <img src="/logo.png" alt="Logo" onload="console.log('Logo loaded')" onerror="console.log('Logo failed')">
+    </div>
+    
+    <script>
+        console.log('Test page loaded');
+    </script>
+</body>
+</html>

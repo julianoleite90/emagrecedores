@@ -25,7 +25,7 @@ const ExpertSection = () => {
               {/* Título */}
               <div className="mb-3 md:mb-4">
                 <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">
-                  A INTERNET ESTÁ INUNDADA POR PRODUTOS QUE NÃO ENTREGAM RESULTADOS
+                  Aprenda a diferenciar o que funciona do que não funciona, e fuja dos produtos com menos de 600mg.
                 </h3>
               </div>
 

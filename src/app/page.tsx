@@ -30,7 +30,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="bg-white rounded-lg p-4 shadow-lg">
                 <Image
-                  src="/2logo.png"
+                  src="/logo.png"
                   alt="Logo"
                   width={240}
                   height={86}

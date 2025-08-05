@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import ScrollLink from './ScrollLink';
 import { trackHeroCTA } from '@/utils/analytics';
 
@@ -29,24 +28,23 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Descubra os Remédios para Emagrecer que Realmente Funcionam em 2025</div>
+                <div className="text-gray-900">5 Remédios para Emagrecer que Realmente Funcionam em 2025</div>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4 italic">Os 5 mais eficazes do ano</h2>
+              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4 italic">Aprovados pela anvisa</h2>
             </div>
 
             {/* Imagem em mobile */}
-            <div className="block lg:hidden relative h-[450px] w-full mt-[2px] mb-6">
-              <picture>
-                <source media="(max-width: 768px)" srcSet="/hero-mob.png" />
-                <Image
-                  src="/hero-mob.png"
+            <div className="block lg:hidden w-full mt-[2px] mb-6">
+              <div className="relative h-[450px] w-full">
+                <img
+                  src="/hmob.png"
                   alt="Remédios para emagrecer"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                 />
-              </picture>
+              </div>
+              <p className="text-xs text-gray-500 italic mt-2 text-center">
+                Editorial: Análise imparcial dos melhores suplementos para emagrecimento de 2025
+              </p>
             </div>
 
             {/* Subtítulo com destaque */}
@@ -59,7 +57,7 @@ const HeroSection = () => {
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-            Por isso, na Análise Melhores Emagrecedores – sua fonte imparcial –, investigamos fórmulas eficazes de 2025. Liderada pela Especialista Ana Albuquerque, analisamos dezenas de opções e selecionamos os 5 tops com base em: tempo de resultados, ingredientes, preço, opiniões de usuários e segurança por estudos independentes.
+            Por isso, investigamos as fórmulas mais eficazes de 2025. Liderada pela Especialista Ana Albuquerque, analisamos dezenas de opções e selecionamos os 5 melhores com base em: tempo de resultados, ingredientes, preço, opiniões de usuários e segurança por estudos independentes.
             </p>
 
             {/* Botão CTA */}
@@ -76,18 +74,17 @@ const HeroSection = () => {
           </div>
 
           {/* Imagem do lado direito (apenas desktop) */}
-          <div className="hidden lg:block relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-            <picture>
-              <source media="(min-width: 769px)" srcSet="/hero-desk.png" />
-              <Image
-                src="/hero-desk.png"
+          <div className="hidden lg:block">
+            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/hdesk.png"
                 alt="Remédios para emagrecer"
-                fill
-                className="object-cover"
-                priority
-                sizes="(min-width: 769px) 50vw, 100vw"
+                className="absolute inset-0 w-full h-full object-cover"
               />
-            </picture>
+            </div>
+            <p className="text-xs text-gray-500 italic mt-3 text-center">
+              Editorial: Análise imparcial dos melhores suplementos para emagrecimento de 2025
+            </p>
           </div>
         </div>
       </div>
