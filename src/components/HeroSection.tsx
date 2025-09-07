@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-gray-100 pt-0 pb-8 md:pb-12">
+    <section className="hero-section bg-gradient-to-b from-gray-50 to-gray-100 pt-0 pb-8 md:pb-12">
       <div className="max-w-7xl mx-auto px-6">
 
 
@@ -35,15 +35,18 @@ const HeroSection = () => {
 
             {/* Imagem em mobile */}
             <div className="block lg:hidden w-full mt-[2px] mb-6">
-              <div className="relative h-[450px] w-full">
+              <div className="hero-image relative h-[450px] w-full">
                 <Image
                   src="/hmob.png"
                   alt="Remédios para emagrecer"
                   fill
                   className="object-cover object-top"
                   priority
+                  fetchPriority="high"
                   sizes="(max-width: 1024px) 100vw, 0px"
-                  quality={85}
+                  quality={90}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                 />
               </div>
               <p className="text-xs text-gray-500 italic mt-2 text-center">
@@ -83,15 +86,18 @@ const HeroSection = () => {
 
           {/* Imagem do lado direito (apenas desktop) */}
           <div className="hidden lg:block">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="hero-image relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/hdesk.png"
                 alt="Remédios para emagrecer"
                 fill
                 className="object-cover"
                 priority
+                fetchPriority="high"
                 sizes="(min-width: 1024px) 50vw, 0px"
-                quality={85}
+                quality={90}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
               />
             </div>
             <p className="text-xs text-gray-500 italic mt-3 text-center">

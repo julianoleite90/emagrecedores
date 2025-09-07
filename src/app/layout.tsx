@@ -43,8 +43,12 @@ export default function RootLayout({
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         
         {/* Preload de recursos críticos para melhorar LCP */}
-        <link rel="preload" href="/hmob.png" as="image" type="image/png" media="(max-width: 1024px)" />
-        <link rel="preload" href="/hdesk.png" as="image" type="image/png" media="(min-width: 1024px)" />
+        <link rel="preload" href="/hmob.png" as="image" type="image/png" media="(max-width: 1024px)" fetchpriority="high" />
+        <link rel="preload" href="/hdesk.png" as="image" type="image/png" media="(min-width: 1024px)" fetchpriority="high" />
+        
+        {/* Preload de fontes críticas */}
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
         
         {/* Preload de fontes críticas */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

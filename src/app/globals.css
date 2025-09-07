@@ -28,6 +28,20 @@ html {
   scroll-behavior: smooth;
   /* Preload crítico */
   font-display: swap;
+  /* Otimizações de renderização */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Critical CSS inline para LCP */
+.hero-section {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+.hero-image {
+  contain: layout style paint;
+  will-change: transform;
 }
 
 body {
