@@ -19,18 +19,54 @@
   }
 }
 
-/* Otimizações de performance */
+/* Otimizações de performance EXTREMAS */
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  /* Preload crítico */
   font-display: swap;
-  /* Otimizações de renderização */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  /* Otimizações de renderização */
+  contain: layout style paint;
+}
+
+/* Otimizações de renderização para performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Otimizações de layout para LCP */
+.hero-section {
+  contain: layout style paint;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.hero-image {
+  contain: layout style paint;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Otimizações de texto para FCP */
+.hero-title {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  contain: layout style paint;
+}
+
+.hero-text {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  contain: layout style paint;
 }
 
 /* Critical CSS inline para LCP */
@@ -75,10 +111,28 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Otimizações de imagens */
+/* Otimizações de imagens para Web Vitals */
 img {
   max-width: 100%;
   height: auto;
+  /* Prevenir layout shift */
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Prevenir layout shift em imagens sem dimensões */
+img:not([width]):not([height]) {
+  aspect-ratio: 16 / 9;
+}
+
+/* Otimizações específicas para Web Vitals */
+.hero-image img {
+  /* Garantir que a imagem não cause layout shift */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Otimização de renderização */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Preload de recursos críticos */

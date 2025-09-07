@@ -35,7 +35,7 @@ const HeroSection = () => {
 
             {/* Imagem em mobile */}
             <div className="block lg:hidden w-full mt-[2px] mb-6">
-              <div className="hero-image relative h-[450px] w-full">
+              <div className="hero-image relative w-full" style={{ aspectRatio: '16/9', height: '450px' }}>
                 <Image
                   src="/hmob.png"
                   alt="Remédios para emagrecer"
@@ -44,7 +44,7 @@ const HeroSection = () => {
                   priority
                   fetchPriority="high"
                   sizes="(max-width: 1024px) 100vw, 0px"
-                  quality={90}
+                  quality={85}
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                 />
@@ -84,22 +84,22 @@ const HeroSection = () => {
 
           </div>
 
-          {/* Imagem do lado direito (apenas desktop) */}
-          <div className="hidden lg:block">
-            <div className="hero-image relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/hdesk.png"
-                alt="Remédios para emagrecer"
-                fill
-                className="object-cover"
-                priority
-                fetchPriority="high"
-                sizes="(min-width: 1024px) 50vw, 0px"
-                quality={90}
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-              />
-            </div>
+      {/* Imagem do lado direito (apenas desktop) */}
+      <div className="hidden lg:block">
+        <div className="hero-image relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3', height: '400px' }}>
+          <Image
+            src="/hdesk.png"
+            alt="Remédios para emagrecer"
+            fill
+            className="object-cover"
+            priority
+            fetchPriority="high"
+            sizes="(min-width: 1024px) 50vw, 0px"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          />
+        </div>
             <p className="text-xs text-gray-500 italic mt-3 text-center">
               Editorial: Análise imparcial dos melhores suplementos para emagrecimento de 2025
             </p>

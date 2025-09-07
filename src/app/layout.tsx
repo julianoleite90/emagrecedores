@@ -53,6 +53,16 @@ export default function RootLayout({
         {/* Preload de fontes críticas */}
         <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         
+        {/* Resource Hints mais agressivos */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        {/* Prefetch de recursos críticos */}
+        <link rel="prefetch" href="/_next/static/chunks/pages/_app.js" />
+        <link rel="prefetch" href="/_next/static/chunks/pages/index.js" />
+        
         {/* Critical CSS inline para LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
@@ -163,6 +173,50 @@ export default function RootLayout({
             console.log('GA4 tracking functions initialized:', {
               trackSectionView: typeof window.trackSectionView === 'function',
               trackCTAClick: typeof window.trackCTAClick === 'function'
+            });
+          `}
+        </Script>
+        
+        {/* Service Worker para cache agressivo */}
+        <Script id="service-worker" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                  .then((registration) => {
+                    console.log('SW registered: ', registration);
+                  })
+                  .catch((registrationError) => {
+                    console.log('SW registration failed: ', registrationError);
+                  });
+              });
+            }
+          `}
+        </Script>
+        
+        {/* Web Vitals monitoring */}
+        <Script id="web-vitals" strategy="afterInteractive">
+          {`
+            // Web Vitals monitoring inline
+            function sendToAnalytics(metric) {
+              if (window.gtag) {
+                window.gtag('event', metric.name, {
+                  event_category: 'Web Vitals',
+                  event_label: metric.id,
+                  value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+                  non_interaction: true,
+                });
+              }
+              console.log('Web Vital:', metric.name, metric.value);
+            }
+            
+            // Importar e inicializar Web Vitals
+            import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+              onCLS(sendToAnalytics);
+              onINP(sendToAnalytics);
+              onFCP(sendToAnalytics);
+              onLCP(sendToAnalytics);
+              onTTFB(sendToAnalytics);
             });
           `}
         </Script>
