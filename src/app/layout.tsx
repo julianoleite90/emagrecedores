@@ -63,45 +63,29 @@ export default function RootLayout({
         <link rel="prefetch" href="/_next/static/chunks/pages/_app.js" />
         <link rel="prefetch" href="/_next/static/chunks/pages/index.js" />
         
-        {/* Critical CSS inline para LCP */}
+        {/* Critical CSS inline SIMPLES para LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
             .hero-section { 
               contain: layout style paint; 
-              will-change: transform; 
-              transform: translateZ(0);
-              backface-visibility: hidden;
             }
             .hero-image { 
               contain: layout style paint; 
-              will-change: transform; 
-              transform: translateZ(0);
-              backface-visibility: hidden;
             }
             .hero-title { 
               font-size: 2.75rem; 
               font-weight: 700; 
               line-height: 1.1; 
-              font-display: swap;
-              text-rendering: optimizeSpeed;
-            }
-            .hero-subtitle { 
-              font-size: 1.25rem; 
-              color: #6b7280; 
-              font-display: swap;
             }
             .hero-text { 
               color: #374151; 
               line-height: 1.6; 
-              font-display: swap;
-              text-rendering: optimizeSpeed;
             }
             .hero-cta { 
               background: #00A040; 
               color: white; 
               padding: 1rem 2rem; 
               border-radius: 0.5rem; 
-              transform: translateZ(0);
             }
             @media (max-width: 1024px) {
               .hero-title { font-size: 2rem; }
@@ -109,14 +93,6 @@ export default function RootLayout({
             }
             @media (min-width: 1024px) {
               .hero-image { height: 400px; }
-            }
-            /* Otimizações de renderização */
-            * { box-sizing: border-box; }
-            html { scroll-behavior: smooth; }
-            body { 
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
-              text-rendering: optimizeLegibility;
             }
           `
         }} />
@@ -177,49 +153,6 @@ export default function RootLayout({
           `}
         </Script>
         
-        {/* Service Worker para cache agressivo */}
-        <Script id="service-worker" strategy="afterInteractive">
-          {`
-            if ('serviceWorker' in navigator) {
-              window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                  .then((registration) => {
-                    console.log('SW registered: ', registration);
-                  })
-                  .catch((registrationError) => {
-                    console.log('SW registration failed: ', registrationError);
-                  });
-              });
-            }
-          `}
-        </Script>
-        
-        {/* Web Vitals monitoring */}
-        <Script id="web-vitals" strategy="afterInteractive">
-          {`
-            // Web Vitals monitoring inline
-            function sendToAnalytics(metric) {
-              if (window.gtag) {
-                window.gtag('event', metric.name, {
-                  event_category: 'Web Vitals',
-                  event_label: metric.id,
-                  value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-                  non_interaction: true,
-                });
-              }
-              console.log('Web Vital:', metric.name, metric.value);
-            }
-            
-            // Importar e inicializar Web Vitals
-            import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
-              onCLS(sendToAnalytics);
-              onINP(sendToAnalytics);
-              onFCP(sendToAnalytics);
-              onLCP(sendToAnalytics);
-              onTTFB(sendToAnalytics);
-            });
-          `}
-        </Script>
       </head>
       <body className={inter.className}>
         <Header />

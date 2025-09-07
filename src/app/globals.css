@@ -19,7 +19,7 @@
   }
 }
 
-/* Otimizações de performance EXTREMAS */
+/* Otimizações de performance SIMPLES */
 * {
   box-sizing: border-box;
 }
@@ -29,43 +29,14 @@ html {
   font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
-  /* Otimizações de renderização */
-  contain: layout style paint;
 }
 
-/* Otimizações de renderização para performance */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
-}
-
-/* Otimizações de layout para LCP */
+/* Otimizações básicas para LCP */
 .hero-section {
   contain: layout style paint;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .hero-image {
-  contain: layout style paint;
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-/* Otimizações de texto para FCP */
-.hero-title {
-  font-display: swap;
-  text-rendering: optimizeSpeed;
-  contain: layout style paint;
-}
-
-.hero-text {
-  font-display: swap;
-  text-rendering: optimizeSpeed;
   contain: layout style paint;
 }
 

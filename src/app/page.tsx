@@ -8,11 +8,11 @@ import WhyConsiderSection from '@/components/WhyConsiderSection';
 // Lazy loading para componentes não críticos
 const RankingSection = lazy(() => import('@/components/RankingSection'));
 
-// Hook para otimização de performance e Web Vitals
+// Hook SIMPLES para otimização de performance
 const usePerformanceOptimization = () => {
   useEffect(() => {
-    // Preload de recursos críticos
-    const preloadResources = () => {
+    // Apenas preload básico de imagens críticas
+    const preloadCriticalImages = () => {
       const criticalImages = ['/hmob.png', '/hdesk.png'];
       criticalImages.forEach(src => {
         const link = document.createElement('link');
@@ -24,36 +24,8 @@ const usePerformanceOptimization = () => {
       });
     };
 
-    // Otimizações para Web Vitals
-    const optimizeWebVitals = () => {
-      // Prevenir layout shift em imagens
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.style.aspectRatio && img.naturalWidth && img.naturalHeight) {
-          img.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`;
-        }
-      });
-
-      // Otimizar event listeners para FID/INP
-      const passiveEvents = ['scroll', 'touchstart', 'touchmove', 'wheel'];
-      passiveEvents.forEach(eventType => {
-        document.addEventListener(eventType, () => {}, { passive: true });
-      });
-
-      // Defer scripts não críticos
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        if (!script.hasAttribute('data-critical')) {
-          (script as HTMLScriptElement).defer = true;
-        }
-      });
-    };
-
-    // Executar otimizações
-    requestIdleCallback(() => {
-      preloadResources();
-      optimizeWebVitals();
-    }, { timeout: 2000 });
+    // Executar apenas preload
+    setTimeout(preloadCriticalImages, 100);
   }, []);
 };
 

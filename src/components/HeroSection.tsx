@@ -35,7 +35,7 @@ const HeroSection = () => {
 
             {/* Imagem em mobile */}
             <div className="block lg:hidden w-full mt-[2px] mb-6">
-              <div className="hero-image relative w-full" style={{ aspectRatio: '16/9', height: '450px' }}>
+              <div className="hero-image relative h-[450px] w-full">
                 <Image
                   src="/hmob.png"
                   alt="Remédios para emagrecer"
@@ -86,7 +86,7 @@ const HeroSection = () => {
 
       {/* Imagem do lado direito (apenas desktop) */}
       <div className="hidden lg:block">
-        <div className="hero-image relative rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: '4/3', height: '400px' }}>
+        <div className="hero-image relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
           <Image
             src="/hdesk.png"
             alt="Remédios para emagrecer"
