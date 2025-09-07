@@ -55,30 +55,50 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         
-        {/* Critical CSS inline SIMPLES para LCP */}
+        {/* Critical CSS inline AGRESSIVO para LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
+            /* Reset básico para FCP */
+            * { box-sizing: border-box; }
+            html { font-display: swap; }
+            body { 
+              margin: 0; 
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              -webkit-font-smoothing: antialiased;
+            }
+            
+            /* Hero section crítico */
             .hero-section { 
               contain: layout style paint; 
+              background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+              padding: 0;
             }
             .hero-image { 
               contain: layout style paint; 
+              background: #f3f4f6;
             }
             .hero-title { 
               font-size: 2.75rem; 
               font-weight: 700; 
               line-height: 1.1; 
+              color: #111827;
+              margin: 0 0 1rem 0;
             }
             .hero-text { 
               color: #374151; 
               line-height: 1.6; 
+              margin: 0 0 1rem 0;
             }
             .hero-cta { 
               background: #00A040; 
               color: white; 
               padding: 1rem 2rem; 
               border-radius: 0.5rem; 
+              border: none;
+              font-weight: 500;
             }
+            
+            /* Media queries críticas */
             @media (max-width: 1024px) {
               .hero-title { font-size: 2rem; }
               .hero-image { height: 450px; }
@@ -89,7 +109,7 @@ export default function RootLayout({
           `
         }} />
         
-        {/* Preload de fontes críticas */}
+        {/* Carregar fontes Google sem bloquear FCP */}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
         
         {/* Preload de fontes críticas */}
