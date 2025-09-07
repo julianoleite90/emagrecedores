@@ -42,26 +42,18 @@ export default function RootLayout({
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         
-        {/* Preload de recursos críticos para melhorar LCP */}
+        {/* Preload ULTRA agressivo para LCP */}
         <link rel="preload" href="/hmob.png" as="image" type="image/png" media="(max-width: 1024px)" fetchPriority="high" />
         <link rel="preload" href="/hdesk.png" as="image" type="image/png" media="(min-width: 1024px)" fetchPriority="high" />
-        
-        {/* Preload de recursos críticos do Next.js */}
-        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
-        <link rel="preload" href="/_next/static/chunks/webpack.js" as="script" />
         
         {/* Preload de fontes críticas */}
         <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         
-        {/* Resource Hints mais agressivos */}
+        {/* Resource Hints críticos */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        
-        {/* Prefetch de recursos críticos */}
-        <link rel="prefetch" href="/_next/static/chunks/pages/_app.js" />
-        <link rel="prefetch" href="/_next/static/chunks/pages/index.js" />
         
         {/* Critical CSS inline SIMPLES para LCP */}
         <style dangerouslySetInnerHTML={{

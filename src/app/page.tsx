@@ -1,5 +1,5 @@
 'use client';
-import { useState, lazy, Suspense, useEffect } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import ExpertSection from '@/components/ExpertSection';
@@ -8,32 +8,8 @@ import WhyConsiderSection from '@/components/WhyConsiderSection';
 // Lazy loading para componentes não críticos
 const RankingSection = lazy(() => import('@/components/RankingSection'));
 
-// Hook SIMPLES para otimização de performance
-const usePerformanceOptimization = () => {
-  useEffect(() => {
-    // Apenas preload básico de imagens críticas
-    const preloadCriticalImages = () => {
-      const criticalImages = ['/hmob.png', '/hdesk.png'];
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        link.fetchPriority = 'high';
-        document.head.appendChild(link);
-      });
-    };
-
-    // Executar apenas preload
-    setTimeout(preloadCriticalImages, 100);
-  }, []);
-};
-
 export default function Home() {
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
-  
-  // Aplicar otimizações de performance
-  usePerformanceOptimization();
 
   return (
     <>
