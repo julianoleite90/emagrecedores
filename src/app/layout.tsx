@@ -46,21 +46,67 @@ export default function RootLayout({
         <link rel="preload" href="/hmob.png" as="image" type="image/png" media="(max-width: 1024px)" fetchPriority="high" />
         <link rel="preload" href="/hdesk.png" as="image" type="image/png" media="(min-width: 1024px)" fetchPriority="high" />
         
+        {/* Preload de recursos críticos do Next.js */}
+        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
+        <link rel="preload" href="/_next/static/chunks/webpack.js" as="script" />
+        
+        {/* Preload de fontes críticas */}
+        <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        
         {/* Critical CSS inline para LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            .hero-section { contain: layout style paint; will-change: transform; }
-            .hero-image { contain: layout style paint; will-change: transform; }
-            .hero-title { font-size: 2.75rem; font-weight: 700; line-height: 1.1; }
-            .hero-subtitle { font-size: 1.25rem; color: #6b7280; }
-            .hero-text { color: #374151; line-height: 1.6; }
-            .hero-cta { background: #00A040; color: white; padding: 1rem 2rem; border-radius: 0.5rem; }
+            .hero-section { 
+              contain: layout style paint; 
+              will-change: transform; 
+              transform: translateZ(0);
+              backface-visibility: hidden;
+            }
+            .hero-image { 
+              contain: layout style paint; 
+              will-change: transform; 
+              transform: translateZ(0);
+              backface-visibility: hidden;
+            }
+            .hero-title { 
+              font-size: 2.75rem; 
+              font-weight: 700; 
+              line-height: 1.1; 
+              font-display: swap;
+              text-rendering: optimizeSpeed;
+            }
+            .hero-subtitle { 
+              font-size: 1.25rem; 
+              color: #6b7280; 
+              font-display: swap;
+            }
+            .hero-text { 
+              color: #374151; 
+              line-height: 1.6; 
+              font-display: swap;
+              text-rendering: optimizeSpeed;
+            }
+            .hero-cta { 
+              background: #00A040; 
+              color: white; 
+              padding: 1rem 2rem; 
+              border-radius: 0.5rem; 
+              transform: translateZ(0);
+            }
             @media (max-width: 1024px) {
               .hero-title { font-size: 2rem; }
               .hero-image { height: 450px; }
             }
             @media (min-width: 1024px) {
               .hero-image { height: 400px; }
+            }
+            /* Otimizações de renderização */
+            * { box-sizing: border-box; }
+            html { scroll-behavior: smooth; }
+            body { 
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-rendering: optimizeLegibility;
             }
           `
         }} />

@@ -6,6 +6,56 @@ const nextConfig: NextConfig = {
   swcMinify: true,
   poweredByHeader: false,
   
+  // Otimizações de performance
+  experimental: {
+    optimizePackageImports: ['@/components', '@/utils'],
+  },
+  
+  // Headers de cache para melhor performance
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'
+          }
+        ]
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(.*\\.(png|jpg|jpeg|gif|webp|svg|ico|avif))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      }
+    ];
+  },
+  
   // Otimizações de imagens
   images: {
     formats: ['image/avif', 'image/webp'],
