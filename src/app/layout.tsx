@@ -46,6 +46,25 @@ export default function RootLayout({
         <link rel="preload" href="/hmob.png" as="image" type="image/png" media="(max-width: 1024px)" fetchpriority="high" />
         <link rel="preload" href="/hdesk.png" as="image" type="image/png" media="(min-width: 1024px)" fetchpriority="high" />
         
+        {/* Critical CSS inline para LCP */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .hero-section { contain: layout style paint; will-change: transform; }
+            .hero-image { contain: layout style paint; will-change: transform; }
+            .hero-title { font-size: 2.75rem; font-weight: 700; line-height: 1.1; }
+            .hero-subtitle { font-size: 1.25rem; color: #6b7280; }
+            .hero-text { color: #374151; line-height: 1.6; }
+            .hero-cta { background: #00A040; color: white; padding: 1rem 2rem; border-radius: 0.5rem; }
+            @media (max-width: 1024px) {
+              .hero-title { font-size: 2rem; }
+              .hero-image { height: 450px; }
+            }
+            @media (min-width: 1024px) {
+              .hero-image { height: 400px; }
+            }
+          `
+        }} />
+        
         {/* Preload de fontes críticas */}
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onLoad="this.onload=null;this.rel='stylesheet'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
@@ -57,6 +76,12 @@ export default function RootLayout({
         {/* DNS prefetch para recursos externos */}
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Prefetch de recursos críticos */}
+        <link rel="prefetch" href="/_next/static/css/app/layout.css" />
+        <link rel="prefetch" href="/_next/static/chunks/webpack.js" />
         
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GEJ71JEFEM"

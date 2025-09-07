@@ -37,11 +37,32 @@ html {
 .hero-section {
   contain: layout style paint;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .hero-image {
   contain: layout style paint;
   will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Otimizações de renderização */
+.hero-title {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+}
+
+.hero-text {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+}
+
+/* Preload de recursos críticos */
+.preload-critical {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
 }
 
 body {

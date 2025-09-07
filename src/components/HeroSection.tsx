@@ -28,7 +28,7 @@ const HeroSection = () => {
 
             {/* Título principal */}
             <div className="text-left">
-              <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
+              <h1 className="hero-title text-gray-900 leading-tight mb-2">
                 <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025</div>
               </h1>
             </div>
@@ -55,26 +55,26 @@ const HeroSection = () => {
             </div>
 
             {/* Subtítulo com destaque */}
-            <p className="text-gray-700 leading-relaxed">
+            <p className="hero-text text-gray-700 leading-relaxed">
             Já se sentiu presa na guerra contra a balança? Dietas exaustivas, academia sem resultados e remédios online que prometem eliminar gordura teimosa, mas falham? Você não está sozinha: estudos mostram que 95% das pessoas reganham o peso em 2 anos, apesar do esforço. A culpa não é sua – o problema são produtos sem provas, com revisões indicando perdas mínimas e riscos de ingredientes mal regulados.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="hero-text text-gray-700 leading-relaxed">
             <strong>E se você pudesse perder até 22% do peso com opções aprovadas?</strong>
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="hero-text text-gray-700 leading-relaxed">
             Por isso, investigamos as melhores fórmulas de 2025. Liderada pela especialista Ana Albuquerque, analisamos dezenas de remédios com base em: Resultados em emagrecimento, Ingredientes, Preço, Clientes Satisfeitos, Aprovação da Anvisa, e tempo médio de emagrecimento.
             </p>
 
-            <p className="text-gray-700 leading-relaxed">
+            <p className="hero-text text-gray-700 leading-relaxed">
             O resultado? Um ranking dos 5 melhores remédios para emagrecer (naturais e sem riscos a saúde), incluindo a fórmula de Phynamax, considerada pelos clientes 47% mais eficaz. Continue lendo para descobrir a lista completa.
             </p>
 
             {/* Botão CTA */}
             <ScrollLink 
               targetId="quiz"
-              className="inline-flex bg-[#00A040] hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
+              className="hero-cta inline-flex hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
               onClick={handleCTAClick}
             >
                               <span className="flex-1 text-center leading-tight">DESCUBRA OS 5 MELHORES DE 2025</span>

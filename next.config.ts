@@ -4,10 +4,16 @@ const nextConfig: NextConfig = {
   // Otimizações de performance
   experimental: {
     optimizePackageImports: ['@/components', '@/utils'],
+    optimizeCss: true,
+    scrollRestoration: true,
   },
   
   // Compressão e otimizações
   compress: true,
+  
+  // Otimizações de build
+  swcMinify: true,
+  poweredByHeader: false,
   
   // Headers de cache para melhor performance
   async headers() {
