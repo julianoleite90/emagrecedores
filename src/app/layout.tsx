@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Script from "next/script";
+import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -11,19 +12,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "5 Melhores Remédios Para Emagrecer em 2025",
+  title: "Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025",
   description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
   keywords: "remédios para emagrecer, emagrecimento, perda de peso, suplementos emagrecedores",
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-  themeColor: "#ffffff",
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
-    title: "5 Melhores Remédios Para Emagrecer em 2025",
+    title: "Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025",
     description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
     siteName: "Análise de Emagrecedores",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -35,6 +41,19 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        {/* Preload de recursos críticos para melhorar LCP */}
+        <link rel="preload" href="/hmob.png" as="image" type="image/png" media="(max-width: 1024px)" />
+        <link rel="preload" href="/hdesk.png" as="image" type="image/png" media="(min-width: 1024px)" />
+        
+        {/* Preload de fontes críticas */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* DNS prefetch para recursos externos */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GEJ71JEFEM"
           strategy="afterInteractive"
@@ -79,7 +98,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-
+        <PerformanceOptimizer />
       </body>
     </html>
   );

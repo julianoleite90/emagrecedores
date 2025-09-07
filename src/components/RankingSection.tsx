@@ -2,8 +2,9 @@ import Image from 'next/image';
 import UtmLink from './UtmLink';
 import SectionTracker from './SectionTracker';
 import { trackProductCTA, trackProductInfo } from '@/utils/analytics';
+import { memo } from 'react';
 
-const RankingSection = () => {
+const RankingSection = memo(() => {
   // Tracking handlers for each product - updating positions
   const handlePhynamaxCTA = () => trackProductCTA('Phynamax', 1);
   const handlePhynamaxInfo = () => trackProductInfo('Phynamax', 1);
@@ -38,7 +39,7 @@ const RankingSection = () => {
                     <h4 className="text-lg sm:text-xl text-gray-900 font-bold">Phynamax</h4>
                     <span className="bg-green-50 text-green-700 px-2 py-0.5 rounded-full text-sm">Mais recomendado</span>
                   </div>
-                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">Usuários relatam uma perda de peso de 7 a 9kg nos primeiros 45 dias de uso. Resultados visíveis principalmente nas coxas, papada, barriga e braços.</p>
+                  <p className="text-gray-900 font-medium text-sm sm:text-base tracking-wide">Usuários relatam uma perda de peso de 7 a 9kg nos primeiros 32 dias de uso. Resultados visíveis principalmente nas coxas, papada, barriga e braços.</p>
                 </div>
                 <div className="flex flex-col items-end">
                   <div className="flex items-center gap-2 mb-1">
@@ -61,7 +62,9 @@ const RankingSection = () => {
                     className="rounded-lg mx-auto sm:mx-0"
                     loading="lazy"
                     sizes="(max-width: 640px) 100vw, 282px"
-                    quality={85}
+                    quality={80}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                   />
                   <p className="text-xs text-gray-600 text-center mt-2">
                     Fórmula eficiente para eliminar a gordura teimosa
@@ -704,6 +707,8 @@ const RankingSection = () => {
       </div>
     </section>
   );
-};
+});
+
+RankingSection.displayName = 'RankingSection';
 
 export default RankingSection; 

@@ -25,14 +25,14 @@ const ExpertSection = () => {
               {/* Título */}
               <div className="mb-3 md:mb-4">
                 <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">
-                  Aprenda a diferenciar o que funciona do que não funciona, e fuja dos produtos com menos de 600mg.
+                  É possível emagrecer sem passar fome em 2025. Mas, tome cuidado com fórmulas que prometem milagres, sem comprovação.
                 </h3>
               </div>
 
               {/* Descrição */}
               <div className="text-gray-700">
                 <p className="text-xs md:text-base leading-relaxed mb-3">
-                  &ldquo;Uma fórmula eficaz precisa ter pelo menos <strong>600mg</strong> de bioativos que agem no controle da saciedade, diminui a compulsão, e que regula o organismo.&rdquo;
+                  &ldquo;Em nossa lista, todos os produtos foram avaliados com rigor, testes e foi coletado depoimento de clientes reais.&rdquo;
                 </p>
                 <p className="text-xs md:text-sm font-medium text-gray-800">
                   Ana Albuquerque - Especialista em emagrecimento

@@ -1,9 +1,10 @@
 import ScrollLink from './ScrollLink';
 import { trackHeroCTA } from '@/utils/analytics';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const formatDate = () => {
-    return "Tempo de leitura: 3 minutos";
+    return "Revisado por: Alessandra Duran";
   };
 
   const handleCTAClick = () => {
@@ -28,18 +29,21 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="text-3xl lg:text-4xl xl:text-[2.75rem] font-bold text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">5 Remédios para Emagrecer que Realmente Funcionam em 2025</div>
+                <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025</div>
               </h1>
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-4 italic">Aprovados pela anvisa</h2>
             </div>
 
             {/* Imagem em mobile */}
             <div className="block lg:hidden w-full mt-[2px] mb-6">
               <div className="relative h-[450px] w-full">
-                <img
+                <Image
                   src="/hmob.png"
                   alt="Remédios para emagrecer"
-                  className="absolute inset-0 w-full h-full object-cover object-top"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 0px"
+                  quality={85}
                 />
               </div>
               <p className="text-xs text-gray-500 italic mt-2 text-center">
@@ -49,15 +53,19 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <p className="text-gray-700 leading-relaxed">
-            Perder peso pode parecer uma batalha impossível: dietas exaustivas, academia e remédios de farmácias ou online para eliminar gordura teimosa. Mas estudos revelam que 80% das pessoas falham em manter a perda a longo prazo, apesar dos esforços. E isso não é culpa sua – o erro está nos produtos que prometem milagres sem entregar.
+            Já se sentiu presa na guerra contra a balança? Dietas exaustivas, academia sem resultados e remédios online que prometem eliminar gordura teimosa, mas falham? Você não está sozinha: estudos mostram que 95% das pessoas reganham o peso em 2 anos, apesar do esforço. A culpa não é sua – o problema são produtos sem provas, com revisões indicando perdas mínimas e riscos de ingredientes mal regulados.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-            A verdade: a maioria dos suplementos carece de provas científicas, com revisões mostrando que nenhum supera placebos em testes rigorosos. Muitos têm ingredientes insuficientes ou mal regulados, causando decepções e riscos à saúde.
+            <strong>E se você pudesse perder até 22% do peso com opções aprovadas?</strong>
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-            Por isso, investigamos as fórmulas mais eficazes de 2025. Liderada pela Especialista Ana Albuquerque, analisamos dezenas de opções e selecionamos os 5 melhores com base em: tempo de resultados, ingredientes, preço, opiniões de usuários e segurança por estudos independentes.
+            Por isso, investigamos as melhores fórmulas de 2025. Liderada pela especialista Ana Albuquerque, analisamos dezenas de remédios com base em: Resultados em emagrecimento, Ingredientes, Preço, Clientes Satisfeitos, Aprovação da Anvisa, e tempo médio de emagrecimento.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed">
+            O resultado? Um ranking dos 5 melhores remédios para emagrecer (naturais e sem riscos a saúde), incluindo a fórmula de Phynamax, considerada pelos clientes 47% mais eficaz. Continue lendo para descobrir a lista completa.
             </p>
 
             {/* Botão CTA */}
@@ -76,10 +84,14 @@ const HeroSection = () => {
           {/* Imagem do lado direito (apenas desktop) */}
           <div className="hidden lg:block">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-              <img
+              <Image
                 src="/hdesk.png"
                 alt="Remédios para emagrecer"
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                className="object-cover"
+                priority
+                sizes="(min-width: 1024px) 50vw, 0px"
+                quality={85}
               />
             </div>
             <p className="text-xs text-gray-500 italic mt-3 text-center">

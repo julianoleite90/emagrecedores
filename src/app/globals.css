@@ -19,18 +19,39 @@
   }
 }
 
+/* Otimizações de performance */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Preload crítico */
+  font-display: swap;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Otimizações de renderização */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Smooth scrolling for links */
-html {
-  scroll-behavior: smooth;
+/* Otimizações de imagens */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Quiz result animation */
+/* Preload de recursos críticos */
+.preload-critical {
+  font-display: swap;
+}
+
+/* Quiz result animation - otimizada */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -44,4 +65,19 @@ html {
 
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+/* Otimizações de layout */
+.layout-shift {
+  contain: layout style paint;
+}
+
+/* Melhorias de acessibilidade e performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

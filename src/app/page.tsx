@@ -1,10 +1,12 @@
 'use client';
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import Image from 'next/image';
 import HeroSection from '@/components/HeroSection';
 import ExpertSection from '@/components/ExpertSection';
 import WhyConsiderSection from '@/components/WhyConsiderSection';
-import RankingSection from '@/components/RankingSection';
+
+// Lazy loading para componentes não críticos
+const RankingSection = lazy(() => import('@/components/RankingSection'));
 
 export default function Home() {
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
@@ -17,8 +19,14 @@ export default function Home() {
       
       {/* Conteúdo do ranking - só exibe quando quiz completado */}
       {isQuizCompleted && (
-        <div className="animate-fadeIn">
-          <RankingSection />
+        <div className="animate-fadeIn layout-shift">
+          <Suspense fallback={
+            <div className="flex justify-center items-center py-12">
+              <div className="animate-pulse bg-gray-200 rounded-lg h-8 w-64"></div>
+            </div>
+          }>
+            <RankingSection />
+          </Suspense>
         </div>
       )}
 
@@ -34,8 +42,10 @@ export default function Home() {
                   alt="Logo"
                   width={240}
                   height={86}
-                  quality={100}
+                  quality={85}
                   className="w-60"
+                  loading="lazy"
+                  sizes="240px"
                 />
               </div>
             </div>
