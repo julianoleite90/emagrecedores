@@ -509,6 +509,15 @@ export function HeroSection() {
               <p>© 2025 Todos os direitos reservados</p>
               <p>Este site não é afiliado a nenhuma marca específica. Os resultados podem variar de pessoa para pessoa.</p>
             </div>
+
+            <div className="flex justify-center space-x-6">
+              <a 
+                href="/politica-privacidade" 
+                className="text-sm text-gray-500 hover:text-emerald-600 transition-colors"
+              >
+                Política de Privacidade
+              </a>
+            </div>
           </div>
         </div>
       </footer>

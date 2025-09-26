@@ -26,9 +26,18 @@ export function Footer() {
           © 2025 Todos os direitos reservados
         </p>
 
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-600 text-sm mb-4">
           Este site não é afiliado a nenhuma marca específica. Os resultados podem variar de pessoa para pessoa.
         </p>
+
+        <div className="flex justify-center space-x-6">
+          <a 
+            href="/politica-privacidade" 
+            className="text-sm text-gray-500 hover:text-emerald-600 transition-colors"
+          >
+            Política de Privacidade
+          </a>
+        </div>
       </div>
     </footer>
   )
