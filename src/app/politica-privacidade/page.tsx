@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { Apple } from 'lucide-react'
 import { Playfair_Display } from 'next/font/google'
 
@@ -21,11 +22,11 @@ export default function PoliticaPrivacidade() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="relative flex items-center justify-center h-16 lg:h-24">
             <div className="absolute left-1/2 transform -translate-x-1/2">
-              <a className={`text-xl lg:text-2xl font-light tracking-wide text-emerald-600 flex items-center gap-2 ${playfair.className}`} href="/">
+              <Link className={`text-xl lg:text-2xl font-light tracking-wide text-emerald-600 flex items-center gap-2 ${playfair.className}`} href="/">
                 <span>SAÚDE</span>
                 <Apple className="h-5 w-5 lg:h-6 lg:w-6 text-red-500" strokeWidth={1.5} />
                 <span>EVERYDAY</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ export default function PoliticaPrivacidade() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Informações Gerais</h2>
               <p className="text-gray-700 leading-relaxed">
-                Esta Política de Privacidade descreve como o site Emagrecedores ADV ("nós", "nosso" ou "site") 
+                Esta Política de Privacidade descreve como o site Emagrecedores ADV (&quot;nós&quot;, &quot;nosso&quot; ou &quot;site&quot;) 
                 coleta, usa e protege suas informações pessoais quando você visita nosso site. 
                 Respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais.
               </p>
@@ -162,7 +163,7 @@ export default function PoliticaPrivacidade() {
               <p className="text-gray-700 leading-relaxed">
                 Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos sobre 
                 mudanças significativas publicando a nova política nesta página e atualizando a 
-                data de "última atualização".
+                data de &quot;última atualização&quot;.
               </p>
             </section>
 
