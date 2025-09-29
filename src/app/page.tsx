@@ -38,7 +38,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="bg-white rounded-lg p-4 shadow-lg">
                 <Image
-                  src="/logo.png"
+                  src="/logo-melhores.png"
                   alt="Logo"
                   width={240}
                   height={86}

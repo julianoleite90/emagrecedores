@@ -8,7 +8,7 @@ const Header = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-auto flex justify-start">
             <Image
-              src="/logo.png"
+              src="/logo-melhores.png"
               alt="Logo"
               width={350}
               height={125}

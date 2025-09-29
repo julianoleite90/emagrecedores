@@ -15,13 +15,13 @@ const WhyConsiderSection = ({ onQuizComplete }: WhyConsiderSectionProps) => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            O que consideramos em nossa análise?
+            O que consideramos em nossa avaliação?
           </h2>
           
           <p className="text-lg text-gray-700 leading-relaxed text-left max-w-4xl mx-auto">
-            Nossa análise foi rigorosa: analisamos os 140 produtos mais citados no Brasil, verificando fórmulas, dosagens, fabricantes e coletando avaliações de consumidores. Desses, 94 foram descartados por terem menos de 600mg de bioativos. Dos restantes, selecionamos os 5 melhores, priorizando tempo para emagrecimento, ingredientes que combatem a compulsão e estimulam a queima de gordura.
+            Após 8 meses de uma análise minuciosa, avaliamos 140 produtos considerando fórmula, eficácia, tempo de resultados, depoimentos reais, reputação do fabricante, preço e estudos científicos. Apenas 12 chegaram aos testes finais, e somente 5 se destacaram como os melhores emagrecedores naturais de 2025 – opções seguras, eficazes e sem efeitos colaterais.
             <br/><br/>
-            <strong>Conheça agora os 5 melhores remédios para emagrecer em 2025</strong>
+            <strong>Conheça agora os 5 melhores emagrecedores naturais de 2025 e descubra qual é o ideal para transformar sua jornada de perda de peso!</strong>
           </p>
         </div>
       </div>

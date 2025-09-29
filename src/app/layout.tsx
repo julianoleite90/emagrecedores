@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025",
+  title: "Conheça: 5 Remédios mais usados para Emagrecer",
   description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
   keywords: "remédios para emagrecer, emagrecimento, perda de peso, suplementos emagrecedores",
   robots: "index, follow",
   manifest: "/manifest.json",
   openGraph: {
     type: "website",
-    title: "Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025",
+    title: "Conheça: 5 Remédios mais usados para Emagrecer",
     description: "Análise completa dos remédios mais eficazes para emagrecer em 2025. Descubra quais são os produtos que realmente funcionam.",
     siteName: "Análise de Emagrecedores",
   },

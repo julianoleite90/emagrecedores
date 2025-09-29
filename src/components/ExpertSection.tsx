@@ -25,17 +25,17 @@ const ExpertSection = () => {
               {/* Título */}
               <div className="mb-3 md:mb-4">
                 <h3 className="text-sm md:text-xl font-semibold text-green-600 mb-2">
-                  É possível emagrecer sem passar fome em 2025. Mas, tome cuidado com fórmulas que prometem milagres, sem comprovação.
+                  Apenas as canetas de emagrecimento funcionam?
                 </h3>
               </div>
 
               {/* Descrição */}
               <div className="text-gray-700">
                 <p className="text-xs md:text-base leading-relaxed mb-3">
-                  &ldquo;Em nossa lista, todos os produtos foram avaliados com rigor, testes e foi coletado depoimento de clientes reais.&rdquo;
+                  <strong>Não caia nessa mentira!</strong> Existem muitas outras soluções que realmente emagrecem, soluções naturais e totalmente seguras.
                 </p>
                 <p className="text-xs md:text-sm font-medium text-gray-800">
-                  Ana Albuquerque - Especialista em emagrecimento
+                  Ana Albuquerque - Especialista em perda de peso
                 </p>
               </div>
             </div>

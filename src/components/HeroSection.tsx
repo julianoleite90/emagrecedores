@@ -29,7 +29,10 @@ const HeroSection = () => {
             {/* Título principal */}
             <div className="text-left">
               <h1 className="hero-title text-gray-900 leading-tight mb-2">
-                <div className="text-gray-900">Os 5 Melhores Remédios para Emagrecer Aprovados pela Anvisa em 2025</div>
+                <div className="text-gray-900">
+                  Conheça:<br />
+                  5 Remédios mais usados para Emagrecer
+                </div>
               </h1>
             </div>
 
@@ -37,7 +40,7 @@ const HeroSection = () => {
             <div className="block lg:hidden w-full mt-[2px] mb-6">
               <div className="hero-image relative h-[450px] w-full">
                 <Image
-                  src="/hmob.png"
+                  src="/hdesk.png"
                   alt="Remédios para emagrecer"
                   fill
                   className="object-cover object-top"
@@ -56,31 +59,28 @@ const HeroSection = () => {
 
             {/* Subtítulo com destaque */}
             <p className="hero-text text-gray-700 leading-relaxed">
-            Já se sentiu presa na guerra contra a balança? Dietas exaustivas, academia sem resultados e remédios online que prometem eliminar gordura teimosa, mas falham? Você não está sozinha: estudos mostram que 95% das pessoas reganham o peso em 2 anos, apesar do esforço. A culpa não é sua – o problema são produtos sem provas, com revisões indicando perdas mínimas e riscos de ingredientes mal regulados.
+            Você já se sentiu frustrada, olhando no espelho e vendo que, apesar de dietas rigorosas, treinos exaustivos e até produtos para emagrecer, o corpo que você sonha simplesmente não aparece? Aquele aperto no peito ao perceber que a roupa favorita não cabe mais e a autoestima vai ficando pelo caminho? Você não está sozinha! A verdade é que 7 em cada 10 pessoas não conseguem perder peso, e 86% dos produtos do mercado não cumprem o que prometem.
             </p>
 
             <p className="hero-text text-gray-700 leading-relaxed">
-            <strong>E se você pudesse perder até 22% do peso com opções aprovadas?</strong>
+            <strong>Mas a culpa não é sua! Mesmo com todo o esforço, o corpo muitas vezes não queima calorias como deveria. Por isso, minha equipe foi atrás dos melhores emagrecedores naturais de 2025: seguros, acessíveis e realmente eficazes.</strong>
             </p>
 
             <p className="hero-text text-gray-700 leading-relaxed">
-            Por isso, investigamos as melhores fórmulas de 2025. Liderada pela especialista Ana Albuquerque, analisamos dezenas de remédios com base em: Resultados em emagrecimento, Ingredientes, Preço, Clientes Satisfeitos, Aprovação da Anvisa, e tempo médio de emagrecimento.
-            </p>
-
-            <p className="hero-text text-gray-700 leading-relaxed">
-            O resultado? Um ranking dos 5 melhores remédios para emagrecer (naturais e sem riscos a saúde), incluindo a fórmula de Phynamax, considerada pelos clientes 47% mais eficaz. Continue lendo para descobrir a lista completa.
+            Nada de injeções caras ou promessas vazias! Continue lendo e descubra o emagrecedor natural perfeito para transformar seu corpo e resgatar sua confiança.
             </p>
 
             {/* Botão CTA */}
-            <ScrollLink 
-              targetId="quiz"
-              className="hero-cta inline-flex hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
-              onClick={handleCTAClick}
-            >
-                              <span className="flex-1 text-center leading-tight">DESCUBRA OS 5 MELHORES DE 2025</span>
-              <span className="ml-2">↓</span>
-            </ScrollLink>
-
+            <div className="mt-6 mb-8">
+              <ScrollLink 
+                targetId="quiz"
+                className="hero-cta inline-flex hover:bg-[#008F35] text-white font-medium py-4 px-4 sm:px-8 rounded-lg transition-colors duration-300 items-center justify-between w-full text-sm sm:text-base"
+                onClick={handleCTAClick}
+              >
+                <span className="flex-1 text-center leading-tight">CONHEÇA OS 5 MELHORES DE 2025</span>
+                <span className="ml-2">↓</span>
+              </ScrollLink>
+            </div>
 
           </div>
 
